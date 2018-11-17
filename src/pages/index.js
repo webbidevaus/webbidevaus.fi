@@ -51,7 +51,7 @@ const IndexPage = () => (
                   Mäkelä.
                 </p>
                 <iframe
-                  frameborder="0"
+                  frameBorder="0"
                   height="200px"
                   scrolling="no"
                   seamless
@@ -64,9 +64,9 @@ const IndexPage = () => (
                   width="560"
                   height="315"
                   src="https://www.youtube.com/embed/ZFnEhwmpjXI"
-                  frameborder="0"
+                  frameBorder="0"
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
+                  allowFullScreen
                 />
               </div>
             </section>
@@ -79,8 +79,8 @@ const IndexPage = () => (
                 <button>Blogipostaukset</button>
               </div>
               <ol className="old-episode-list">
-                {Array.from(Array(6)).map(() => (
-                  <li className="old-episode-list__item">
+                {Array.from(Array(6)).map((_, id) => (
+                  <li key={id} className="old-episode-list__item">
                     <h3>22. Kesäduuni- ja opiskelujakso</h3>
                   </li>
                 ))}
