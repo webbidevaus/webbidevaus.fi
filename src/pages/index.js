@@ -3,6 +3,13 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Header from '../components/Header'
 
+function toResultYoutubeVideos(result) {
+  return result.edges.map(({ node }) => ({
+    ...node,
+    publishedAt: new Date(node.publishedAt),
+  }))
+}
+
 const IndexPage = () => (
   <StaticQuery
     query={graphql`
@@ -21,8 +28,17 @@ const IndexPage = () => (
         }
       }
     `}
-    render={data =>
-      console.log(data) || (
+    render={({ allYoutubeVideo }) => {
+      const youtubeVideosFromLatest = toResultYoutubeVideos(
+        allYoutubeVideo
+      ).sort(
+        (video1, video2) =>
+          video2.publishedAt.valueOf() - video1.publishedAt.valueOf()
+      )
+
+      const [firstVlog, ...otherVlogs] = youtubeVideosFromLatest
+
+      return (
         <div>
           <Header />
           <main>
@@ -49,7 +65,7 @@ const IndexPage = () => (
                 <iframe
                   width="560"
                   height="315"
-                  src="https://www.youtube.com/embed/ZFnEhwmpjXI"
+                  src={`https://www.youtube.com/embed/${firstVlog.videoId}`}
                   frameBorder="0"
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
@@ -100,7 +116,7 @@ const IndexPage = () => (
           </footer>
         </div>
       )
-    }
+    }}
   />
 )
 
