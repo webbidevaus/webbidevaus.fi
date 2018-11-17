@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "camelcase": "^5.0.0",
+    "humps": "^2.0.1",
     "node-fetch": "^2.2.0"
   }
 }

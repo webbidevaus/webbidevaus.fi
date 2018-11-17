@@ -1,5 +1,5 @@
 const fetch = require('node-fetch')
-const camelCase = require('camelcase')
+const humps = require('humps')
 
 exports.sourceNodes = (
   { actions, createNodeId, createContentDigest },
@@ -9,7 +9,7 @@ exports.sourceNodes = (
 
   const processEpisode = episode => {
     const nodeId = createNodeId(`episode-${episode.id}`)
-    const episodeWithCamelCaseFields = camelCase(episode)
+    const episodeWithCamelCaseFields = humps.camelizeKeys(episode)
     const nodeContent = JSON.stringify(episodeWithCamelCaseFields)
 
     const nodeData = Object.assign({}, episodeWithCamelCaseFields, {
