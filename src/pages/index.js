@@ -3,10 +3,18 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Header from '../components/Header'
 
-function toResultYoutubeVideos(result) {
+function resultToYoutubeVideos(result) {
   return result.edges.map(({ node }) => ({
     ...node,
     publishedAt: new Date(node.publishedAt),
+  }))
+}
+
+function resultToSimplecastEpisodes(result) {
+  return result.edges.map(({ node }) => ({
+    ...node,
+    publishedAt: new Date(node.publishedAt),
+    embedId: node.sharingUrl.split('/s/')[1],
   }))
 }
 
@@ -33,21 +41,25 @@ const IndexPage = () => (
               number
               title
               description
-              long_description
+              longDescription
+              sharingUrl
             }
           }
         }
       }
     `}
     render={({ allYoutubeVideo, allEpisode }) => {
-      const youtubeVideosFromLatest = toResultYoutubeVideos(
+      const youtubeVideosFromLatest = resultToYoutubeVideos(
         allYoutubeVideo
       ).sort(
         (video1, video2) =>
           video2.publishedAt.valueOf() - video1.publishedAt.valueOf()
       )
 
-      const [firstVlog, ...otherVlogs] = youtubeVideosFromLatest
+      const [latestEpisode, ...otherEpisodes] = resultToSimplecastEpisodes(
+        allEpisode
+      )
+      const [latestVlog] = youtubeVideosFromLatest
 
       return (
         <div>
@@ -68,7 +80,9 @@ const IndexPage = () => (
                   height="200px"
                   scrolling="no"
                   seamless
-                  src="https://embed.simplecast.com/01a60a17?color=f5f5f5"
+                  src={`https://embed.simplecast.com/${
+                    latestEpisode.embedId
+                  }?color=f5f5f5`}
                   width="100%"
                 />
               </div>
@@ -76,7 +90,7 @@ const IndexPage = () => (
                 <iframe
                   width="560"
                   height="315"
-                  src={`https://www.youtube.com/embed/${firstVlog.videoId}`}
+                  src={`https://www.youtube.com/embed/${latestVlog.videoId}`}
                   frameBorder="0"
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
@@ -92,9 +106,9 @@ const IndexPage = () => (
                 <button>Blogipostaukset</button>
               </div>
               <ol className="old-episode-list">
-                {Array.from(Array(6)).map((_, id) => (
+                {otherEpisodes.map(({ id, number, title }) => (
                   <li key={id} className="old-episode-list__item">
-                    <h3>22. Kesäduuni- ja opiskelujakso</h3>
+                    <h3>{title}</h3>
                   </li>
                 ))}
               </ol>
