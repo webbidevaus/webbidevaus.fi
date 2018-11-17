@@ -38,6 +38,13 @@ module.exports = {
         maxVideos: 50, // Defaults to 50
       },
     },
+    {
+      resolve: `gatsby-source-simplecast`,
+      options: {
+        podcastId: process.env.SIMPLECAST_PODCAST_ID,
+        apiKey: process.env.SIMPLECAST_API_KEY,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',

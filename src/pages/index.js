@@ -26,9 +26,20 @@ const IndexPage = () => (
             }
           }
         }
+        allEpisode {
+          edges {
+            node {
+              id
+              number
+              title
+              description
+              long_description
+            }
+          }
+        }
       }
     `}
-    render={({ allYoutubeVideo }) => {
+    render={({ allYoutubeVideo, allEpisode }) => {
       const youtubeVideosFromLatest = toResultYoutubeVideos(
         allYoutubeVideo
       ).sort(
