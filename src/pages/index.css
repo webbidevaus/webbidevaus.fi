@@ -1,3 +1,14 @@
 body {
   background: pink;
 }
+
+header {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  background: fuchsia;
+}
+
+header img {
+  width: 6rem;
+}
