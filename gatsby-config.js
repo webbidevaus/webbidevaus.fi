@@ -1,3 +1,9 @@
+// Temporary fix for youtube plugin
+// https://github.com/gatsbyjs/gatsby/issues/1818
+require('babel-polyfill')
+
+require('dotenv').config()
+
 module.exports = {
   siteMetadata: {
     title: 'Gatsby Default Starter',
@@ -22,7 +28,14 @@ module.exports = {
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-source-youtube`,
+      options: {
+        channelId: process.env.YOUTUBE_CHANNEL_ID,
+        apiKey: process.env.YOUTUBE_API_KEY,
+        maxVideos: 50, // Defaults to 50
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
