@@ -20,4 +20,5 @@ header {
 }
 header img {
   width: 6rem;
+  align-self: center;
 }

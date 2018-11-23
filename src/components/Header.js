@@ -5,12 +5,11 @@ import './header.css'
 const Header = () => (
   <header>
     <div className="brand-container">
-      <div>
-        <img
-          src="https://media.simplecast.com/podcast/logo_image/4497/webbidevaus-logo.jpg"
-          alt="logo"
-        />
-      </div>
+      <img
+        src="https://media.simplecast.com/podcast/logo_image/4497/webbidevaus-logo.jpg"
+        alt="logo"
+      />
+
       <div className="title-container">
         <h1>webbidevaus.fi</h1>
         <h2>Puheradiota webbikehityksestä, suomeksi!</h2>
