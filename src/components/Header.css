@@ -1,10 +1,23 @@
 header {
   padding: 2rem;
   display: flex;
-  flex-direction: column;
-  background: fuchsia;
+  align-items: center;
+  justify-content: space-between;
+  background: #ccc;
 }
-
+.brand-container {
+  display: flex;
+}
+.title-container {
+  margin-left: 1rem;
+}
+.title-container h2 {
+  font-weight: normal;
+}
+.social a {
+  background: #fff;
+  padding: 1rem;
+}
 header img {
   width: 6rem;
 }
