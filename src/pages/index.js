@@ -79,6 +79,7 @@ const IndexPage = () => (
                   frameBorder="0"
                   height="200px"
                   scrolling="no"
+                  title={latestEpisode.title}
                   seamless
                   src={`https://embed.simplecast.com/${
                     latestEpisode.embedId
@@ -90,6 +91,7 @@ const IndexPage = () => (
                 <iframe
                   width="560"
                   height="315"
+                  title="video-title-here"
                   src={`https://www.youtube.com/embed/${latestVlog.videoId}`}
                   frameBorder="0"
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
