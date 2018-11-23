@@ -45,6 +45,7 @@ const IndexPage = () => (
               description
               longDescription
               sharingUrl
+              published
             }
           }
         }
@@ -60,7 +61,7 @@ const IndexPage = () => (
 
       const [latestEpisode, ...otherEpisodes] = resultToSimplecastEpisodes(
         allEpisode
-      )
+      ).filter(({ published }) => published)
       const [latestVlog] = youtubeVideosFromLatest
 
       return (
