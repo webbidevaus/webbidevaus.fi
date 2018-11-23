@@ -3,6 +3,8 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Header from '../components/Header'
 
+import './index.css'
+
 function resultToYoutubeVideos(result) {
   return result.edges.map(({ node }) => ({
     ...node,
@@ -66,7 +68,7 @@ const IndexPage = () => (
           <Header />
           <main>
             <section className="newest-episodes">
-              <div className="newest-podcast">
+              <div className="feature newest-podcast">
                 <h1>
                   <span className="newest-podcast__episode-number">22.</span>
                   Kesäduuni- ja opiskelujakso
@@ -87,7 +89,7 @@ const IndexPage = () => (
                   width="100%"
                 />
               </div>
-              <div className="newest-vlog-entry">
+              <div className="feature newest-vlog-entry">
                 <iframe
                   width="560"
                   height="315"
