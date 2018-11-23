@@ -15,3 +15,14 @@
 .newest-podcast__episode-number {
   font-size: 40px;
 }
+
+.old-episode-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.old-episode-list__item {
+  width: 200px;
+  margin: 1rem;
+  padding: 1rem;
+  background: #ccc;
+}
