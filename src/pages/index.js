@@ -20,6 +20,10 @@ function resultToSimplecastEpisodes(result) {
   }))
 }
 
+function episodeTitleWithoutNumber(title) {
+  return title.replace(/^\d*. /, '');
+}
+
 const IndexPage = () => (
   <StaticQuery
     query={graphql`
@@ -71,12 +75,11 @@ const IndexPage = () => (
             <section className="newest-episodes">
               <div className="feature newest-podcast">
                 <h1>
-                  <span className="newest-podcast__episode-number">22.</span>
-                  Kesäduuni- ja opiskelujakso
+                  <span className="newest-podcast__episode-number">{latestEpisode.number}.</span>
+                  {episodeTitleWithoutNumber(latestEpisode.title)}
                 </h1>
                 <p>
-                  Kauan odotettu kesäduuni- ja opiskelujakso! Vieraana Iiro
-                  Mäkelä.
+                  {latestEpisode.description}
                 </p>
                 <iframe
                   frameBorder="0"
@@ -86,7 +89,7 @@ const IndexPage = () => (
                   seamless
                   src={`https://embed.simplecast.com/${
                     latestEpisode.embedId
-                  }?color=f5f5f5`}
+                    }?color=f5f5f5`}
                   width="100%"
                 />
               </div>
@@ -112,8 +115,9 @@ const IndexPage = () => (
               </div>
               <ol className="old-episode-list">
                 {otherEpisodes.map(({ id, number, title }) => (
-                  <li key={id} className="old-episode-list__item">
-                    <h3>{title}</h3>
+                  <li key={id} className="old-episode">
+                    <h3 className="old-episode__number">{number}</h3>
+                    <h3 className="old-episode__title">{episodeTitleWithoutNumber(title)}</h3>
                   </li>
                 ))}
               </ol>
