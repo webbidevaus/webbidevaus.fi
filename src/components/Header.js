@@ -1,14 +1,12 @@
 import React from 'react'
 
-import './Header.css'
+import logo from '../images/webbidevaus-logo.jpg'
+import './Header.scss'
 
 const Header = () => (
   <header>
     <div className="brand-container">
-      <img
-        src="https://media.simplecast.com/podcast/logo_image/4497/webbidevaus-logo.jpg"
-        alt="logo"
-      />
+      <img src={logo} alt="logo" />
 
       <div className="title-container">
         <h1>webbidevaus.fi</h1>

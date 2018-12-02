@@ -1,0 +1,46 @@
+@import 'colors';
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-family: 'IBM Plex Mono';
+  color: $black;
+}
+*:before {
+  box-sizing: inherit;
+}
+*:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+html {
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+ul,
+ol {
+  list-style-type: none;
+}
+a {
+  color: #e31393;
+}
+p {
+  line-height: 150%;
+}

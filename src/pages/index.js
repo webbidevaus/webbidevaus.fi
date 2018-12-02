@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 
-import './index.css'
+import './index.scss'
 
 function resultToYoutubeVideos(result) {
   return result.edges.map(({ node }) => ({
@@ -72,36 +72,47 @@ const IndexPage = () => (
         return (
           <main>
             <section className="newest-episodes">
-              <div className="feature newest-podcast">
-                <h1>
-                  <span className="newest-podcast__episode-number">
-                    {latestEpisode.number}.
-                  </span>
-                  {episodeTitleWithoutNumber(latestEpisode.title)}
-                </h1>
-                <p>{latestEpisode.description}</p>
-                <iframe
-                  frameBorder="0"
-                  height="200px"
-                  scrolling="no"
-                  title={latestEpisode.title}
-                  seamless
-                  src={`https://embed.simplecast.com/${
-                    latestEpisode.embedId
-                  }?color=f5f5f5`}
-                  width="100%"
-                />
+              <div className="feature">
+                <div className="newest-podcast">
+                  <h1 className="newest-podcast__number">
+                    {latestEpisode.number}
+                  </h1>
+
+                  <div className="newest-podcast__content">
+                    <h1 className="newest-podcast__title">
+                      {episodeTitleWithoutNumber(latestEpisode.title)}
+                    </h1>
+                    <p className="newest-podcast__description">
+                      {latestEpisode.description}
+                    </p>
+                    <p className="newest-podcast__description">
+                      <a href="#">Tarkempi kuvaus ja linkit...</a>
+                    </p>
+                    <iframe
+                      frameBorder="0"
+                      height="36px"
+                      scrolling="no"
+                      seamless
+                      title={latestEpisode.title}
+                      src={`https://simplecast.com/e/${
+                        latestEpisode.embedId
+                      }?style=light`}
+                      width="100%"
+                    />
+                  </div>
+                </div>
               </div>
+
               <div className="feature newest-vlog-entry">
-                <iframe
-                  width="560"
-                  height="315"
-                  title="video-title-here"
-                  src={`https://www.youtube.com/embed/${latestVlog.videoId}`}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
+                <div className="newest-vlog-entry__container">
+                  <iframe
+                    title="Viimeisin vlog"
+                    src={`https://www.youtube.com/embed/${latestVlog.videoId}`}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
               </div>
             </section>
             <section className="old-episodes">

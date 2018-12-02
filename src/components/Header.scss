@@ -1,23 +1,35 @@
+@import 'colors';
+
 header {
   padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #ccc;
+  border-bottom: 1px solid $pink;
 }
+
 .brand-container {
   display: flex;
 }
+
 .title-container {
   margin-left: 1rem;
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+    font-weight: normal;
+  }
 }
-.title-container h2 {
-  font-weight: normal;
-}
+
 .social a {
   background: #fff;
   padding: 1rem;
 }
+
 header img {
   width: 6rem;
   align-self: center;
