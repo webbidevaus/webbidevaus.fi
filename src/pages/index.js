@@ -71,7 +71,7 @@ const IndexPage = () => (
 
         return (
           <main>
-            <section className="features">
+            <section className="features padded">
               <div className="feature">
                 <div className="newest-podcast">
                   <h1 className="newest-podcast__number">
@@ -115,7 +115,7 @@ const IndexPage = () => (
                 </div>
               </div>
             </section>
-            <section className="old-episodes">
+            <section className="old-episodes padded">
               <div className="old-episodes__filter">
                 Näytä:
                 <button>Kaikki</button>

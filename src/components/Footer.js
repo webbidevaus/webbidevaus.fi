@@ -4,8 +4,8 @@ import './Footer.scss'
 
 export default function footer() {
   return (
-    <footer>
-      <h1>Juontajat</h1>
+    <footer className="footer padded">
+      <h1 className="footer__title">Juontajasi</h1>
       <ul className="hosts">
         <li className="host">
           <img

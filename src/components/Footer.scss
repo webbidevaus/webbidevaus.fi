@@ -1,9 +1,12 @@
-/**
- * FOOTER
- */
+@import 'colors';
 
-footer {
-  background: #ccc;
+.footer {
+  background: $orange;
+}
+
+.footer__title {
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .hosts {
@@ -16,6 +19,10 @@ footer {
 
 .host {
   display: flex;
+
+  &:first-of-type {
+    margin-right: 2rem;
+  }
 }
 
 .host img {

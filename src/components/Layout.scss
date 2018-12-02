@@ -44,3 +44,16 @@ a {
 p {
   line-height: 150%;
 }
+
+.main-wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.padded {
+  padding: 1rem;
+
+  @media (min-width: 600px) {
+    padding: 2rem;
+  }
+}
