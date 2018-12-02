@@ -27,29 +27,3 @@
   padding: 1rem;
   background: #ccc;
 }
-
-footer {
-  background: #ccc;
-}
-
-.hosts {
-  display: flex;
-  list-style: none;
-  padding: 1rem;
-  margin: 0;
-  justify-content: center;
-}
-
-.host {
-  display: flex;
-}
-
-.host img {
-  width: 150px;
-  flex-grow: 0;
-  align-self: center;
-}
-
-.host-details {
-  margin-left: 1rem;
-}

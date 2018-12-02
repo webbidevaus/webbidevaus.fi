@@ -2,6 +2,7 @@ import React from 'react'
 
 import { StaticQuery, graphql } from 'gatsby'
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 import './index.css'
 
@@ -21,7 +22,7 @@ function resultToSimplecastEpisodes(result) {
 }
 
 function episodeTitleWithoutNumber(title) {
-  return title.replace(/^\d*. /, '');
+  return title.replace(/^\d*. /, '')
 }
 
 const IndexPage = () => (
@@ -75,12 +76,12 @@ const IndexPage = () => (
             <section className="newest-episodes">
               <div className="feature newest-podcast">
                 <h1>
-                  <span className="newest-podcast__episode-number">{latestEpisode.number}.</span>
+                  <span className="newest-podcast__episode-number">
+                    {latestEpisode.number}.
+                  </span>
                   {episodeTitleWithoutNumber(latestEpisode.title)}
                 </h1>
-                <p>
-                  {latestEpisode.description}
-                </p>
+                <p>{latestEpisode.description}</p>
                 <iframe
                   frameBorder="0"
                   height="200px"
@@ -89,7 +90,7 @@ const IndexPage = () => (
                   seamless
                   src={`https://embed.simplecast.com/${
                     latestEpisode.embedId
-                    }?color=f5f5f5`}
+                  }?color=f5f5f5`}
                   width="100%"
                 />
               </div>
@@ -117,41 +118,15 @@ const IndexPage = () => (
                 {otherEpisodes.map(({ id, number, title }) => (
                   <li key={id} className="old-episode">
                     <h3 className="old-episode__number">{number}</h3>
-                    <h3 className="old-episode__title">{episodeTitleWithoutNumber(title)}</h3>
+                    <h3 className="old-episode__title">
+                      {episodeTitleWithoutNumber(title)}
+                    </h3>
                   </li>
                 ))}
               </ol>
             </section>
           </main>
-          <footer>
-            <h1>Juontajat</h1>
-            <ul className="hosts">
-              <li className="host">
-                <img
-                  src="https://avatars2.githubusercontent.com/u/162899?s=460&v=4"
-                  alt="Antti"
-                />
-                <div className="host-details">
-                  <h2>Antti</h2>
-                  <p>Lorem ipsum dolor sit amet</p>
-                  <a href="https://twitter.com/anttti">@anttti</a>
-                </div>
-              </li>
-              <li className="host">
-                <img
-                  src="https://avatars3.githubusercontent.com/u/1206987?s=460&v=4"
-                  alt="Riku"
-                />
-                <div className="host-details">
-                  <h2>Riku</h2>
-                  <p>Lorem ipsum dolor sit amet</p>
-                  <a href="https://www.w3schools.com">
-                    https://www.w3schools.com
-                  </a>
-                </div>
-              </li>
-            </ul>
-          </footer>
+          <Footer />
         </div>
       )
     }}
