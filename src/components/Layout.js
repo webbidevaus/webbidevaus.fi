@@ -3,6 +3,9 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
+import Header from './Header'
+import Footer from './Footer'
+
 import './Layout.css'
 
 const Layout = ({ children }) => (
@@ -21,13 +24,20 @@ const Layout = ({ children }) => (
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+            {
+              name: 'description',
+              content:
+                'Webbidevaus.fi - Puheradiota web-kehityksestä Suomeksi!',
+            },
+            { name: 'keywords', content: 'webbidevaus, web dev, podcast' },
           ]}
         >
           <html lang="en" />
         </Helmet>
-        <div>{children}</div>
+
+        <Header />
+        {children}
+        <Footer />
       </>
     )}
   />

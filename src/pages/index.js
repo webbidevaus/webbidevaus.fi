@@ -1,8 +1,7 @@
 import React from 'react'
-
 import { StaticQuery, graphql } from 'gatsby'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+
+import Layout from '../components/Layout'
 
 import './index.css'
 
@@ -26,52 +25,51 @@ function episodeTitleWithoutNumber(title) {
 }
 
 const IndexPage = () => (
-  <StaticQuery
-    query={graphql`
-      {
-        allYoutubeVideo {
-          edges {
-            node {
-              id
-              title
-              description
-              videoId
-              publishedAt
-              privacyStatus
+  <Layout>
+    <StaticQuery
+      query={graphql`
+        {
+          allYoutubeVideo {
+            edges {
+              node {
+                id
+                title
+                description
+                videoId
+                publishedAt
+                privacyStatus
+              }
+            }
+          }
+          allEpisode {
+            edges {
+              node {
+                id
+                number
+                title
+                description
+                longDescription
+                sharingUrl
+                published
+              }
             }
           }
         }
-        allEpisode {
-          edges {
-            node {
-              id
-              number
-              title
-              description
-              longDescription
-              sharingUrl
-              published
-            }
-          }
-        }
-      }
-    `}
-    render={({ allYoutubeVideo, allEpisode }) => {
-      const youtubeVideosFromLatest = resultToYoutubeVideos(
-        allYoutubeVideo
-      ).sort(
-        (video1, video2) =>
-          video2.publishedAt.valueOf() - video1.publishedAt.valueOf()
-      )
+      `}
+      render={({ allYoutubeVideo, allEpisode }) => {
+        const youtubeVideosFromLatest = resultToYoutubeVideos(
+          allYoutubeVideo
+        ).sort(
+          (video1, video2) =>
+            video2.publishedAt.valueOf() - video1.publishedAt.valueOf()
+        )
 
-      const [latestEpisode, ...otherEpisodes] = resultToSimplecastEpisodes(
-        allEpisode
-      ).filter(({ published }) => published)
-      const [latestVlog] = youtubeVideosFromLatest
+        const [latestEpisode, ...otherEpisodes] = resultToSimplecastEpisodes(
+          allEpisode
+        ).filter(({ published }) => published)
+        const [latestVlog] = youtubeVideosFromLatest
 
-      return (
-        <div>
-          <Header />
+        return (
           <main>
             <section className="newest-episodes">
               <div className="feature newest-podcast">
@@ -126,11 +124,10 @@ const IndexPage = () => (
               </ol>
             </section>
           </main>
-          <Footer />
-        </div>
-      )
-    }}
-  />
+        )
+      }}
+    />
+  </Layout>
 )
 
 export default IndexPage
