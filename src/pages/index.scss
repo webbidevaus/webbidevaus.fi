@@ -1,20 +1,39 @@
 @import '../components/colors';
 
-.newest-episodes {
+.features {
   display: flex;
-  padding: 2rem;
+  flex-direction: column;
+  padding: 1rem;
+
+  @media (min-width: 600px) {
+    padding: 2rem;
+  }
+
+  @media (min-width: 850px) {
+    flex-direction: row;
+  }
 }
 
 .feature {
-  width: 50%;
+  @media (min-width: 850px) {
+    width: 50%;
+  }
 }
 
 .newest-podcast {
   display: flex;
   flex-direction: row;
+  margin-bottom: 1rem;
   padding: 1rem;
-  margin-right: 2rem;
   background: $pink;
+
+  @media (min-width: 600px) {
+    margin-bottom: 2rem;
+  }
+
+  @media (min-width: 850px) {
+    margin-right: 2rem;
+  }
 
   * {
     color: white;

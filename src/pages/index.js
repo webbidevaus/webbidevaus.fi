@@ -71,7 +71,7 @@ const IndexPage = () => (
 
         return (
           <main>
-            <section className="newest-episodes">
+            <section className="features">
               <div className="feature">
                 <div className="newest-podcast">
                   <h1 className="newest-podcast__number">
