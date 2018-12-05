@@ -83,9 +83,10 @@
 
 .filter-button {
   display: inline-block;
-  margin-left: 1rem;
-  background: transparent;
+  margin-left: 0.5rem;
+  padding: 0.3rem 0.5rem;
   border: 0;
+  background: transparent;
   color: $pink;
   font-weight: bold;
   font-size: 1rem;
