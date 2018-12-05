@@ -118,10 +118,12 @@ const IndexPage = () => (
             <section className="old-episodes padded">
               <div className="old-episodes__filter">
                 Näytä:
-                <button>Kaikki</button>
-                <button>Podcast-jaksot</button>
-                <button>Videojaksot</button>
-                <button>Blogipostaukset</button>
+                <button className="filter-button filter-button--active">
+                  Kaikki
+                </button>
+                <button className="filter-button">Podcast-jaksot</button>
+                <button className="filter-button">Videojaksot</button>
+                <button className="filter-button">Blogipostaukset</button>
               </div>
               <ol className="old-episode-list">
                 {otherEpisodes.map(({ id, number, title }) => (
