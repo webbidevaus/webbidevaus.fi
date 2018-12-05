@@ -35,11 +35,9 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
 
-        <div className="main-wrap">
-          <Header />
-          {children}
-          <Footer />
-        </div>
+        <Header />
+        {children}
+        <Footer />
       </>
     )}
   />
