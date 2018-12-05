@@ -77,12 +77,42 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   margin-right: -1rem;
+  padding-top: 1rem;
 }
 
 .old-episode {
-  margin: 1rem 1rem 0 0;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
   padding: 1rem;
-  border: 1px solid $pink;
+  background: $light-blue;
+  border-top: 0.5rem solid rgba(55, 56, 104, 0.6);
+
+  @media (min-width: 600px) {
+    margin-bottom: 2rem;
+  }
+
+  @media (min-width: 850px) {
+    margin-right: 2rem;
+  }
+
+  * {
+    color: $dark-blue;
+  }
+}
+
+.old-episode__number {
+  position: relative;
+  top: -8px;
+  margin-right: 1rem;
+  font-size: 40px;
+  // color: rgba(255, 255, 255, 0.6);
+  color: rgba(55, 56, 104, 0.6);
+}
+
+.old-episode__title {
+  margin-bottom: 0.5rem;
+  font-size: 20px;
 }
 
 .filter-button {
