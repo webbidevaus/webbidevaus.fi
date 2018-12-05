@@ -20,7 +20,7 @@
   flex-direction: row;
   margin-bottom: 1rem;
   padding: 1rem;
-  background: $pink;
+  background: $blue;
 
   @media (min-width: 600px) {
     margin-bottom: 2rem;
@@ -72,6 +72,7 @@
 .old-episode-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin-right: -1rem;
 }
 
 .old-episode {

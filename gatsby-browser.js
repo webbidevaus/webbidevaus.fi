@@ -4,4 +4,4 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
-require('typeface-ibm-plex-mono')
+require('typeface-montserrat')
