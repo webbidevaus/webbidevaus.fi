@@ -85,8 +85,11 @@
 .old-episode-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  margin-right: -1rem;
   padding-top: 1rem;
+
+  @media (min-width: 850px) {
+    margin-right: -2rem;
+  }
 }
 
 .old-episode {
