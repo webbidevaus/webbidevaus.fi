@@ -87,6 +87,9 @@ const IndexPage = () => (
 
                     <div className="newest-podcast__content">
                       <h1 className="newest-podcast__title">
+                        <span className="newest-podcast__title-number">
+                          {latestEpisode.number}.{' '}
+                        </span>
                         {episodeTitleWithoutNumber(latestEpisode.title)}
                       </h1>
                       <p className="newest-podcast__description">
