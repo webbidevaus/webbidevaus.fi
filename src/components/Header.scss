@@ -1,90 +1,70 @@
 @import 'colors';
 
-.site-header {
-  // border-bottom: 1px solid $light-blue;
-}
+$breakpoint: 650px;
 
-.site-header__content {
+.site-header {
   padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
 
-  @media (min-width: 600px) {
-    padding: 2rem;
+  @media (min-width: $breakpoint) {
+    padding: 3rem;
     align-items: center;
+    flex-direction: row;
     justify-content: space-between;
-  }
-
-  @media (min-width: 900px) {
-    flex-direction: row;
-  }
-}
-
-.brand-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 1rem;
-
-  @media (min-width: 600px) {
-    flex-direction: row;
-  }
-
-  @media (min-width: 900px) {
-    margin-bottom: 0;
   }
 }
 
 .logo {
-  display: block;
-  width: 100px;
-  height: auto;
-  margin-bottom: 1rem;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  width: 100%;
+  margin: 2rem 0 3rem 0;
+  font-weight: 900;
+  font-size: 36px;
+  color: white;
 
-  @media (min-width: 600px) {
-    margin-right: 2rem;
-    margin-bottom: 0rem;
-  }
-}
-
-.title-container {
-  text-align: center;
-
-  @media (min-width: 600px) {
-    text-align: initial;
-  }
-
-  h1 {
-    margin-bottom: 0.5rem;
-    font-size: 1.5rem;
-  }
-
-  h2 {
-    font-size: 1rem;
-    font-weight: normal;
+  @media (min-width: $breakpoint) {
+    justify-content: flex-start;
+    margin: 0;
   }
 }
 
 .social {
   display: flex;
+  flex-direction: column-reverse;
   justify-content: center;
+  align-items: center;
   width: 100%;
 
-  @media (min-width: 900px) {
+  @media (min-width: $breakpoint) {
+    flex-direction: row;
     justify-content: flex-end;
   }
+}
 
-  a {
-    display: inline-block;
-    padding: 1rem;
-    border: 1px solid $pink;
-    background: #fff;
+.social__link {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.08em;
 
-    &:first-of-type {
-      margin-right: 1rem;
-    }
+  &:first-of-type {
+    margin-right: 2rem;
+  }
+}
+
+.social__links-wrap {
+  @media (max-width: $breakpoint) {
+    margin-top: 2rem;
+  }
+
+  @media (min-width: $breakpoint) {
+    margin-right: 3rem;
   }
 }

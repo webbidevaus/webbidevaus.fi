@@ -2,6 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
+import Header from '../components/Header'
 
 import './index.scss'
 
@@ -70,10 +71,15 @@ const IndexPage = () => (
         const [latestVlog] = youtubeVideosFromLatest
 
         return (
-          <main>
-            <section className="features">
-              <div className="features__content padded wrap">
+          <div>
+            <div className="hero">
+              <Header />
+
+              <section className="features padded wrap">
                 <div className="feature">
+                  <h3 className="feature__title small-title">
+                    Uusin podcast-jakso
+                  </h3>
                   <div className="newest-podcast">
                     <h1 className="newest-podcast__number">
                       {latestEpisode.number}
@@ -105,6 +111,9 @@ const IndexPage = () => (
                 </div>
 
                 <div className="feature newest-vlog-entry">
+                  <h3 className="feature__title small-title">
+                    Uusin videojakso
+                  </h3>
                   <div className="newest-vlog-entry__container">
                     <iframe
                       title="Viimeisin vlog"
@@ -117,8 +126,8 @@ const IndexPage = () => (
                     />
                   </div>
                 </div>
-              </div>
-            </section>
+              </section>
+            </div>
 
             <section className="old-episodes padded wrap">
               <div className="old-episodes__filter">
@@ -141,7 +150,7 @@ const IndexPage = () => (
                 ))}
               </ol>
             </section>
-          </main>
+          </div>
         )
       }}
     />

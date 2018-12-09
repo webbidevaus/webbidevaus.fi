@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-import Header from './Header'
 import Footer from './Footer'
 
 import './Layout.scss'
@@ -35,7 +34,6 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
 
-        <Header />
         {children}
         <Footer />
       </>

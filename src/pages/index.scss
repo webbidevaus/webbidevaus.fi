@@ -1,10 +1,11 @@
 @import '../components/colors';
+@import '../components/button';
 
-.features {
-  background: $light-blue;
+.hero {
+  background: linear-gradient(180deg, #d63169 0%, #b2004e 100%);
 }
 
-.features__content {
+.features {
   display: flex;
   flex-direction: column;
 
@@ -19,12 +20,15 @@
   }
 }
 
+.feature__title {
+  margin-bottom: 2rem;
+  color: #fe8cbe;
+}
+
 .newest-podcast {
   display: flex;
   flex-direction: row;
   margin-bottom: 1rem;
-  padding: 1rem;
-  background: $blue;
 
   @media (min-width: 600px) {
     margin-bottom: 2rem;
@@ -41,10 +45,11 @@
 
 .newest-podcast__number {
   position: relative;
-  top: -8px;
+  top: -14px;
   margin-right: 1rem;
-  font-size: 40px;
-  color: rgba(255, 255, 255, 0.6);
+  font-size: 70px;
+  font-weight: 900;
+  color: #f46ea9;
 }
 
 .newest-podcast__title {
