@@ -129,26 +129,36 @@ const IndexPage = () => (
               </section>
             </div>
 
-            <section className="old-episodes padded wrap">
-              <div className="old-episodes__filter">
-                Näytä:
-                <button className="filter-button filter-button--active">
-                  Kaikki
-                </button>
-                <button className="filter-button">Podcast-jaksot</button>
-                <button className="filter-button">Videojaksot</button>
-                <button className="filter-button">Blogipostaukset</button>
+            <section className="old-episodes">
+              <div className="old-episodes__container padded wrap">
+                {/* <div className="old-episodes__filter">
+                  Näytä:
+                  <button className="filter-button filter-button--active">
+                    Kaikki
+                  </button>
+                  <button className="filter-button">Podcast-jaksot</button>
+                  <button className="filter-button">Videojaksot</button>
+                  <button className="filter-button">Blogipostaukset</button>
+                </div> */}
+                <ol className="old-episode-list">
+                  {otherEpisodes.map(({ id, number, title, description }) => (
+                    <li key={id} className="old-episode">
+                      <header className="old-episode__header small-title">
+                        Podcast-jakso
+                      </header>
+                      <section className="old-episode__content">
+                        <h3 className="old-episode__number">{number}</h3>
+                        <div>
+                          <h3 className="old-episode__title">
+                            {episodeTitleWithoutNumber(title)}
+                          </h3>
+                          <p>{description}</p>
+                        </div>
+                      </section>
+                    </li>
+                  ))}
+                </ol>
               </div>
-              <ol className="old-episode-list">
-                {otherEpisodes.map(({ id, number, title }) => (
-                  <li key={id} className="old-episode">
-                    <h3 className="old-episode__number">{number}</h3>
-                    <h3 className="old-episode__title">
-                      {episodeTitleWithoutNumber(title)}
-                    </h3>
-                  </li>
-                ))}
-              </ol>
             </section>
           </div>
         )
