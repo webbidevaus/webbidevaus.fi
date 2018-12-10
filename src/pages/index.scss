@@ -2,13 +2,31 @@
 @import '../components/button';
 
 .hero {
-  background: linear-gradient(180deg, #d63169 0%, #b2004e 100%);
+  position: relative;
+  z-index: 1;
+  background: rgba(55, 56, 104, 0.12);
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    right: 0;
+    bottom: 90px;
+    left: 0;
+    background: linear-gradient(180deg, #d63169 0%, #b2004e 100%);
+    transform: skewY(-2.5deg);
+    transform-origin: 100%;
+  }
 }
 
 .features {
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
   margin-top: 3rem;
+  padding-bottom: 0;
 
   @media (min-width: 650px) {
     margin-top: 0;
@@ -20,35 +38,39 @@
 }
 
 .feature {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
   @media (min-width: 850px) {
     width: 50%;
   }
 }
 
-.feature__title {
+.feature--podcast {
+  padding: 0 1rem 1rem 1rem;
   margin-bottom: 2rem;
-  color: #fe8cbe;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #ab0949, #9a0741);
 
-  @media (max-width: 650px) {
-    text-align: center;
+  @media (min-width: 850px) {
+    margin: 0 2rem 0 0;
   }
+}
+
+.feature__title {
+  padding: 1rem 0;
+  color: white;
 }
 
 .newest-podcast {
   display: flex;
   flex-direction: column;
-  margin-bottom: 4rem;
-
-  @media (min-width: 650px) {
-    flex-direction: row;
-  }
-  @media (min-width: 850px) {
-    margin-bottom: 2rem;
-    margin-right: 2rem;
-  }
 
   * {
     color: white;
+  }
+
+  @media (min-width: 650px) {
+    flex-direction: row;
   }
 }
 
@@ -58,7 +80,7 @@
   margin-right: 1rem;
   font-size: 70px;
   font-weight: 900;
-  color: #f46ea9;
+  color: #650026;
 }
 
 .newest-podcast__title-number {
@@ -84,7 +106,20 @@
 }
 
 .newest-vlog-entry {
-  margin-bottom: 2rem;
+  border-radius: 8px;
+  background: white;
+  overflow: hidden;
+
+  @media (max-width: 850px) {
+    width: 100%;
+  }
+}
+
+.newest-vlog-entry__title {
+  padding: 1rem;
+  border-radius: 8px 8px 0 0;
+  color: white !important;
+  background: #373868;
 }
 
 .newest-vlog-entry__container {

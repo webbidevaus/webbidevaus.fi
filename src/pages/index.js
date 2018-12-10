@@ -76,7 +76,7 @@ const IndexPage = () => (
               <Header />
 
               <section className="features padded wrap">
-                <div className="feature">
+                <div className="feature feature--podcast">
                   <h3 className="feature__title small-title">
                     Uusin podcast-jakso
                   </h3>
@@ -114,7 +114,7 @@ const IndexPage = () => (
                 </div>
 
                 <div className="feature newest-vlog-entry">
-                  <h3 className="feature__title small-title">
+                  <h3 className="newest-vlog-entry__title small-title">
                     Uusin videojakso
                   </h3>
                   <div className="newest-vlog-entry__container">

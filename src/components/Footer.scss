@@ -1,9 +1,30 @@
 @import 'colors';
 
 .footer {
-  background: linear-gradient(180deg, rgba(55, 56, 104, 0.89) 0%, #373868 100%);
+  position: relative;
+  z-index: 1;
+
   * {
     color: white;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    top: -50px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(55, 56, 104, 0.89) 0%,
+      #373868 100%
+    );
+    transform: skewY(-2.5deg);
+    transform-origin: 100%;
   }
 }
 
