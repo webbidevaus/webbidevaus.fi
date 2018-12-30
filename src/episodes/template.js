@@ -5,6 +5,7 @@ import Header from '../components/Header'
 import { nodeToPodcastEpisode } from '../episodes'
 
 import './template.scss'
+import { PodcastPlayer } from '../components/PodcastPlayer'
 
 const EpisodeTemplate = props => {
   const episode = nodeToPodcastEpisode(props.pageContext)
@@ -14,6 +15,7 @@ const EpisodeTemplate = props => {
       <Header />
 
       <section className="episode">
+        <PodcastPlayer title={episode.title} embedId={episode.embedId} />
         <Markdown source={episode.longDescription} />
       </section>
     </Layout>

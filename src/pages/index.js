@@ -11,6 +11,7 @@ import {
   episodeTitleWithoutNumber,
   resultToPodcastEpisodes,
 } from '../episodes'
+import { PodcastPlayer } from '../components/PodcastPlayer'
 
 const IndexPage = () => (
   <Layout>
@@ -80,16 +81,9 @@ const IndexPage = () => (
                       <p className="newest-podcast__description">
                         <a href="#">Tarkempi kuvaus ja linkit...</a>
                       </p>
-                      <iframe
-                        frameBorder="0"
-                        height="36px"
-                        scrolling="no"
-                        seamless
+                      <PodcastPlayer
                         title={latestEpisode.title}
-                        src={`https://simplecast.com/e/${
-                          latestEpisode.embedId
-                        }?style=light`}
-                        width="100%"
+                        embedId={latestEpisode.embedId}
                       />
                     </div>
                   </div>
