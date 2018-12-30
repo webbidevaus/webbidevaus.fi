@@ -1,9 +1,9 @@
 import React from 'react'
-
+import classnames from 'classnames'
 import './Header.scss'
 
-const Header = () => (
-  <header className="site-header wrap">
+const Header = ({ className }) => (
+  <header className={classnames('site-header', 'wrap', className)}>
     <div className="logo">&lt;fi/&gt;</div>
 
     <section className="social">

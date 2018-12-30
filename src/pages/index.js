@@ -5,25 +5,11 @@ import Layout from '../components/Layout'
 import Header from '../components/Header'
 
 import './index.scss'
-
-function resultToYoutubeVideos(result) {
-  return result.edges.map(({ node }) => ({
-    ...node,
-    publishedAt: new Date(node.publishedAt),
-  }))
-}
-
-function resultToSimplecastEpisodes(result) {
-  return result.edges.map(({ node }) => ({
-    ...node,
-    publishedAt: new Date(node.publishedAt),
-    embedId: node.sharingUrl.split('/s/')[1],
-  }))
-}
-
-function episodeTitleWithoutNumber(title) {
-  return title.replace(/^\d*. /, '')
-}
+import {
+  resultToYoutubeVideos,
+  episodeTitleWithoutNumber,
+  resultToPodcastEpisodes,
+} from '../episodes'
 
 const IndexPage = () => (
   <Layout>
@@ -58,22 +44,17 @@ const IndexPage = () => (
         }
       `}
       render={({ allYoutubeVideo, allEpisode }) => {
-        const youtubeVideosFromLatest = resultToYoutubeVideos(
-          allYoutubeVideo
-        ).sort(
-          (video1, video2) =>
-            video2.publishedAt.valueOf() - video1.publishedAt.valueOf()
-        )
+        const youtubeVideosFromLatest = resultToYoutubeVideos(allYoutubeVideo)
 
-        const [latestEpisode, ...otherEpisodes] = resultToSimplecastEpisodes(
+        const [latestEpisode, ...otherEpisodes] = resultToPodcastEpisodes(
           allEpisode
-        ).filter(({ published }) => published)
+        )
         const [latestVlog] = youtubeVideosFromLatest
 
         return (
           <div>
             <div className="hero">
-              <Header />
+              <Header className="hero__header" />
 
               <section className="features padded wrap">
                 <div className="feature feature--podcast">
