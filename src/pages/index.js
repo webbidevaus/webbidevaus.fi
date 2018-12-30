@@ -2,16 +2,17 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import classNames from 'classnames'
 
-import Layout from '../components/Layout'
-import Header from '../components/Header'
+import { Layout } from '../components/Layout'
+import { Header } from '../components/Header'
+import { PodcastPlayer } from '../components/PodcastPlayer'
 
-import './index.scss'
 import {
   resultToYoutubeVideos,
   episodeTitleWithoutNumber,
   resultToPodcastEpisodes,
 } from '../episodes'
-import { PodcastPlayer } from '../components/PodcastPlayer'
+
+import './index.scss'
 
 const IndexPage = () => (
   <Layout>

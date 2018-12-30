@@ -2,7 +2,7 @@ import React from 'react'
 
 import './Footer.scss'
 
-export default function footer() {
+export function Footer() {
   return (
     <footer className="footer padded">
       <h1 className="footer__slogan">

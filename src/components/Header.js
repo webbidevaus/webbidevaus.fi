@@ -2,7 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 import './Header.scss'
 
-const Header = ({ className }) => (
+export const Header = ({ className }) => (
   <header className={classNames('site-header', className)}>
     <div className="logo">&lt;fi/&gt;</div>
 
@@ -24,5 +24,3 @@ const Header = ({ className }) => (
     </section>
   </header>
 )
-
-export default Header

@@ -1,11 +1,13 @@
 import React from 'react'
 import Markdown from 'react-markdown'
-import Layout from '../components/Layout'
-import Header from '../components/Header'
+
+import { Layout } from '../components/Layout'
+import { Header } from '../components/Header'
+import { PodcastPlayer } from '../components/PodcastPlayer'
+
 import { nodeToPodcastEpisode } from '../episodes'
 
 import './template.scss'
-import { PodcastPlayer } from '../components/PodcastPlayer'
 
 const EpisodeTemplate = props => {
   const episode = nodeToPodcastEpisode(props.pageContext)
