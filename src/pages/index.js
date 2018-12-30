@@ -1,5 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
+import classNames from 'classnames'
 
 import Layout from '../components/Layout'
 import Header from '../components/Header'
@@ -54,7 +55,7 @@ const IndexPage = () => (
         return (
           <div>
             <div className="hero">
-              <Header className="hero__header" />
+              <Header className={classNames('hero__header', 'wrap')} />
 
               <section className="features padded wrap">
                 <div className="feature feature--podcast">
