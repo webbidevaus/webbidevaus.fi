@@ -58,7 +58,7 @@ const EpisodeTemplate = props => {
           </div>
 
           <div className="episode__shownotes">
-            <Markdown source={episode.longDescription} />
+            <Markdown source={episode.longDescription} linkTarget="_blank" />
           </div>
         </div>
       </section>
