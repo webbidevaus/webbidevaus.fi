@@ -1,11 +1,14 @@
+@import '../components/colors';
+
 .button {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
+  padding: 1rem 1.5rem;
   border-radius: 8px;
 
   box-shadow: 0px 4px 4px rgba(55, 56, 104, 0.2);
-  background: linear-gradient(180deg, #3d3e73 0%, #373868 100%);
+  background: linear-gradient($blue-gradient-start, $blue-gradient-end);
 
+  line-height: 1;
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;

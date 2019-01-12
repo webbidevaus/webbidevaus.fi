@@ -98,7 +98,7 @@
   padding: 1rem;
   border-radius: 8px 8px 0 0;
   color: white !important;
-  background: #373868;
+  background: linear-gradient($blue-gradient-start, $blue-gradient-end);
 }
 
 .newest-vlog-entry__container {
@@ -176,9 +176,10 @@
 }
 
 .old-episode__header {
-  padding: 1.1rem 1.5rem;
+  padding: 1rem 1.5rem;
   border-radius: 8px 8px 0 0;
-  background-color: #373868;
+  line-height: 1;
+  background: linear-gradient($blue-gradient-start, $blue-gradient-end);
   color: white;
 }
 
