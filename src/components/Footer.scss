@@ -1,8 +1,15 @@
 @import 'colors';
 
-.footer {
+.footer.padded {
   position: relative;
   z-index: 1;
+  top: 50px;
+  margin-top: -160px;
+  padding-top: 150px;
+
+  @media (min-width: 600px) {
+    margin-top: -210px;
+  }
 
   * {
     color: white;
@@ -18,14 +25,14 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: linear-gradient(
-      180deg,
-      rgba(55, 56, 104, 0.89) 0%,
-      #373868 100%
-    );
+    background: linear-gradient(180deg, #494a75 0%, #373868 100%);
     transform: skewY(-2.5deg);
     transform-origin: 100%;
   }
+}
+
+.footer--single.padded {
+  margin-top: -166px;
 }
 
 .footer__slogan {
@@ -85,10 +92,39 @@
   flex-grow: 0;
   align-self: center;
   margin-bottom: 1rem;
+  border-radius: 8px;
 }
 
 .host-details {
-  @media (min-width: 600px) {
-    margin-left: 1rem;
+  h2 {
+    font-size: 16px;
   }
+}
+
+.subscribe {
+  margin: 4rem 0 2rem 0;
+  text-align: center;
+  color: white;
+}
+
+.subscribe-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 6rem;
+  padding: 0 20px;
+}
+
+.subscribe-button {
+  display: inline-block;
+  margin: 0 20px 10px 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.subscribe-button__image {
+  display: inline-block;
+  height: 40px;
 }

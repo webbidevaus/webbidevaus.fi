@@ -4,7 +4,9 @@ import './Header.scss'
 
 export const Header = ({ className }) => (
   <header className={classNames('site-header', className)}>
-    <div className="logo">&lt;fi/&gt;</div>
+    <a className="logo-link" href="/">
+      <div className="logo">&lt;fi/&gt;</div>
+    </a>
 
     <section className="social">
       <div className="social__links-wrap">

@@ -1,10 +1,20 @@
 import React from 'react'
+import classNames from 'classnames'
 
+import itunes from '../images/itunes.svg'
+import overcast from '../images/overcast.svg'
+import pocketcasts from '../images/pocketcasts.svg'
 import './Footer.scss'
 
-export function Footer() {
+export function Footer({ isSingle = false }) {
   return (
-    <footer className="footer padded">
+    <footer
+      className={classNames({
+        footer: true,
+        'footer--single': isSingle,
+        padded: true,
+      })}
+    >
       <h1 className="footer__slogan">
         “Puheradiota webbikehityksestä, suomeksi!”
       </h1>
@@ -37,6 +47,40 @@ export function Footer() {
           </div>
         </li>
       </ul>
+
+      <h1 className="subscribe small-title">Tilaa Webbidevaus.fi -podcast!</h1>
+      <div className="subscribe-buttons">
+        <a
+          className="subscribe-button"
+          href="https://itunes.apple.com/fi/podcast/webbidevaus-fi/id1350226932"
+        >
+          <img
+            className="subscribe-button__image"
+            src={itunes}
+            alt="Webbidevaus iTunesissa"
+          />
+        </a>
+        <a
+          className="subscribe-button"
+          href="https://overcast.fm/itunes1350226932/webbidevaus-fi"
+        >
+          <img
+            className="subscribe-button__image"
+            src={overcast}
+            alt="Webbidevaus Overcastissa"
+          />
+        </a>
+        <a
+          className="subscribe-button"
+          href="https://pca.st/podcast/60a538e0-f84f-0135-c260-7d73a919276a"
+        >
+          <img
+            className="subscribe-button__image"
+            src={pocketcasts}
+            alt="Webbidevaus Pocket Castsissa"
+          />
+        </a>
+      </div>
     </footer>
   )
 }

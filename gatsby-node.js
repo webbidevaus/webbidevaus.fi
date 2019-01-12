@@ -34,6 +34,12 @@ exports.createPages = ({ graphql, actions }) => {
               longDescription
               sharingUrl
               published
+              publishedAt
+              images {
+                large
+                small
+                thumb
+              }
             }
           }
         }

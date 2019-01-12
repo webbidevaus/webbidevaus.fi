@@ -2,8 +2,9 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import classNames from 'classnames'
 
-import { Layout } from '../components/Layout'
+import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
+import { Layout } from '../components/Layout'
 import { PodcastPlayer } from '../components/PodcastPlayer'
 
 import {
@@ -55,7 +56,7 @@ const IndexPage = () => (
         const [latestVlog] = youtubeVideosFromLatest
 
         return (
-          <div>
+          <>
             <div className="hero">
               <Header className={classNames('hero__header', 'wrap')} />
 
@@ -80,7 +81,9 @@ const IndexPage = () => (
                         {latestEpisode.description}
                       </p>
                       <p className="newest-podcast__description">
-                        <a href="#">Tarkempi kuvaus ja linkit...</a>
+                        <a href={`/${latestEpisode.number}`}>
+                          Tarkempi kuvaus ja linkit...
+                        </a>
                       </p>
                       <PodcastPlayer
                         title={latestEpisode.title}
@@ -123,24 +126,28 @@ const IndexPage = () => (
                 <ol className="old-episode-list">
                   {otherEpisodes.map(({ id, number, title, description }) => (
                     <li key={id} className="old-episode">
-                      <header className="old-episode__header small-title">
-                        Podcast-jakso
-                      </header>
-                      <section className="old-episode__content">
-                        <h3 className="old-episode__number">{number}</h3>
-                        <div>
-                          <h3 className="old-episode__title">
-                            {episodeTitleWithoutNumber(title)}
-                          </h3>
-                          <p>{description}</p>
-                        </div>
-                      </section>
+                      <a href={`/${number}`}>
+                        <header className="old-episode__header small-title">
+                          Podcast-jakso
+                        </header>
+                        <section className="old-episode__content">
+                          <h3 className="old-episode__number">{number}</h3>
+                          <div>
+                            <h3 className="old-episode__title">
+                              {episodeTitleWithoutNumber(title)}
+                            </h3>
+                            <p>{description}</p>
+                          </div>
+                        </section>
+                      </a>
                     </li>
                   ))}
                 </ol>
               </div>
             </section>
-          </div>
+
+            <Footer />
+          </>
         )
       }}
     />

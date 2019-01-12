@@ -19,16 +19,25 @@ $breakpoint: 650px;
 }
 
 .logo {
+  font-weight: 900;
+  font-size: 36px;
+  color: white;
+}
+
+.logo-link {
   display: flex;
   flex: 1;
   justify-content: center;
   width: 100%;
   margin: 2rem 0 3rem 0;
-  font-weight: 900;
-  font-size: 36px;
-  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
 
   @media (min-width: $breakpoint) {
+    &:hover {
+      background: #ac094a;
+    }
     justify-content: flex-start;
     margin: 0;
   }
@@ -48,6 +57,9 @@ $breakpoint: 650px;
 }
 
 .social__link {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
@@ -55,8 +67,12 @@ $breakpoint: 650px;
   font-size: 14px;
   letter-spacing: 0.08em;
 
+  &:hover {
+    background: #ac094a;
+  }
+
   &:first-of-type {
-    margin-right: 2rem;
+    margin-right: 1rem;
   }
 }
 
