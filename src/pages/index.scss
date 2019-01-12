@@ -1,40 +1,6 @@
 @import '../components/colors';
 @import '../components/button';
 
-.hero {
-  position: relative;
-  z-index: 1;
-
-  &:after {
-    content: '';
-    display: block;
-    position: absolute;
-    z-index: -1;
-    height: 100%;
-    right: 0;
-    bottom: 90px;
-    left: 0;
-    background: linear-gradient(180deg, #d63169 0%, #b2004e 100%);
-    transform: skewY(-2.5deg);
-    transform-origin: 100%;
-  }
-}
-
-.hero--single {
-  height: 400px;
-  margin-bottom: -140px;
-  background: transparent;
-
-  @media (min-width: 650px) {
-    height: 300px;
-    margin-bottom: -180px;
-  }
-}
-
-.hero__header {
-  background: transparent;
-}
-
 .features {
   display: flex;
   align-items: flex-start;
