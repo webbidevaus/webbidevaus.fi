@@ -2,6 +2,44 @@
 @import '../components/button';
 
 .episode {
-  margin: 30px 40px;
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px;
   background: white;
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 20px 0 10px 0;
+  }
+
+  p,
+  ul,
+  ol,
+  li {
+    margin-bottom: 10px;
+  }
+
+  li > ul,
+  li > ol {
+    margin-top: 10px;
+  }
+
+  ul,
+  ol {
+    list-style-type: disc;
+    padding-left: 18px;
+    // list-style-position: inside;
+  }
+
+  li {
+    // padding-left: 20px;
+  }
 }

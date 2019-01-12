@@ -17,6 +17,7 @@ const EpisodeTemplate = props => {
       <Header />
 
       <section className="episode">
+        <h1>{episode.title}</h1>
         <PodcastPlayer title={episode.title} embedId={episode.embedId} />
         <Markdown source={episode.longDescription} />
       </section>
