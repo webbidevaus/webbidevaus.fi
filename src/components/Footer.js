@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-
+import { Element } from 'react-scroll'
 import itunes from '../images/itunes.svg'
 import overcast from '../images/overcast.svg'
 import pocketcasts from '../images/pocketcasts.svg'
@@ -49,7 +49,7 @@ export function Footer({ isSingle = false }) {
       </ul>
 
       <h1 className="subscribe small-title">Tilaa Webbidevaus.fi -podcast!</h1>
-      <div className="subscribe-buttons">
+      <Element className="subscribe-buttons" name="subscribe">
         <a
           className="subscribe-button"
           href="https://itunes.apple.com/fi/podcast/webbidevaus-fi/id1350226932"
@@ -80,7 +80,7 @@ export function Footer({ isSingle = false }) {
             alt="Webbidevaus Pocket Castsissa"
           />
         </a>
-      </div>
+      </Element>
     </footer>
   )
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
+import { Link } from 'react-scroll'
 import './Header.scss'
 
 export const Header = ({ className }) => (
@@ -13,12 +14,15 @@ export const Header = ({ className }) => (
         <a className="social__link" href="https://twitter.com/webbidevaus">
           Twitter
         </a>
-        <a
+
+        <Link
+          to="subscribe"
           className="social__link"
-          href="https://rss.simplecast.com/podcasts/4497/rss"
+          smooth={true}
+          duration={500}
         >
-          RSS
-        </a>
+          Tilaa
+        </Link>
       </div>
       <a className="button" href="http://bit.ly/webbidevaus">
         Kysy kysymys!

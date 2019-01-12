@@ -71,7 +71,7 @@ $breakpoint: 650px;
     background: #ac094a;
   }
 
-  &:first-of-type {
+  &:not(:last-of-type) {
     margin-right: 1rem;
   }
 }
