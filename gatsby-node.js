@@ -35,6 +35,7 @@ exports.createPages = ({ graphql, actions }) => {
               sharingUrl
               published
               publishedAt
+              duration
               images {
                 large
                 small
