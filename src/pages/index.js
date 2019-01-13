@@ -23,12 +23,10 @@ const IndexPage = () => (
           allYoutubeVideo {
             edges {
               node {
-                id
-                title
-                description
                 videoId
-                publishedAt
-                privacyStatus
+                thumbnail {
+                  url
+                }
               }
             }
           }
@@ -98,15 +96,18 @@ const IndexPage = () => (
                     Uusin videojakso
                   </h3>
                   <div className="newest-vlog-entry__container">
-                    <iframe
-                      title="Viimeisin vlog"
-                      src={`https://www.youtube.com/embed/${
+                    <a
+                      target="_blank"
+                      href={`https://www.youtube.com/watch?v=${
                         latestVlog.videoId
                       }`}
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
+                    >
+                      <img src={latestVlog.thumbnail.url} />
+                      <svg viewBox="0 0 459 459">
+                        <circle cx="50%" cy="50%" r="50%" />
+                        <path d="M229.5 0C102.751 0 0 102.751 0 229.5S102.751 459 229.5 459 459 356.249 459 229.5 356.249 0 229.5 0zm80.792 239.651l-111.764 76.084a12.281 12.281 0 0 1-19.19-10.151V153.416a12.281 12.281 0 0 1 19.19-10.151l111.764 76.084a12.28 12.28 0 0 1 0 20.302z" />
+                      </svg>
+                    </a>
                   </div>
                 </div>
               </section>
