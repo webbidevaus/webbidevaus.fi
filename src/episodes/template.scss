@@ -65,40 +65,9 @@
   font-size: 24px;
 }
 
-.episode__info {
-  display: flex;
-  position: relative;
-  left: -4px;
-}
-
-.episode__meta {
-  display: flex;
-  align-items: center;
-  margin: 0 40px 20px 0;
-  text-transform: uppercase;
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 0.08em;
-}
-
-.episode__meta-icon {
-  width: 24px;
-  margin-right: 10px;
-  opacity: 0.5;
-}
-
-.episode__meta-title {
-  color: #373868;
-  opacity: 0.5;
-}
-
 .episode__player {
   padding: 15px 15px 12px 15px;
   margin-bottom: 20px;
   border-radius: 8px;
   background: linear-gradient(180deg, #d63169 0%, #b2004e 100%);
-}
-
-#main-audio {
-  width: 100%;
 }

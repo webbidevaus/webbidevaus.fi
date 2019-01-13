@@ -5,7 +5,7 @@ import classNames from 'classnames'
 import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
 import { Layout } from '../components/Layout'
-import { PodcastPlayer } from '../components/PodcastPlayer'
+import Meta from '../components/Meta'
 
 import {
   resultToYoutubeVideos,
@@ -41,6 +41,8 @@ const IndexPage = () => (
                 longDescription
                 sharingUrl
                 published
+                duration
+                publishedAt
               }
             }
           }
@@ -76,18 +78,37 @@ const IndexPage = () => (
                         </span>
                         {episodeTitleWithoutNumber(latestEpisode.title)}
                       </h1>
+
+                      <Meta
+                        publishedAt={latestEpisode.publishedAt}
+                        duration={latestEpisode.duration}
+                        isLight
+                        isShort
+                      />
+
                       <p className="newest-podcast__description">
                         {latestEpisode.description}
                       </p>
+
                       <p className="newest-podcast__description">
                         <a href={`/${latestEpisode.number}`}>
                           Tarkempi kuvaus ja linkit...
                         </a>
                       </p>
-                      <PodcastPlayer
-                        title={latestEpisode.title}
-                        embedId={latestEpisode.embedId}
-                      />
+
+                      <audio
+                        className="audio-player"
+                        controls="controls"
+                        preload="none"
+                        width="100%"
+                      >
+                        <source
+                          src={`https://audio.simplecast.com/${
+                            latestEpisode.embedId
+                          }.mp3`}
+                          type="audio/mpeg"
+                        />
+                      </audio>
                     </div>
                   </div>
                 </div>
