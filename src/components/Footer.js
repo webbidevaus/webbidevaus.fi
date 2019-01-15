@@ -49,7 +49,7 @@ export function Footer({ isSingle = false }) {
       </ul>
 
       <h1 className="subscribe small-title">Tilaa Webbidevaus.fi -podcast!</h1>
-      <div className="subscribe-buttons" id="subscribe">
+      <div className="subscribe-buttons">
         <a
           className="subscribe-button"
           href="https://itunes.apple.com/fi/podcast/webbidevaus-fi/id1350226932"
