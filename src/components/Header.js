@@ -2,6 +2,11 @@ import React from 'react'
 import classNames from 'classnames'
 import './Header.scss'
 
+// Using a <a href="#subscribe"> caused an overflowing content bug
+function scrollToBottom() {
+  window.scrollTo(0, document.body.scrollHeight)
+}
+
 export const Header = ({ className }) => (
   <header className={classNames('site-header', className)}>
     <a className="logo-link" href="/">
@@ -14,9 +19,9 @@ export const Header = ({ className }) => (
           Twitter
         </a>
 
-        <a className="social__link" href="#subscribe">
+        <button className="social__link" onClick={scrollToBottom}>
           Tilaa
-        </a>
+        </button>
       </div>
       <a className="button" href="http://bit.ly/webbidevaus">
         Kysy kysymys!

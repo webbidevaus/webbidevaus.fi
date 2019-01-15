@@ -90,6 +90,9 @@ $breakpoint: 650px;
 }
 
 .social__link {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
   display: inline-block;
   padding: 5px 10px;
   border-radius: 5px;
@@ -104,7 +107,7 @@ $breakpoint: 650px;
     background: #ac094a;
   }
 
-  &:not(:last-of-type) {
+  &:not(:last-child) {
     margin-right: 1rem;
   }
 }
