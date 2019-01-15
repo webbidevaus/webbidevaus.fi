@@ -45,15 +45,48 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       }
-    `).then(result => {
-      result.data.allEpisode.edges.forEach(({ node }) => {
-        createPage({
-          path: node.number.toString(),
-          component: path.resolve(`./src/episodes/template.js`),
-          context: node,
+    `)
+      .then(result => {
+        result.data.allEpisode.edges.forEach(({ node }) => {
+          createPage({
+            path: node.number.toString(),
+            component: path.resolve(`./src/episodes/template.js`),
+            context: node,
+          })
+        })
+        // resolve()
+      })
+      .then(() => {
+        return graphql(`
+          {
+            allMarkdownRemark(
+              sort: { order: DESC, fields: [frontmatter___date] }
+              limit: 1000
+            ) {
+              edges {
+                node {
+                  frontmatter {
+                    path
+                  }
+                }
+              }
+            }
+          }
+        `).then(result => {
+          if (result.errors) {
+            return Promise.reject(result.errors)
+          }
+
+          result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+            createPage({
+              path: node.frontmatter.path,
+              component: path.resolve(`./src/blog-posts/template.js`),
+              context: {},
+            })
+          })
+
+          resolve()
         })
       })
-      resolve()
-    })
   })
 }
