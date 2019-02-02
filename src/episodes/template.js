@@ -5,6 +5,7 @@ import classNames from 'classnames'
 import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
 import { Layout } from '../components/Layout'
+import Player from '../components/Player'
 import Meta from '../components/Meta'
 
 import { nodeToPodcastEpisode, episodeTitleWithoutNumber } from '../episodes'
@@ -30,17 +31,10 @@ const EpisodeTemplate = props => {
           <Meta publishedAt={episode.publishedAt} duration={episode.duration} />
 
           <div className="episode__player">
-            <audio
-              className="audio-player"
-              controls="controls"
-              preload="none"
-              width="100%"
-            >
-              <source
-                src={`https://audio.simplecast.com/${episode.embedId}.mp3`}
-                type="audio/mpeg"
-              />
-            </audio>
+            <Player
+              audioSrc={`https://audio.simplecast.com/${episode.embedId}.mp3`}
+              isDark
+            />
           </div>
 
           <div className="episode__shownotes">

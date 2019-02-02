@@ -6,6 +6,7 @@ import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
 import { Layout } from '../components/Layout'
 import Meta from '../components/Meta'
+import Player from '../components/Player'
 
 import {
   resultToYoutubeVideos,
@@ -96,19 +97,11 @@ const IndexPage = () => (
                         </a>
                       </p>
 
-                      <audio
-                        className="audio-player"
-                        controls="controls"
-                        preload="none"
-                        width="100%"
-                      >
-                        <source
-                          src={`https://audio.simplecast.com/${
-                            latestEpisode.embedId
-                          }.mp3`}
-                          type="audio/mpeg"
-                        />
-                      </audio>
+                      <Player
+                        audioSrc={`https://audio.simplecast.com/${
+                          latestEpisode.embedId
+                        }.mp3`}
+                      />
                     </div>
                   </div>
                 </div>

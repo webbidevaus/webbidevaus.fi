@@ -41,7 +41,7 @@ const formatTime = durationInSeconds => {
 export default function Meta({
   publishedAt,
   duration,
-  isShort = false,
+  isShort = true,
   isLight = false,
 }) {
   const primaryColor = isLight ? 'white' : '#373868'
