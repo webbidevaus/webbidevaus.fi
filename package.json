@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "webbidevaus.fi",
+  "description": "Webbidevaus.fi",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Antti Mattila <me@rarelyneeded.com>, Riku Rouvila <riku.rouvila@gmail.com>",
   "dependencies": {
     "classnames": "^2.2.6",
     "dotenv-cli": "^1.4.0",
@@ -25,21 +25,20 @@
     "typeface-montserrat": "0.0.54"
   },
   "keywords": [
-    "gatsby"
+    "webbidevaus"
   ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "dotenv gatsby develop",
     "start": "npm run develop",
-    "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "prettier --write \"src/**/*.js\""
   },
   "devDependencies": {
     "prettier": "^1.14.2"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/webbidevaus/webbidevaus.fi"
   }
 }
