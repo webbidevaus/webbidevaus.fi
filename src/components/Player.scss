@@ -1,0 +1,31 @@
+.podcast-player {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 8px;
+  background: white;
+}
+
+.podcast-player__play-pause {
+  cursor: pointer;
+}
+
+.podcast-player__controls {
+  width: 180px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.podcast-player__time {
+  width: 72px;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  font-feature-settings: tnum;
+  font-variant-numeric: tabular-nums;
+}
+
+.podcast-player__control {
+  color: #bb1155;
+}
