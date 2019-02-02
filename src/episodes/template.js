@@ -33,6 +33,7 @@ const EpisodeTemplate = props => {
           <div className="episode__player">
             <Player
               audioSrc={`https://audio.simplecast.com/${episode.embedId}.mp3`}
+              isDark
             />
           </div>
 

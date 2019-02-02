@@ -18,18 +18,3 @@
   letter-spacing: 0.08em;
   cursor: pointer;
 }
-
-.button--slim {
-  padding: 0.2rem 0.8rem;
-}
-
-.button--ghost {
-  border: 3px solid #bb1155;
-  background: transparent;
-  color: #bb1155;
-  box-shadow: none;
-}
-
-.button[disabled] {
-  opacity: 0.4;
-}

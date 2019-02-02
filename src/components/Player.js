@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react'
+import classNames from 'classnames'
 
 import './Player.scss'
 
@@ -14,7 +15,7 @@ const formatTime = totalSeconds => {
   return `${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)}`
 }
 
-export default function Player({ audioSrc }) {
+export default function Player({ audioSrc, isDark = false }) {
   const [isPlaying, setIsPlaying] = useState(false)
   const [currentSpeed, setCurrentSpeed] = useState(1)
   const [currentTime, setCurrentTime] = useState(0)
@@ -67,8 +68,13 @@ export default function Player({ audioSrc }) {
     seek(REWIND)
   }
 
+  const playerClasses = classNames({
+    'podcast-player': true,
+    'podcast-player--dark': isDark,
+  })
+
   return (
-    <div className="podcast-player">
+    <div className={playerClasses}>
       <audio
         ref={audioRef}
         preload="none"
@@ -93,7 +99,7 @@ export default function Player({ audioSrc }) {
           stroke-dashoffset="0"
           style={{
             'stroke-width': '6px',
-            stroke: '#BB1155',
+            stroke: 'var(--playerPrimaryColor)',
             fill: 'transparent',
           }}
         />
@@ -104,10 +110,10 @@ export default function Player({ audioSrc }) {
           ry="10"
           style={{
             'stroke-width': '8px',
-            stroke: '#BB1155',
+            stroke: 'var(--playerPrimaryColor)',
             'stroke-linejoin': 'round',
             'stroke-linecap': 'round',
-            fill: '#BB1155',
+            fill: 'var(--playerPrimaryColor)',
           }}
         >
           <animate
@@ -138,10 +144,10 @@ export default function Player({ audioSrc }) {
           ry="10"
           style={{
             'stroke-width': '8px',
-            stroke: '#BB1155',
+            stroke: 'var(--playerPrimaryColor)',
             'stroke-linejoin': 'round',
             'stroke-linecap': 'round',
-            fill: '#BB1155',
+            fill: 'var(--playerPrimaryColor)',
           }}
         >
           <animate
@@ -167,7 +173,7 @@ export default function Player({ audioSrc }) {
 
       <div className="podcast-player__controls">
         <button
-          className="podcast-player__control button button--slim button--ghost"
+          className="podcast-player__control podcast-player__button"
           onClick={on15Rev}
           disabled={!isPlaying}
         >
@@ -176,8 +182,8 @@ export default function Player({ audioSrc }) {
             width="16"
             height="16"
             viewBox="0 0 24 24"
-            fill="#bb1155"
-            stroke="#bb1155"
+            fill="var(--playerPrimaryColor)"
+            stroke="var(--playerPrimaryColor)"
             stroke-width="3"
             stroke-linecap="round"
             stroke-linejoin="round"
@@ -189,7 +195,7 @@ export default function Player({ audioSrc }) {
         </button>
 
         <button
-          className="podcast-player__control button button--slim button--ghost"
+          className="podcast-player__control podcast-player__button"
           onClick={on15Fwd}
           disabled={!isPlaying}
         >
@@ -198,8 +204,8 @@ export default function Player({ audioSrc }) {
             width="16"
             height="16"
             viewBox="0 0 24 24"
-            fill="#bb1155"
-            stroke="#bb1155"
+            fill="var(--playerPrimaryColor)"
+            stroke="var(--playerPrimaryColor)"
             stroke-width="3"
             stroke-linecap="round"
             stroke-linejoin="round"
@@ -209,7 +215,7 @@ export default function Player({ audioSrc }) {
             <polygon points="2 19 11 12 2 5 2 19" />
           </svg>
         </button>
-        <div className="podcast-player__control select">
+        <div className="podcast-player__control podcast-player__speed">
           <select value={currentSpeed} onChange={onSpeedChanged}>
             {SPEEDS.map(speed => (
               <option key={speed} value={speed}>

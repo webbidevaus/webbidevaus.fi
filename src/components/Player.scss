@@ -1,3 +1,8 @@
+:root {
+  --playerPrimaryColor: #bb1155;
+  --playerBackgroundColor: white;
+}
+
 .podcast-player {
   display: flex;
   flex-direction: column;
@@ -5,11 +10,10 @@
   justify-content: space-between;
   padding: 20px;
   border-radius: 8px;
-  background: white;
+  background: var(--playerBackgroundColor);
 
   @media (min-width: 500px) {
     flex-direction: row;
-    padding: 10px;
   }
 }
 
@@ -39,5 +43,52 @@
 }
 
 .podcast-player__control {
-  color: #bb1155;
+  color: var(--playerPrimaryColor);
+}
+
+.podcast-player__button {
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  border: 3px solid var(--playerPrimaryColor);
+  border-radius: 8px;
+
+  background: transparent;
+  line-height: 1;
+  color: var(--playerPrimaryColor);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+
+  &[disabled] {
+    opacity: 0.4;
+  }
+}
+
+.podcast-player__speed {
+  position: relative;
+  width: 55px;
+  height: 30px;
+  overflow: hidden;
+  border: 3px solid var(--playerPrimaryColor);
+  border-radius: 8px;
+
+  select {
+    padding: 0px 5px 5px 5px;
+    width: 68px;
+    height: 30px;
+    border: none;
+    background: transparent;
+    color: var(--playerPrimaryColor);
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+.podcast-player--dark {
+  // Flip the colors for the dark player variant
+  --playerPrimaryColor: white;
+  --playerBackgroundColor: #bb1155;
 }
