@@ -13,7 +13,7 @@
     margin-top: 0;
   }
 
-  @media (min-width: 850px) {
+  @media (min-width: 1030px) {
     flex-direction: row;
   }
 }
@@ -21,18 +21,20 @@
 .feature {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 
-  @media (min-width: 850px) {
+  @media (min-width: 1030px) {
     width: 50%;
   }
 }
 
 .feature--podcast {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
   padding: 0 1rem 1rem 1rem;
-  margin-bottom: 2rem;
   border-radius: 8px;
   background: linear-gradient(180deg, #ab0949, #9a0741);
 
-  @media (min-width: 850px) {
+  @media (min-width: 1030px) {
     margin: 0 2rem 0 0;
   }
 }
@@ -62,6 +64,7 @@
 
 .newest-podcast__title-number {
   display: none;
+  color: white;
 }
 
 @media (max-width: 650px) {
@@ -90,10 +93,12 @@
 }
 
 .newest-vlog-entry {
+  margin: 0 auto;
+  max-width: 600px;
   border-radius: 8px;
   overflow: hidden;
 
-  @media (max-width: 850px) {
+  @media (max-width: 1030px) {
     width: 100%;
   }
 }
