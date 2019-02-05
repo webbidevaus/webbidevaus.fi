@@ -29,6 +29,12 @@ export const Layout = ({ children }) => (
             { name: 'keywords', content: 'webbidevaus, web dev, podcast' },
           ]}
         >
+          <link
+            rel="alternate"
+            type="application/rss+xml"
+            title="Webbidevaus.fi RSS"
+            href="https://rss.simplecast.com/podcasts/4497/rss"
+          />
           <html lang="en" />
         </Helmet>
 
