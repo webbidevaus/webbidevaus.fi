@@ -58,11 +58,20 @@ module.exports = {
           {
             serialize: ({ query: { site, allEpisode } }) => {
               return allEpisode.edges.map(edge => {
+                const { title, description } = edge.node
+                const url = `${site.siteMetadata.siteUrl}/${edge.node.number}`
+                const maxDescriptionLength = 260 - title.length - url.length
+                const truncatedDescription =
+                  description.length > maxDescriptionLength
+                    ? `${description.substr(0, maxDescriptionLength)}...`
+                    : description
+
                 return Object.assign({}, edge.node.frontmatter, {
-                  title: edge.node.title,
+                  title,
                   date: edge.node.publishedAt,
-                  url: `${site.siteMetadata.siteUrl}/${edge.node.number}`,
+                  url,
                   guid: site.siteMetadata.siteUrl + edge.node.id,
+                  description: truncatedDescription,
                 })
               })
             },
@@ -77,6 +86,7 @@ module.exports = {
                       number
                       title
                       publishedAt
+                      description
                     }
                   }
                 }
