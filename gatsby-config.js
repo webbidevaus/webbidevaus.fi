@@ -7,6 +7,7 @@ require('dotenv').config()
 module.exports = {
   siteMetadata: {
     title: 'Webbidevaus.fi',
+    siteUrl: 'https://webbidevaus.fi',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -38,6 +39,53 @@ module.exports = {
       options: {
         podcastId: process.env.SIMPLECAST_PODCAST_ID,
         apiKey: process.env.SIMPLECAST_API_KEY,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allEpisode } }) => {
+              return allEpisode.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  title: edge.node.title,
+                  date: edge.node.publishedAt,
+                  url: `${site.siteMetadata.siteUrl}/${edge.node.number}`,
+                  guid: site.siteMetadata.siteUrl + edge.node.id,
+                })
+              })
+            },
+            query: `
+              {
+                allEpisode(
+                  sort: { order: DESC, fields: [number] }
+                ) {
+                  edges {
+                    node {
+                      id
+                      number
+                      title
+                      publishedAt
+                    }
+                  }
+                }
+              }
+            `,
+            output: '/sync.xml',
+            title: 'Webbidevaus.fi webhook feed',
+          },
+        ],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
