@@ -68,17 +68,21 @@ const IndexPage = () => (
                     Uusin podcast-jakso
                   </h3>
                   <div className="newest-podcast">
-                    <h1 className="newest-podcast__number">
-                      {latestEpisode.number}
-                    </h1>
+                    <a href={`/${latestEpisode.number}`} className="newest-podcast__block-link">
+                      <h1 className="newest-podcast__number">
+                        {latestEpisode.number}
+                      </h1>
+                    </a>
 
                     <div className="newest-podcast__content">
-                      <h1 className="newest-podcast__title">
-                        <span className="newest-podcast__title-number">
-                          {latestEpisode.number}.{' '}
-                        </span>
-                        {episodeTitleWithoutNumber(latestEpisode.title)}
-                      </h1>
+                      <a href={`/${latestEpisode.number}`} className="newest-podcast__block-link">
+                        <h1 className="newest-podcast__title">
+                          <span className="newest-podcast__title-number">
+                            {latestEpisode.number}.{' '}
+                          </span>
+                          {episodeTitleWithoutNumber(latestEpisode.title)}
+                        </h1>
+                      </a>
 
                       <Meta
                         publishedAt={latestEpisode.publishedAt}
