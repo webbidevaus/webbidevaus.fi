@@ -1,0 +1,52 @@
+[
+  {
+    "id": 293128,
+    "number": 41,
+    "season": 1,
+    "podcast_id": 4497,
+    "guid": "75829901-6730-4760-a23c-663fc096f19f",
+    "title": "41: TKMV",
+    "author": "",
+    "duration": 3318,
+    "explicit": false,
+    "published": true,
+    "description": "Te Kysytte, Me Vastaamme! Avasimme jälleen katsojien lähettämiä kysymyksiä sisältävän arkun, ja arvoimme sieltä kourallisen tiukkoja kysymyksiä vastattavaksi.",
+    "long_description": "Te Kysytte, Me Vastaamme! Avasimme jälleen katsojien lähettämiä kysymyksiä sisältävän arkun, ja arvoimme sieltä kourallisen tiukkoja kysymyksiä vastattavaksi.\r\n\r\n## Kysymykset\r\n\r\n- Jos ette webbidevaisi työksenne, mitä tekisitte? **Sami**\r\n- Versionhallintaan löytyy monta keinoa. Git, svn, mercurial, main-01-02-2019-final-final.js vai jokin muu? Mitä itse suositte? **Sakari**\r\n- Paljonko saatte palkkaa? Muutama arkinen asia, jotka ilahduttavat teitä? **Rölli**\r\n- Miten elementti keskitetään pystysuunnassa CSS:llä? **Anonyymi**\r\n- Moni huippu-urheilija ja sirkustaiteilija yms. harjoittelee. Milloin koodari harjoittelee? Minusta tuntuu siltä, että kun harjoitellaan, niin harjoitellaan tuotannossa eli silloin kun tehdään asiakkaalle koodia. Mutta eikö olisi kannattavampaa harjoitella harjoituksissa ja sitten kun tehdään asiakkaalle, niin sitten suoritetaan? **Tomi-boiii**\r\n- Miksei [webbidevaus.fi](http://webbidevaus.fi/):n yksittäisten jaksojen playerissa ole vieläkään sitä \"progressbaria\" :S demonstraatio -> [http://www.giphy.com/gifs/VIucH2I0HIkPOMjMxr](http://www.giphy.com/gifs/VIucH2I0HIkPOMjMxr) **tsipilai**\r\n- Kuuntelen usein podcastejanne matkalla töihin ja takaisin kotiin. Työmatkani kestää noin 15 minuuttia, joten jaksot jäävät usein kesken, ja jatkan niitä myöhemmin. Toivoisin podcastien webbiplayeriin ihan rehtiä kelausominaisuutta. Pikkasen kyrsii kelata esim 45min podcastia rämpyttämällä 15sec eteenpäin tai nopeutuksella. Muuten kaikki hyvin ja kiitos huikeasta setistä ja mukavasta höpöstelystä! **Jupe**\r\n\r\n## Linkit\r\n\r\n- [React Finland](https://react-finland.fi)\r\n- [Git flow](https://nvie.com/posts/a-successful-git-branching-model/)\r\n\r\n## Jakson valinnat\r\n\r\n- Riku: [The Office (US)](https://en.wikipedia.org/wiki/The_Office_(U.S._TV_series))\r\n- Antti: [Mojito](http://www.shotti.fi/resepti/mojito/)\r\n    - [Sokerisiirappi](http://www.keittotaito.com/sokerisiirappi.html)\r\n    - [Vahva minttu](https://jarvikyla.fi/product/vahva-minttu/)\r\n\r\n## Ota yhteyttä!\r\n\r\n- [@webbidevaus](https://twitter.com/webbidevaus)\r\n- [webbidevaus.fi](https://webbidevaus.fi)",
+    "published_at": "2019-04-21T07:01:00.000-07:00",
+    "audio_file_size": 26733802,
+    "audio_url": "http://audio.simplecast.com/293128.mp3",
+    "sharing_url": "https://simplecast.com/s/2e084415",
+    "images": {
+      "large": "https://media.simplecast.com/episode/image/293128/1555855647-artwork.jpg",
+      "small": "https://media.simplecast.com/episode/image/293128/small_1555855647-artwork.jpg",
+      "thumb": "https://media.simplecast.com/episode/image/293128/thumb_1555855647-artwork.jpg"
+    },
+    "is_hidden": false,
+    "sponsors": []
+  },
+  {
+    "id": 291808,
+    "number": 40,
+    "season": 1,
+    "podcast_id": 4497,
+    "guid": "7dc5d339-76aa-4c9e-9c80-65f28ae1a36d",
+    "title": "40: Level Up! 1",
+    "author": "",
+    "duration": 4144,
+    "explicit": false,
+    "published": true,
+    "description": "Kaikkien aikojen ensimmäinen Level Up! -jakso! Aiheina mm. datalist, Houdini, CSS grid, Bundlephobia ja paljon muuta.",
+    "long_description": "Kaikkien aikojen ensimmäinen Level Up! -jakso! Aiheina mm. datalist, Houdini, CSS grid, Bundlephobia ja paljon muuta.\r\n\r\n## Linkit\r\n\r\n- [React Finland](https://react-finland.fi)\r\n- [Datalist](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist) & [Details](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details)\r\n- [State of Houdini](https://www.youtube.com/watch?v=lK3OiJvwgSc&t=650s)\r\n- [CSS Paint API](https://developers.google.com/web/updates/2018/01/paintapi)\r\n- [css-houdini.rocks](https://css-houdini.rocks)\r\n    - [Irregular grid](https://css-houdini.rocks/irregular-grid)\r\n    - [Ripple animation](https://css-houdini.rocks/ripple)\r\n    - [Smooth corners](https://css-houdini.rocks/smooth-corners)\r\n- [GoogleChromeLabs/houdini-samples](https://github.com/GoogleChromeLabs/houdini-samples)\r\n- [CSS Layout API Explained](https://github.com/w3c/css-houdini-drafts/blob/master/css-layout-api/EXPLAINER.md)\r\n- [New WebKit Features](https://webkit.org/blog/8718/new-webkit-features-in-safari-12-1/)\r\n- [Image lazy-loading](https://addyosmani.com/blog/lazy-loading/)\r\n- [Bundlephobia](https://bundlephobia.com)\r\n- [Overmind.js](https://overmindjs.org/?view=react&typescript=true)\r\n\r\n## Jakson valinnat\r\n\r\n- Riku: [Nokian Panimon limpparit](http://nokianpanimo.fi/juomat/virvoitusjuomat/)\r\n- Antti: [The Division 2](https://tomclancy-thedivision.ubisoft.com/game/en-gb/home)\r\n\r\n## Ota yhteyttä!\r\n\r\n- [@webbidevaus](https://twitter.com/webbidevaus)\r\n- [webbidevaus.fi](https://webbidevaus.fi)",
+    "published_at": "2019-04-14T02:00:00.000-07:00",
+    "audio_file_size": 33339162,
+    "audio_url": "http://audio.simplecast.com/291808.mp3",
+    "sharing_url": "https://simplecast.com/s/6c4dfa79",
+    "images": {
+      "large": "https://media.simplecast.com/episode/image/291808/1555171285-artwork.jpg",
+      "small": "https://media.simplecast.com/episode/image/291808/small_1555171285-artwork.jpg",
+      "thumb": "https://media.simplecast.com/episode/image/291808/thumb_1555171285-artwork.jpg"
+    },
+    "is_hidden": false,
+    "sponsors": []
+  }
+]

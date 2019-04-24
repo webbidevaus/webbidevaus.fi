@@ -1,16 +1,20 @@
 :root {
   --playerPrimaryColor: #bb1155;
   --playerBackgroundColor: white;
+  --playerRangeBackgroundColor: hsla(336, 83%, 40%, 0.4);
 }
 
 .podcast-player {
+  padding: 20px;
+  background: var(--playerBackgroundColor);
+  border-radius: 8px;
+}
+
+.podcast-player__essentials {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
-  border-radius: 8px;
-  background: var(--playerBackgroundColor);
 
   @media (min-width: 500px) {
     flex-direction: row;
@@ -91,4 +95,5 @@
   // Flip the colors for the dark player variant
   --playerPrimaryColor: white;
   --playerBackgroundColor: #bb1155;
+  --playerRangeBackgroundColor: hsla(0, 0%, 100%, 0.4);
 }
