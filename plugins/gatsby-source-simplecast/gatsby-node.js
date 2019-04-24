@@ -30,18 +30,23 @@ exports.sourceNodes = (
     configOptions.podcastId
   }/episodes.json`
 
-  return fetch(apiUrl, {
-    headers: {
-      Authorization: `Basic ${Buffer.from(configOptions.apiKey).toString(
-        'base64'
-      )}`,
-    },
-  })
-    .then(response => response.json())
-    .then(async episoders => {
-      episoders.forEach(episode => {
-        const nodeData = processEpisode(episode)
-        createNode(nodeData)
-      })
+  let request
+  if (configOptions.apiKey) {
+    request = fetch(apiUrl, {
+      headers: {
+        Authorization: `Basic ${Buffer.from(configOptions.apiKey).toString(
+          'base64'
+        )}`,
+      },
+    }).then(response => response.json())
+  } else {
+    request = Promise.resolve(require('./mock-data.json'))
+  }
+
+  return request.then(async episodes => {
+    episodes.forEach(episode => {
+      const nodeData = processEpisode(episode)
+      createNode(nodeData)
     })
+  })
 }
