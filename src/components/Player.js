@@ -106,7 +106,7 @@ export default function Player({ audioSrc, isDark = false }) {
             strokeDasharray="314"
             strokeDashoffset="0"
             style={{
-              'strokeWidth': '6px',
+              strokeWidth: '6px',
               stroke: 'var(--playerPrimaryColor)',
               fill: 'transparent',
             }}
@@ -117,10 +117,10 @@ export default function Player({ audioSrc, isDark = false }) {
             rx="10"
             ry="10"
             style={{
-              'strokeWidth': '8px',
+              strokeWidth: '8px',
               stroke: 'var(--playerPrimaryColor)',
-              'strokeLinejoin': 'round',
-              'strokeLinecap': 'round',
+              strokeLinejoin: 'round',
+              strokeLinecap: 'round',
               fill: 'var(--playerPrimaryColor)',
             }}
           >
@@ -151,10 +151,10 @@ export default function Player({ audioSrc, isDark = false }) {
             rx="10"
             ry="10"
             style={{
-              'strokeWidth': '8px',
+              strokeWidth: '8px',
               stroke: 'var(--playerPrimaryColor)',
-              'strokeLinejoin': 'round',
-              'strokeLinecap': 'round',
+              strokeLinejoin: 'round',
+              strokeLinecap: 'round',
               fill: 'var(--playerPrimaryColor)',
             }}
           >
@@ -240,7 +240,13 @@ export default function Player({ audioSrc, isDark = false }) {
         </div>
       </div>
 
-      <SeekBar duration={duration} audioRef={audioRef} isPlaying={isPlaying} setIsPlaying={setIsPlaying} currentTime={currentTime} />
+      <SeekBar
+        duration={duration}
+        audioRef={audioRef}
+        isPlaying={isPlaying}
+        setIsPlaying={setIsPlaying}
+        currentTime={currentTime}
+      />
     </div>
   )
 }
