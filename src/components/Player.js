@@ -7,6 +7,7 @@ import SeekBar from './SeekBar'
 const SPEEDS = [0.5, 0.8, 1, 1.1, 1.25, 1.5, 2]
 const FAST_FORWARD = Symbol('ff')
 const REWIND = Symbol('rwd')
+const STORAGE_KEY = 'webbidevaus-player-config-v1'
 
 const formatTime = totalSeconds => {
   const hours = Math.floor(totalSeconds / 3600)
@@ -18,16 +19,13 @@ const formatTime = totalSeconds => {
 
 function getPlayerConfig() {
   return (
-    JSON.parse(window.localStorage.getItem('webbidevaus-player-config')) || {
+    JSON.parse(window.localStorage.getItem(STORAGE_KEY)) || {
       episodePositions: {},
     }
   )
 }
 function storePlayerConfig(config) {
-  window.localStorage.setItem(
-    'webbidevaus-player-config',
-    JSON.stringify(config)
-  )
+  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(config))
 }
 
 function getStoredPlayPosition(audioSrc) {
