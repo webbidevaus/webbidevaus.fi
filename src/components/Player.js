@@ -18,8 +18,12 @@ const formatTime = totalSeconds => {
 }
 
 function getPlayerConfig() {
+  const storedConfig =
+    typeof window !== 'undefined'
+      ? JSON.parse(window.localStorage.getItem(STORAGE_KEY))
+      : null
   return (
-    JSON.parse(window.localStorage.getItem(STORAGE_KEY)) || {
+    storedConfig || {
       episodePositions: {},
     }
   )
