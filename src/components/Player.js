@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import classNames from 'classnames'
 
 import './Player.scss'
@@ -7,6 +7,7 @@ import SeekBar from './SeekBar'
 const SPEEDS = [0.5, 0.8, 1, 1.1, 1.25, 1.5, 2]
 const FAST_FORWARD = Symbol('ff')
 const REWIND = Symbol('rwd')
+const STORAGE_KEY = 'webbidevaus-player-config-v1'
 
 const formatTime = totalSeconds => {
   const hours = Math.floor(totalSeconds / 3600)
@@ -16,11 +17,32 @@ const formatTime = totalSeconds => {
   return `${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)}`
 }
 
+function getPlayerConfig() {
+  const storedConfig =
+    typeof window !== 'undefined'
+      ? JSON.parse(window.localStorage.getItem(STORAGE_KEY))
+      : null
+  return (
+    storedConfig || {
+      episodePositions: {},
+    }
+  )
+}
+function storePlayerConfig(config) {
+  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(config))
+}
+
+function getStoredPlayPosition(audioSrc) {
+  return getPlayerConfig().episodePositions[audioSrc]
+}
+
 export default function Player({ audioSrc, isDark = false }) {
   const [isPlaying, setIsPlaying] = useState(false)
   const [duration, setDuration] = useState(0)
   const [currentSpeed, setCurrentSpeed] = useState(1)
-  const [currentTime, setCurrentTime] = useState(0)
+  const [currentTime, setCurrentTime] = useState(
+    getStoredPlayPosition(audioSrc) || 0
+  )
   const audioRef = useRef(null)
   const fromPlayToPauseAnimationTriangleRef = useRef(null)
   const fromPauseToPlayAnimationTriangleRef = useRef(null)
@@ -40,6 +62,24 @@ export default function Player({ audioSrc, isDark = false }) {
       fromPauseToPlayAnimationLineRef.current.beginElement()
     }
   }
+
+  // Persist current play position when currentTime changes
+  useEffect(
+    () => {
+      const config = getPlayerConfig()
+      config.episodePositions[audioSrc] = currentTime
+      storePlayerConfig(config)
+    },
+    [currentTime]
+  )
+
+  // Force player's play position if there's a stored position
+  useEffect(() => {
+    const storedPosition = getStoredPlayPosition(audioSrc)
+    if (storedPosition) {
+      audioRef.current.currentTime = storedPosition
+    }
+  }, [])
 
   const onSpeedChanged = val => {
     setCurrentSpeed(val.target.value)
