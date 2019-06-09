@@ -26,25 +26,23 @@ exports.sourceNodes = (
     return nodeData
   }
 
-  const apiUrl = `https://api.simplecast.com/v1/podcasts/${
+  const apiUrl = `https://api.simplecast.com/podcasts/${
     configOptions.podcastId
-  }/episodes.json`
+  }/episodes?count=999`
 
   let request
   if (configOptions.apiKey) {
     request = fetch(apiUrl, {
       headers: {
-        Authorization: `Basic ${Buffer.from(configOptions.apiKey).toString(
-          'base64'
-        )}`,
+        Authorization: `Basic ${configOptions.apiKey}`,
       },
     }).then(response => response.json())
   } else {
     request = Promise.resolve(require('./mock-data.json'))
   }
 
-  return request.then(async episodes => {
-    episodes.forEach(episode => {
+  return request.then(async response => {
+    response.collection.forEach(episode => {
       const nodeData = processEpisode(episode)
       createNode(nodeData)
     })
