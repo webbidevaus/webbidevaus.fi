@@ -33,7 +33,7 @@ export const Layout = ({ children }) => (
             rel="alternate"
             type="application/rss+xml"
             title="Webbidevaus.fi RSS"
-            href="https://rss.simplecast.com/podcasts/4497/rss"
+            href="https://feeds.simplecast.com/wFD5mVlw"
           />
           <html lang="en" />
         </Helmet>

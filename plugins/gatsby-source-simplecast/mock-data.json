@@ -1,52 +1,932 @@
 [
   {
-    "id": 293128,
-    "number": 41,
-    "season": 1,
-    "podcast_id": 4497,
-    "guid": "75829901-6730-4760-a23c-663fc096f19f",
-    "title": "41: TKMV",
-    "author": "",
-    "duration": 3318,
-    "explicit": false,
-    "published": true,
-    "description": "Te Kysytte, Me Vastaamme! Avasimme jälleen katsojien lähettämiä kysymyksiä sisältävän arkun, ja arvoimme sieltä kourallisen tiukkoja kysymyksiä vastattavaksi.",
-    "long_description": "Te Kysytte, Me Vastaamme! Avasimme jälleen katsojien lähettämiä kysymyksiä sisältävän arkun, ja arvoimme sieltä kourallisen tiukkoja kysymyksiä vastattavaksi.\r\n\r\n## Kysymykset\r\n\r\n- Jos ette webbidevaisi työksenne, mitä tekisitte? **Sami**\r\n- Versionhallintaan löytyy monta keinoa. Git, svn, mercurial, main-01-02-2019-final-final.js vai jokin muu? Mitä itse suositte? **Sakari**\r\n- Paljonko saatte palkkaa? Muutama arkinen asia, jotka ilahduttavat teitä? **Rölli**\r\n- Miten elementti keskitetään pystysuunnassa CSS:llä? **Anonyymi**\r\n- Moni huippu-urheilija ja sirkustaiteilija yms. harjoittelee. Milloin koodari harjoittelee? Minusta tuntuu siltä, että kun harjoitellaan, niin harjoitellaan tuotannossa eli silloin kun tehdään asiakkaalle koodia. Mutta eikö olisi kannattavampaa harjoitella harjoituksissa ja sitten kun tehdään asiakkaalle, niin sitten suoritetaan? **Tomi-boiii**\r\n- Miksei [webbidevaus.fi](http://webbidevaus.fi/):n yksittäisten jaksojen playerissa ole vieläkään sitä \"progressbaria\" :S demonstraatio -> [http://www.giphy.com/gifs/VIucH2I0HIkPOMjMxr](http://www.giphy.com/gifs/VIucH2I0HIkPOMjMxr) **tsipilai**\r\n- Kuuntelen usein podcastejanne matkalla töihin ja takaisin kotiin. Työmatkani kestää noin 15 minuuttia, joten jaksot jäävät usein kesken, ja jatkan niitä myöhemmin. Toivoisin podcastien webbiplayeriin ihan rehtiä kelausominaisuutta. Pikkasen kyrsii kelata esim 45min podcastia rämpyttämällä 15sec eteenpäin tai nopeutuksella. Muuten kaikki hyvin ja kiitos huikeasta setistä ja mukavasta höpöstelystä! **Jupe**\r\n\r\n## Linkit\r\n\r\n- [React Finland](https://react-finland.fi)\r\n- [Git flow](https://nvie.com/posts/a-successful-git-branching-model/)\r\n\r\n## Jakson valinnat\r\n\r\n- Riku: [The Office (US)](https://en.wikipedia.org/wiki/The_Office_(U.S._TV_series))\r\n- Antti: [Mojito](http://www.shotti.fi/resepti/mojito/)\r\n    - [Sokerisiirappi](http://www.keittotaito.com/sokerisiirappi.html)\r\n    - [Vahva minttu](https://jarvikyla.fi/product/vahva-minttu/)\r\n\r\n## Ota yhteyttä!\r\n\r\n- [@webbidevaus](https://twitter.com/webbidevaus)\r\n- [webbidevaus.fi](https://webbidevaus.fi)",
-    "published_at": "2019-04-21T07:01:00.000-07:00",
-    "audio_file_size": 26733802,
-    "audio_url": "http://audio.simplecast.com/293128.mp3",
-    "sharing_url": "https://simplecast.com/s/2e084415",
-    "images": {
-      "large": "https://media.simplecast.com/episode/image/293128/1555855647-artwork.jpg",
-      "small": "https://media.simplecast.com/episode/image/293128/small_1555855647-artwork.jpg",
-      "thumb": "https://media.simplecast.com/episode/image/293128/thumb_1555855647-artwork.jpg"
+    "id": "cf526a56-e856-4038-afa5-6b7ea89a078e",
+    "legacy_id": null,
+    "href": "https://api.simplecast.com/episodes/cf526a56-e856-4038-afa5-6b7ea89a078e",
+    "audio_file_size": 35097036,
+    "waveform_pack": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/cf526a56-e856-4038-afa5-6b7ea89a078e/Webbidevaus_46_tc.pack",
+    "audio_file_url": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/cf526a56-e856-4038-afa5-6b7ea89a078e/Webbidevaus_46_tc.mp3",
+    "schedule": null,
+    "duration": 4364,
+    "sponsors": {
+      "href": "https://api.simplecast.com/episodes/cf526a56-e856-4038-afa5-6b7ea89a078e/sponsors"
+    },
+    "waveform_json": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/cf526a56-e856-4038-afa5-6b7ea89a078e/Webbidevaus_46_tc.json",
+    "title": "46: React Finland 4: React Native + Expo, Styleguidist ja muuta mukavaa",
+    "description": "Rikun synttärispecial! Antti ja Riku puhuvat uusimmista vapaa-ajan projekteistaan.\n\nMyöskään React Finland materiaali ei vaikuttaisi loppuvan koskaan. Tässä jaksossa haastattelussa Nik Graf, Ville Immonen, Artem Sapegin ja Artem Zakharchenko.",
+    "updated_at": "2019-06-08T21:00:03.123773",
+    "unschedule": null,
+    "published_at": "2019-06-08T21:00:03.123704",
+    "status": "published",
+    "is_published": true,
+    "update": null,
+    "scheduled_for": null,
+    "recast_image": null,
+    "analytics": null,
+    "type": "full",
+    "dashboard_link": "https://dashboard.simplecast.com/episodes/cf526a56-e856-4038-afa5-6b7ea89a078e",
+    "image_path": null,
+    "warnings": [],
+    "audio_content_type": "audio/mpeg",
+    "recast_image_url": null,
+    "slug": "46",
+    "delete": null,
+    "number": 46,
+    "podcast": {
+      "href": "https://api.simplecast.com/podcasts/c323bddb-1521-4c01-9f09-f3b876b9877e?current_episode=cf526a56-e856-4038-afa5-6b7ea89a078e",
+      "title": "Webbidevaus.fi",
+      "status": "published",
+      "is_migration": true,
+      "import": null,
+      "image_url": "https://cdn.simplecast.com/images/c323bddb-1521-4c01-9f09-f3b876b9877e/89bdabf8-b0fa-475b-a2c2-5e6a55975087/1518464110artwork.jpg",
+      "id": "c323bddb-1521-4c01-9f09-f3b876b9877e",
+      "episodes": {
+        "count": 46
+      }
+    },
+    "authors": {
+      "href": "https://api.simplecast.com/episodes/cf526a56-e856-4038-afa5-6b7ea89a078e/authors",
+      "create": null,
+      "collection": [
+        {
+          "href": "https://api.simplecast.com/authors/41150ef5-f333-4df2-a3fd-420509303fa3?episode=cf526a56-e856-4038-afa5-6b7ea89a078e",
+          "remove": null,
+          "name": "Antti Mattila, Riku Rouvila",
+          "id": "41150ef5-f333-4df2-a3fd-420509303fa3"
+        }
+      ],
+      "associate": null
     },
     "is_hidden": false,
-    "sponsors": []
+    "sign_url": null,
+    "enclosure_url": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/cf526a56-e856-4038-afa5-6b7ea89a078e/Webbidevaus_46_tc.mp3",
+    "upload_complete": null,
+    "recast_color": null,
+    "episode_url": "https://webbidevausfi.simplecast.com/episodes/46-IbuvHqXU",
+    "publish": null,
+    "created_at": "2019-06-06T14:47:40.392554",
+    "custom_url": null,
+    "audio_file_name": "Webbidevaus_46.mp3",
+    "audio_file_path": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/cf526a56-e856-4038-afa5-6b7ea89a078e/Webbidevaus_46.mp3",
+    "guid": "8fa2c7d2-3193-444f-ac0d-bc45b0ea5bdb",
+    "keywords": {
+      "href": "https://api.simplecast.com/episodes/cf526a56-e856-4038-afa5-6b7ea89a078e/keywords",
+      "create": null,
+      "collection": []
+    },
+    "is_explicit": false,
+    "audio_file_path_tc": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/cf526a56-e856-4038-afa5-6b7ea89a078e/Webbidevaus_46_tc.mp3",
+    "long_description": "Rikun synttärispecial! Antti ja Riku puhuvat uusimmista vapaa-ajan projekteistaan.\n\nMyöskään React Finland materiaali ei vaikuttaisi loppuvan koskaan. Tässä jaksossa haastattelussa Nik Graf, Ville Immonen, Artem Sapegin ja Artem Zakharchenko.\n\n## Linkit\n\n- [DUN DUN DUN](http://dundundun.netlify.com)\n- [Digital Ocean Droplets](https://www.digitalocean.com/products/droplets/)\n\n## Jakson valinnat\n\n- Riku: [Jaffa vesimeloni-vadelma](https://www.jaffa.fi/tuotteet/vesimeloni-vadelma/)\n- Antti: [Bear](https://bear.app)\n\n## Vieraat\n\n### Nik Graf **[@nikgraf](https://twitter.com/nikgraf)**\n\nTalk: [Unpopular Opinions](https://www.youtube.com/watch?v=c9YtmMi-5rM)\n\n### Ville Immonen **[@VilleImmonen](https://twitter.com/VilleImmonen)**\n\nTalk: [React Standard Library](https://www.youtube.com/watch?v=6A9GeBXhPWY)\n\n### Artem Sapegin **[@sapegin](https://twitter.com/iamsapegin) & Artem Zakharchenko [@kettanaito](https://twitter.com/kettanaito)**\n\nTalk: [Custom CSS is the path to inconsistent UI — Artem Sapegin](https://www.youtube.com/watch?v=_CsBRkRTzIA)\n\nTalk: [Creating layouts that last — Artem Zakharchenko](https://www.youtube.com/watch?v=_HrXUB97xQs)\n\n## Ota yhteyttä!\n\n- [@webbidevaus](https://twitter.com/webbidevaus)\n- [webbidevaus.fi](https://webbidevaus.fi)",
+    "audio_file": {
+      "url": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/cf526a56-e856-4038-afa5-6b7ea89a078e/Webbidevaus_46_tc.mp3",
+      "size": 35097036,
+      "path_tc": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/cf526a56-e856-4038-afa5-6b7ea89a078e/Webbidevaus_46_tc.mp3",
+      "path": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/cf526a56-e856-4038-afa5-6b7ea89a078e/Webbidevaus_46.mp3",
+      "name": "Webbidevaus_46.mp3",
+      "delete": null
+    },
+    "season": {
+      "href": "https://api.simplecast.com/seasons/a7658b9d-0f0f-4594-8525-45f6e9f9cc22",
+      "number": 1
+    },
+    "image_url": null,
+    "token": "IbuvHqXU"
   },
   {
-    "id": 291808,
-    "number": 40,
-    "season": 1,
-    "podcast_id": 4497,
-    "guid": "7dc5d339-76aa-4c9e-9c80-65f28ae1a36d",
-    "title": "40: Level Up! 1",
-    "author": "",
-    "duration": 4144,
-    "explicit": false,
-    "published": true,
-    "description": "Kaikkien aikojen ensimmäinen Level Up! -jakso! Aiheina mm. datalist, Houdini, CSS grid, Bundlephobia ja paljon muuta.",
-    "long_description": "Kaikkien aikojen ensimmäinen Level Up! -jakso! Aiheina mm. datalist, Houdini, CSS grid, Bundlephobia ja paljon muuta.\r\n\r\n## Linkit\r\n\r\n- [React Finland](https://react-finland.fi)\r\n- [Datalist](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist) & [Details](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details)\r\n- [State of Houdini](https://www.youtube.com/watch?v=lK3OiJvwgSc&t=650s)\r\n- [CSS Paint API](https://developers.google.com/web/updates/2018/01/paintapi)\r\n- [css-houdini.rocks](https://css-houdini.rocks)\r\n    - [Irregular grid](https://css-houdini.rocks/irregular-grid)\r\n    - [Ripple animation](https://css-houdini.rocks/ripple)\r\n    - [Smooth corners](https://css-houdini.rocks/smooth-corners)\r\n- [GoogleChromeLabs/houdini-samples](https://github.com/GoogleChromeLabs/houdini-samples)\r\n- [CSS Layout API Explained](https://github.com/w3c/css-houdini-drafts/blob/master/css-layout-api/EXPLAINER.md)\r\n- [New WebKit Features](https://webkit.org/blog/8718/new-webkit-features-in-safari-12-1/)\r\n- [Image lazy-loading](https://addyosmani.com/blog/lazy-loading/)\r\n- [Bundlephobia](https://bundlephobia.com)\r\n- [Overmind.js](https://overmindjs.org/?view=react&typescript=true)\r\n\r\n## Jakson valinnat\r\n\r\n- Riku: [Nokian Panimon limpparit](http://nokianpanimo.fi/juomat/virvoitusjuomat/)\r\n- Antti: [The Division 2](https://tomclancy-thedivision.ubisoft.com/game/en-gb/home)\r\n\r\n## Ota yhteyttä!\r\n\r\n- [@webbidevaus](https://twitter.com/webbidevaus)\r\n- [webbidevaus.fi](https://webbidevaus.fi)",
-    "published_at": "2019-04-14T02:00:00.000-07:00",
-    "audio_file_size": 33339162,
-    "audio_url": "http://audio.simplecast.com/291808.mp3",
-    "sharing_url": "https://simplecast.com/s/6c4dfa79",
-    "images": {
-      "large": "https://media.simplecast.com/episode/image/291808/1555171285-artwork.jpg",
-      "small": "https://media.simplecast.com/episode/image/291808/small_1555171285-artwork.jpg",
-      "thumb": "https://media.simplecast.com/episode/image/291808/thumb_1555171285-artwork.jpg"
+    "id": "502f5bbc-35d9-4955-9e20-5789ec703e04",
+    "legacy_id": 299931,
+    "href": "https://api.simplecast.com/episodes/502f5bbc-35d9-4955-9e20-5789ec703e04",
+    "audio_file_size": 35548185,
+    "waveform_pack": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/502f5bbc-35d9-4955-9e20-5789ec703e04/25a310b7_tc.pack",
+    "audio_file_url": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/502f5bbc-35d9-4955-9e20-5789ec703e04/25a310b7_tc.mp3",
+    "schedule": null,
+    "duration": 4420,
+    "sponsors": {
+      "href": "https://api.simplecast.com/episodes/502f5bbc-35d9-4955-9e20-5789ec703e04/sponsors"
+    },
+    "waveform_json": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/502f5bbc-35d9-4955-9e20-5789ec703e04/25a310b7_tc.json",
+    "description": "React Finland -haastattelukatiskan tyhjennys jatkuu! Tässä jaksossa vieraana Manuel Matuzović, Glenn Reyes ja Bruno Lourenço.",
+    "title": "45: React Finland 3: Saavutattavuus, animaatiot ja omat vs muiden komponentit",
+    "updated_at": "2019-06-02T13:11:17.339379",
+    "unschedule": null,
+    "published_at": "2019-06-02T11:25:00.000000",
+    "status": "published",
+    "is_published": true,
+    "update": null,
+    "scheduled_for": null,
+    "recast_image": null,
+    "number": 45,
+    "analytics": null,
+    "type": "full",
+    "dashboard_link": "https://dashboard.simplecast.com/episodes/502f5bbc-35d9-4955-9e20-5789ec703e04",
+    "image_path": "/images/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/502f5bbc-35d9-4955-9e20-5789ec703e04/1559475878artwork.jpg",
+    "warnings": [],
+    "audio_content_type": "audio/mpeg",
+    "recast_image_url": null,
+    "slug": "31153d7a",
+    "delete": null,
+    "podcast": {
+      "href": "https://api.simplecast.com/podcasts/c323bddb-1521-4c01-9f09-f3b876b9877e?current_episode=502f5bbc-35d9-4955-9e20-5789ec703e04",
+      "title": "Webbidevaus.fi",
+      "status": "published",
+      "is_migration": true,
+      "import": null,
+      "image_url": "https://cdn.simplecast.com/images/c323bddb-1521-4c01-9f09-f3b876b9877e/89bdabf8-b0fa-475b-a2c2-5e6a55975087/1518464110artwork.jpg",
+      "id": "c323bddb-1521-4c01-9f09-f3b876b9877e",
+      "episodes": {
+        "count": 46
+      }
+    },
+    "authors": {
+      "href": "https://api.simplecast.com/episodes/502f5bbc-35d9-4955-9e20-5789ec703e04/authors",
+      "create": null,
+      "collection": [
+        {
+          "href": "https://api.simplecast.com/authors/41150ef5-f333-4df2-a3fd-420509303fa3?episode=502f5bbc-35d9-4955-9e20-5789ec703e04",
+          "remove": null,
+          "name": "Antti Mattila, Riku Rouvila",
+          "id": "41150ef5-f333-4df2-a3fd-420509303fa3"
+        }
+      ],
+      "associate": null
     },
     "is_hidden": false,
-    "sponsors": []
+    "sign_url": null,
+    "enclosure_url": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/502f5bbc-35d9-4955-9e20-5789ec703e04/25a310b7_tc.mp3",
+    "upload_complete": null,
+    "recast_color": null,
+    "episode_url": "https://webbidevausfi.simplecast.com/episodes/31153d7a-25a310b7",
+    "publish": null,
+    "created_at": "2019-06-02T13:10:08.882098",
+    "custom_url": null,
+    "audio_file_name": "25a310b7.mp3",
+    "audio_file_path": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/502f5bbc-35d9-4955-9e20-5789ec703e04/25a310b7.mp3",
+    "guid": "d0a199ce-6bf5-446a-a004-36b9869ea7ec",
+    "keywords": {
+      "href": "https://api.simplecast.com/episodes/502f5bbc-35d9-4955-9e20-5789ec703e04/keywords",
+      "create": null,
+      "collection": []
+    },
+    "is_explicit": false,
+    "audio_file_path_tc": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/502f5bbc-35d9-4955-9e20-5789ec703e04/25a310b7_tc.mp3",
+    "long_description": "React Finland -haastattelukatiskan tyhjennys jatkuu! Tässä jaksossa vieraana Manuel Matuzović, Glenn Reyes ja Bruno Lourenço.\r\n\r\n## Manuel Matuzović **[@mmatuzo](https://twitter.com/mmatuzo)**\r\n\r\nTalk: [12 Tips For More Accessible React Apps](https://www.youtube.com/watch?v=NL6XKcX4sxc)\r\n\r\n## Glenn Reyes **[@glnnrys](https://twitter.com/glnnrys)**\r\n\r\nTalk: [Drawing the line between 3rd party and handcrafted components](https://www.youtube.com/watch?v=EdUJQYDYdPQ) \r\n\r\n## Bruno Lourenço **[@brunnolou](https://twitter.com/brunnolou)**\r\n\r\nTalk: [Delightful UI animations by understanding the brain](https://www.youtube.com/watch?v=TszRBCc6DQ4)\r\n\r\n- [react-morph](https://github.com/brunnolou/react-morph)\r\n\r\n## Linkit\r\n\r\n- [https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/captureStream](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/captureStream)\r\n- [https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder](https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder)\r\n- [https://mariusschulz.com/blog/typescript-2-0-tagged-union-types](https://mariusschulz.com/blog/typescript-2-0-tagged-union-types)\r\n- [http://blog.jenkster.com/2016/06/how-elm-slays-a-ui-antipattern.html](http://blog.jenkster.com/2016/06/how-elm-slays-a-ui-antipattern.html)\r\n\r\n## Jakson valinnat\r\n\r\n- Riku: [https://code.visualstudio.com/api/get-started/your-first-extension](https://code.visualstudio.com/api/get-started/your-first-extension)\r\n- Antti: [MAKE: Bootstrapper's handbook](https://makebook.io)\r\n\r\n## Ota yhteyttä!\r\n\r\n- [@webbidevaus](https://twitter.com/webbidevaus)\r\n- [webbidevaus.fi](https://webbidevaus.fi)",
+    "audio_file": {
+      "url": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/502f5bbc-35d9-4955-9e20-5789ec703e04/25a310b7_tc.mp3",
+      "size": 35548185,
+      "path_tc": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/502f5bbc-35d9-4955-9e20-5789ec703e04/25a310b7_tc.mp3",
+      "path": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/502f5bbc-35d9-4955-9e20-5789ec703e04/25a310b7.mp3",
+      "name": "25a310b7.mp3",
+      "delete": null
+    },
+    "season": {
+      "href": "https://api.simplecast.com/seasons/a7658b9d-0f0f-4594-8525-45f6e9f9cc22",
+      "number": 1
+    },
+    "image_url": "https://cdn.simplecast.com/images/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/502f5bbc-35d9-4955-9e20-5789ec703e04/1559475878artwork.jpg",
+    "token": "25a310b7"
+  },
+  {
+    "id": "7f08431b-82db-49a7-bd1e-b84246a92d26",
+    "legacy_id": 299125,
+    "href": "https://api.simplecast.com/episodes/7f08431b-82db-49a7-bd1e-b84246a92d26",
+    "audio_file_size": 37258201,
+    "waveform_pack": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/7f08431b-82db-49a7-bd1e-b84246a92d26/ef743774_tc.pack",
+    "audio_file_url": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/7f08431b-82db-49a7-bd1e-b84246a92d26/ef743774_tc.mp3",
+    "schedule": null,
+    "duration": 4634,
+    "sponsors": {
+      "href": "https://api.simplecast.com/episodes/7f08431b-82db-49a7-bd1e-b84246a92d26/sponsors"
+    },
+    "waveform_json": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/7f08431b-82db-49a7-bd1e-b84246a92d26/ef743774_tc.json",
+    "title": "44: React Finland 2: Designkirjastot & testaaminen",
+    "description": "React Finland -konffan antia, osa 2. Tässä jaksossa vieraina Andrey Okonetchnikov, Varya Stepanova, Juha Linnanen sekä Maaret Pyhäjärvi. Aiheina designkirjastot, React Native CI, testaus ja paljon muuta!",
+    "updated_at": "2019-06-02T13:11:23.567014",
+    "unschedule": null,
+    "published_at": "2019-05-26T18:31:00.000000",
+    "status": "published",
+    "is_published": true,
+    "update": null,
+    "scheduled_for": null,
+    "recast_image": null,
+    "analytics": null,
+    "type": "full",
+    "dashboard_link": "https://dashboard.simplecast.com/episodes/7f08431b-82db-49a7-bd1e-b84246a92d26",
+    "image_path": "/images/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/7f08431b-82db-49a7-bd1e-b84246a92d26/1558895978artwork.jpg",
+    "warnings": [],
+    "audio_content_type": "audio/mpeg",
+    "recast_image_url": null,
+    "slug": "44",
+    "delete": null,
+    "number": 44,
+    "podcast": {
+      "href": "https://api.simplecast.com/podcasts/c323bddb-1521-4c01-9f09-f3b876b9877e?current_episode=7f08431b-82db-49a7-bd1e-b84246a92d26",
+      "title": "Webbidevaus.fi",
+      "status": "published",
+      "is_migration": true,
+      "import": null,
+      "image_url": "https://cdn.simplecast.com/images/c323bddb-1521-4c01-9f09-f3b876b9877e/89bdabf8-b0fa-475b-a2c2-5e6a55975087/1518464110artwork.jpg",
+      "id": "c323bddb-1521-4c01-9f09-f3b876b9877e",
+      "episodes": {
+        "count": 46
+      }
+    },
+    "authors": {
+      "href": "https://api.simplecast.com/episodes/7f08431b-82db-49a7-bd1e-b84246a92d26/authors",
+      "create": null,
+      "collection": [
+        {
+          "href": "https://api.simplecast.com/authors/41150ef5-f333-4df2-a3fd-420509303fa3?episode=7f08431b-82db-49a7-bd1e-b84246a92d26",
+          "remove": null,
+          "name": "Antti Mattila, Riku Rouvila",
+          "id": "41150ef5-f333-4df2-a3fd-420509303fa3"
+        }
+      ],
+      "associate": null
+    },
+    "is_hidden": false,
+    "sign_url": null,
+    "enclosure_url": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/7f08431b-82db-49a7-bd1e-b84246a92d26/ef743774_tc.mp3",
+    "upload_complete": null,
+    "recast_color": null,
+    "episode_url": "https://webbidevausfi.simplecast.com/episodes/44-ef743774",
+    "publish": null,
+    "created_at": "2019-06-02T13:10:08.908752",
+    "custom_url": null,
+    "audio_file_name": "ef743774.mp3",
+    "audio_file_path": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/7f08431b-82db-49a7-bd1e-b84246a92d26/ef743774.mp3",
+    "guid": "33efd479-870c-4b56-a369-332d64a0d82e",
+    "keywords": {
+      "href": "https://api.simplecast.com/episodes/7f08431b-82db-49a7-bd1e-b84246a92d26/keywords",
+      "create": null,
+      "collection": []
+    },
+    "is_explicit": false,
+    "audio_file_path_tc": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/7f08431b-82db-49a7-bd1e-b84246a92d26/ef743774_tc.mp3",
+    "long_description": "React Finland -konffan antia, osa 2. Tässä jaksossa vieraina Andrey Okonetchnikov, Varya Stepanova, Juha Linnanen sekä Maaret Pyhäjärvi. Aiheina designkirjastot, React Native CI, testaus ja paljon muuta!\r\n\r\n## 21:09 Andrey Okonetchnikov **[@okonetchnikov](https://twitter.com/okonetchnikov)**\r\n\r\nTalk: [A Common Design Language Let Designers and Developers talk to each other](https://www.youtube.com/watch?v=a6DtiGhKMdk)\r\n\r\n### Linkit:\r\n\r\n- [lint-staged](https://github.com/okonet/lint-staged)\r\n\r\n## 35:52 Varya Stepanova **[@varya_en](https://twitter.com/varya_en)**\r\n\r\nTalk: [A practical guide to building your design system infrastructure](https://www.youtube.com/watch?v=5_lYTicLUbk)\r\n\r\n## 44:26 Juha Linnanen @[pillar15](https://twitter.com/pillar15)\r\n\r\nTalk: [CI/CD for React Native](https://www.youtube.com/watch?v=Lid-2xFU4vg)\r\n\r\n### Linkit:\r\n\r\n- [https://github.com/solinor/react-native-ci](https://github.com/solinor/react-native-ci)\r\n\r\n## 57:38 Maaret Pyhäjärvi [@maaretp](https://twitter.com/maaretp)\r\n\r\nTalk: [Intersection of Automation and Exploratory Testing](https://www.youtube.com/watch?v=Dg4JawCeNhs)\r\n\r\n## Jakson valinnat\r\n\r\n- Riku: [Dependency cruiser](https://www.npmjs.com/package/dependency-cruiser)\r\n- Antti: [AeroPress](https://aeropress.com)",
+    "audio_file": {
+      "url": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/7f08431b-82db-49a7-bd1e-b84246a92d26/ef743774_tc.mp3",
+      "size": 37258201,
+      "path_tc": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/7f08431b-82db-49a7-bd1e-b84246a92d26/ef743774_tc.mp3",
+      "path": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/7f08431b-82db-49a7-bd1e-b84246a92d26/ef743774.mp3",
+      "name": "ef743774.mp3",
+      "delete": null
+    },
+    "season": {
+      "href": "https://api.simplecast.com/seasons/a7658b9d-0f0f-4594-8525-45f6e9f9cc22",
+      "number": 1
+    },
+    "image_url": "https://cdn.simplecast.com/images/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/7f08431b-82db-49a7-bd1e-b84246a92d26/1558895978artwork.jpg",
+    "token": "ef743774"
+  },
+  {
+    "id": "2aacd283-c773-4bf2-b69a-b975049bd80a",
+    "legacy_id": 298206,
+    "href": "https://api.simplecast.com/episodes/2aacd283-c773-4bf2-b69a-b975049bd80a",
+    "audio_file_size": 21075601,
+    "waveform_pack": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/2aacd283-c773-4bf2-b69a-b975049bd80a/7f0ecfb7_tc.pack",
+    "audio_file_url": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/2aacd283-c773-4bf2-b69a-b975049bd80a/7f0ecfb7_tc.mp3",
+    "schedule": null,
+    "duration": 2611,
+    "sponsors": {
+      "href": "https://api.simplecast.com/episodes/2aacd283-c773-4bf2-b69a-b975049bd80a/sponsors"
+    },
+    "waveform_json": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/2aacd283-c773-4bf2-b69a-b975049bd80a/7f0ecfb7_tc.json",
+    "description": "Antti ja Riku pääsivät React Finlandiin kyselemään puhujien mietteitä tilanhallinnasta ja tilakoneista. Vieraina jaksossa MobX:n ja immer:in kehittäjä Michel Weststrate, xstaten kehittäjä David Khourshid, sekä Luca Matteis ja Farzad Yz. Kovaa kamaa siis luvassa 🎧",
+    "title": "43: React Finland 1: State Management",
+    "updated_at": "2019-06-02T13:11:23.204410",
+    "unschedule": null,
+    "published_at": "2019-05-19T17:09:00.000000",
+    "status": "published",
+    "is_published": true,
+    "update": null,
+    "scheduled_for": null,
+    "recast_image": null,
+    "number": 43,
+    "analytics": null,
+    "type": "full",
+    "dashboard_link": "https://dashboard.simplecast.com/episodes/2aacd283-c773-4bf2-b69a-b975049bd80a",
+    "image_path": "/images/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/2aacd283-c773-4bf2-b69a-b975049bd80a/1558285887artwork.jpg",
+    "warnings": [],
+    "audio_content_type": "audio/mpeg",
+    "recast_image_url": null,
+    "slug": "43",
+    "delete": null,
+    "podcast": {
+      "href": "https://api.simplecast.com/podcasts/c323bddb-1521-4c01-9f09-f3b876b9877e?current_episode=2aacd283-c773-4bf2-b69a-b975049bd80a",
+      "title": "Webbidevaus.fi",
+      "status": "published",
+      "is_migration": true,
+      "import": null,
+      "image_url": "https://cdn.simplecast.com/images/c323bddb-1521-4c01-9f09-f3b876b9877e/89bdabf8-b0fa-475b-a2c2-5e6a55975087/1518464110artwork.jpg",
+      "id": "c323bddb-1521-4c01-9f09-f3b876b9877e",
+      "episodes": {
+        "count": 46
+      }
+    },
+    "authors": {
+      "href": "https://api.simplecast.com/episodes/2aacd283-c773-4bf2-b69a-b975049bd80a/authors",
+      "create": null,
+      "collection": [
+        {
+          "href": "https://api.simplecast.com/authors/41150ef5-f333-4df2-a3fd-420509303fa3?episode=2aacd283-c773-4bf2-b69a-b975049bd80a",
+          "remove": null,
+          "name": "Antti Mattila, Riku Rouvila",
+          "id": "41150ef5-f333-4df2-a3fd-420509303fa3"
+        }
+      ],
+      "associate": null
+    },
+    "is_hidden": false,
+    "sign_url": null,
+    "enclosure_url": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/2aacd283-c773-4bf2-b69a-b975049bd80a/7f0ecfb7_tc.mp3",
+    "upload_complete": null,
+    "recast_color": null,
+    "episode_url": "https://webbidevausfi.simplecast.com/episodes/43-7f0ecfb7",
+    "publish": null,
+    "created_at": "2019-06-02T13:10:08.934751",
+    "custom_url": null,
+    "audio_file_name": "7f0ecfb7.mp3",
+    "audio_file_path": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/2aacd283-c773-4bf2-b69a-b975049bd80a/7f0ecfb7.mp3",
+    "guid": "32a00a61-d078-47e4-a2c3-acbf55d80f6e",
+    "keywords": {
+      "href": "https://api.simplecast.com/episodes/2aacd283-c773-4bf2-b69a-b975049bd80a/keywords",
+      "create": null,
+      "collection": []
+    },
+    "is_explicit": false,
+    "audio_file_path_tc": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/2aacd283-c773-4bf2-b69a-b975049bd80a/7f0ecfb7_tc.mp3",
+    "long_description": "Antti ja Riku pääsivät React Finlandiin kyselemään puhujien mietteitä tilanhallinnasta ja tilakoneista. Vieraina jaksossa MobX:n ja immer:in kehittäjä Michel Weststrate, xstaten kehittäjä David Khourshid, sekä Luca Matteis ja Farzad Yz. Kovaa kamaa siis luvassa 🎧\r\n\r\n## **Michel Weststrate [@mweststrate](https://twitter.com/mweststrate)**\r\n\r\nTalk: [MobX The Journey](https://www.youtube.com/watch?v=MIh1qSHi_Fc)\r\n\r\nKeskustelua tilanhallinnasta webbisovelluksissa. Onko Redux jo aikalailla ohi vuonna 2019? Mukana myös Michelin mietteitä äärimmäisen suosittujen open source - projektien ylläpitämisestä.\r\n\r\n**Linkit:**\r\n\r\n- [mobx](https://github.com/mobxjs/mobx)\r\n- [immer](https://github.com/immerjs/immer)\r\n\r\n## **David Khourshid [@davidkpiano](https://twitter.com/davidkpiano)**\r\n\r\nTalk: [Mind Reading with Adaptive and Intelligent UIs in React — David Khourshid](https://www.youtube.com/watch?v=ppvi09LIUnU)\r\n\r\nOvatko tilakoneet ja (kone)oppivat käyttöliittymät tulevaisuus? Mikä on xstate, ja ratkaiseeko se applikaation tilanhallinnan?\r\n\r\n**Linkit:**\r\n\r\n- [xstate](https://github.com/davidkpiano/xstate)\r\n- [Model-based testing](https://en.wikipedia.org/wiki/Model-based_testing)\r\n\r\n## **Luca Matteis [@lmatteis](https://twitter.com/lmatteis) & Farzad Yz [@Farzad_YZ](https://twitter.com/Farzad_YZ)**\r\n\r\nTalks: \r\n[Append only development with React](https://www.youtube.com/watch?v=cXuvCMG21Ss) - Luca Matteis\r\n\r\n[Abstract component modeling in React](https://www.youtube.com/watch?v=AVb5dURO6q0) - Farzad Yz\r\n\r\nMitä on append only programming, ja toimiko se oikeasti käytännössä?\r\n\r\n**Linkit:**\r\n\r\n- [React-behavioral](https://medium.com/@lmatteis/react-behavioral-cf6523747aaf)\r\n\r\n## Jakson valinnat\r\n\r\n- Riku: [Chernobyl](https://www.imdb.com/title/tt7366338/)\r\n- Antti: [Youtube: Ali Leiniö](https://www.youtube.com/channel/UCjifOn2M5T8IQ2ZHzAEL_pw)",
+    "audio_file": {
+      "url": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/2aacd283-c773-4bf2-b69a-b975049bd80a/7f0ecfb7_tc.mp3",
+      "size": 21075601,
+      "path_tc": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/2aacd283-c773-4bf2-b69a-b975049bd80a/7f0ecfb7_tc.mp3",
+      "path": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/2aacd283-c773-4bf2-b69a-b975049bd80a/7f0ecfb7.mp3",
+      "name": "7f0ecfb7.mp3",
+      "delete": null
+    },
+    "season": {
+      "href": "https://api.simplecast.com/seasons/a7658b9d-0f0f-4594-8525-45f6e9f9cc22",
+      "number": 1
+    },
+    "image_url": "https://cdn.simplecast.com/images/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/2aacd283-c773-4bf2-b69a-b975049bd80a/1558285887artwork.jpg",
+    "token": "7f0ecfb7"
+  },
+  {
+    "id": "0d7a4216-30e9-4386-a149-866e9c98bf44",
+    "legacy_id": 296493,
+    "href": "https://api.simplecast.com/episodes/0d7a4216-30e9-4386-a149-866e9c98bf44",
+    "audio_file_size": 26657106,
+    "waveform_pack": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/0d7a4216-30e9-4386-a149-866e9c98bf44/d48d204b_tc.pack",
+    "audio_file_url": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/0d7a4216-30e9-4386-a149-866e9c98bf44/d48d204b_tc.mp3",
+    "schedule": null,
+    "duration": 3309,
+    "sponsors": {
+      "href": "https://api.simplecast.com/episodes/0d7a4216-30e9-4386-a149-866e9c98bf44/sponsors"
+    },
+    "waveform_json": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/0d7a4216-30e9-4386-a149-866e9c98bf44/d48d204b_tc.json",
+    "title": "42: TKMV",
+    "description": "Te Kysytte, Me Vastaamme! Avasimme jälleen katsojien lähettämiä kysymyksiä sisältävän arkun, ja arvoimme sieltä kourallisen tiukkoja kysymyksiä vastattavaksi.",
+    "updated_at": "2019-06-02T13:10:25.189293",
+    "unschedule": null,
+    "published_at": "2019-05-12T08:43:00.000000",
+    "status": "published",
+    "is_published": true,
+    "update": null,
+    "scheduled_for": null,
+    "recast_image": null,
+    "analytics": null,
+    "type": "full",
+    "dashboard_link": "https://dashboard.simplecast.com/episodes/0d7a4216-30e9-4386-a149-866e9c98bf44",
+    "image_path": "/images/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/0d7a4216-30e9-4386-a149-866e9c98bf44/1557650999artwork.jpg",
+    "warnings": [],
+    "audio_content_type": "audio/mpeg",
+    "recast_image_url": null,
+    "slug": "42",
+    "delete": null,
+    "number": 42,
+    "podcast": {
+      "href": "https://api.simplecast.com/podcasts/c323bddb-1521-4c01-9f09-f3b876b9877e?current_episode=0d7a4216-30e9-4386-a149-866e9c98bf44",
+      "title": "Webbidevaus.fi",
+      "status": "published",
+      "is_migration": true,
+      "import": null,
+      "image_url": "https://cdn.simplecast.com/images/c323bddb-1521-4c01-9f09-f3b876b9877e/89bdabf8-b0fa-475b-a2c2-5e6a55975087/1518464110artwork.jpg",
+      "id": "c323bddb-1521-4c01-9f09-f3b876b9877e",
+      "episodes": {
+        "count": 46
+      }
+    },
+    "authors": {
+      "href": "https://api.simplecast.com/episodes/0d7a4216-30e9-4386-a149-866e9c98bf44/authors",
+      "create": null,
+      "collection": [
+        {
+          "href": "https://api.simplecast.com/authors/41150ef5-f333-4df2-a3fd-420509303fa3?episode=0d7a4216-30e9-4386-a149-866e9c98bf44",
+          "remove": null,
+          "name": "Antti Mattila, Riku Rouvila",
+          "id": "41150ef5-f333-4df2-a3fd-420509303fa3"
+        }
+      ],
+      "associate": null
+    },
+    "is_hidden": false,
+    "sign_url": null,
+    "enclosure_url": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/0d7a4216-30e9-4386-a149-866e9c98bf44/d48d204b_tc.mp3",
+    "upload_complete": null,
+    "recast_color": null,
+    "episode_url": "https://webbidevausfi.simplecast.com/episodes/42-d48d204b",
+    "publish": null,
+    "created_at": "2019-06-02T13:10:08.955292",
+    "custom_url": null,
+    "audio_file_name": "d48d204b.mp3",
+    "audio_file_path": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/0d7a4216-30e9-4386-a149-866e9c98bf44/d48d204b.mp3",
+    "guid": "1d2f66ad-3fef-4dc1-abdb-834e06137b3b",
+    "keywords": {
+      "href": "https://api.simplecast.com/episodes/0d7a4216-30e9-4386-a149-866e9c98bf44/keywords",
+      "create": null,
+      "collection": []
+    },
+    "is_explicit": false,
+    "audio_file_path_tc": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/0d7a4216-30e9-4386-a149-866e9c98bf44/d48d204b_tc.mp3",
+    "long_description": "Te Kysytte, Me Vastaamme! Avasimme jälleen katsojien lähettämiä kysymyksiä sisältävän arkun, ja arvoimme sieltä kourallisen tiukkoja kysymyksiä vastattavaksi.\r\n\r\n## Kysymykset\r\n\r\n- Oletteko tehneet tutuille tai sukulaisille koodia tai ratkaisuja niin sanotusti 'pro bono', eli hyväntekeväisyytenä? **iiNiemi**\r\n- \"VIM vai Emacs? Eli onko editorilla merkitystä koodatessa? Ja vaikuttaako kieli editorin valintaan? PHP => PHPStorm Java => IntelliJ Python => PyCharm JavaScript => kynä CSS => selaimen webinspector \" **Tommi**\r\n- Tilastointisovellukset (talous, terveys yms.) ja niiden laskennan toteutus. Tehdäänkö kaikki datan laskeminen ja käsittely bäkkärissä, vai jätetäänkö osa fronttiin? Mielipiteitä/kokemuksia?\r\n- Node ja JS skene on hyvin selkäytimessä. Onko JS edellä devaavien morkkaus pelkkää kateellisten javajäärien panettelua vai kannattaisiko bäkkäriä varten opetella vaikka Java/C#/python ja rakennella sillä? Fullstack-kyvykkyys on hakusessa myös JS skenen ulkopuolelta. **(Nodejäädä)**\r\n- Ymmärtävätkö, teidän mielestänne, nykypäivän webbidevaajat tarpeeksi hyvin ohjelmistosuunnittelun perusprinsiippejä (esim. SOLID, GRASP jne.) ja design patterneja, vai perustuuko tekeminen vain siihen miten valitut frameworkit ohjaavat tekemään asioita sen suuremmin ajattelematta asiaa? Hemmetin vaikeasti muotoiltu ja monisyinen kysymys, mutta toivottavasti aiheuttaa keskustelua :D.. **Aki Haapamäki**\r\n\r\n## Linkit\r\n\r\n- [Spark Framework](http://sparkjava.com)\r\n- [MVC](https://en.wikipedia.org/wiki/Model–view–controller)\r\n- [SOLID](https://en.wikipedia.org/wiki/SOLID)\r\n- [GRASP](https://en.wikipedia.org/wiki/GRASP_(object-oriented_design))\r\n\r\n## Jakson valinnat\r\n\r\n- Riku: [webglfundamentals.org](https://webglfundamentals.org/)\r\n- Antti: [Luontoon.fi](https://www.luontoon.fi)\r\n\r\n## Ota yhteyttä!\r\n\r\n- [@webbidevaus](https://twitter.com/webbidevaus)\r\n- [webbidevaus.fi](https://webbidevaus.fi)",
+    "audio_file": {
+      "url": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/0d7a4216-30e9-4386-a149-866e9c98bf44/d48d204b_tc.mp3",
+      "size": 26657106,
+      "path_tc": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/0d7a4216-30e9-4386-a149-866e9c98bf44/d48d204b_tc.mp3",
+      "path": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/0d7a4216-30e9-4386-a149-866e9c98bf44/d48d204b.mp3",
+      "name": "d48d204b.mp3",
+      "delete": null
+    },
+    "season": {
+      "href": "https://api.simplecast.com/seasons/a7658b9d-0f0f-4594-8525-45f6e9f9cc22",
+      "number": 1
+    },
+    "image_url": "https://cdn.simplecast.com/images/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/0d7a4216-30e9-4386-a149-866e9c98bf44/1557650999artwork.jpg",
+    "token": "d48d204b"
+  },
+  {
+    "id": "c1ae8836-3688-436a-9f5f-549da32b58c9",
+    "legacy_id": 293128,
+    "href": "https://api.simplecast.com/episodes/c1ae8836-3688-436a-9f5f-549da32b58c9",
+    "audio_file_size": 26733802,
+    "waveform_pack": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/c1ae8836-3688-436a-9f5f-549da32b58c9/2e084415_tc.pack",
+    "audio_file_url": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/c1ae8836-3688-436a-9f5f-549da32b58c9/2e084415_tc.mp3",
+    "schedule": null,
+    "duration": 3319,
+    "sponsors": {
+      "href": "https://api.simplecast.com/episodes/c1ae8836-3688-436a-9f5f-549da32b58c9/sponsors"
+    },
+    "waveform_json": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/c1ae8836-3688-436a-9f5f-549da32b58c9/2e084415_tc.json",
+    "description": "Te Kysytte, Me Vastaamme! Avasimme jälleen katsojien lähettämiä kysymyksiä sisältävän arkun, ja arvoimme sieltä kourallisen tiukkoja kysymyksiä vastattavaksi.",
+    "updated_at": "2019-06-02T13:10:40.946302",
+    "unschedule": null,
+    "published_at": "2019-04-21T14:01:00.000000",
+    "status": "published",
+    "is_published": true,
+    "update": null,
+    "scheduled_for": null,
+    "number": 41,
+    "recast_image": null,
+    "analytics": null,
+    "type": "full",
+    "title": "41: TKMV",
+    "dashboard_link": "https://dashboard.simplecast.com/episodes/c1ae8836-3688-436a-9f5f-549da32b58c9",
+    "image_path": "/images/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/c1ae8836-3688-436a-9f5f-549da32b58c9/1555855647artwork.jpg",
+    "warnings": [],
+    "audio_content_type": "audio/mpeg",
+    "recast_image_url": null,
+    "slug": "41",
+    "delete": null,
+    "podcast": {
+      "href": "https://api.simplecast.com/podcasts/c323bddb-1521-4c01-9f09-f3b876b9877e?current_episode=c1ae8836-3688-436a-9f5f-549da32b58c9",
+      "title": "Webbidevaus.fi",
+      "status": "published",
+      "is_migration": true,
+      "import": null,
+      "image_url": "https://cdn.simplecast.com/images/c323bddb-1521-4c01-9f09-f3b876b9877e/89bdabf8-b0fa-475b-a2c2-5e6a55975087/1518464110artwork.jpg",
+      "id": "c323bddb-1521-4c01-9f09-f3b876b9877e",
+      "episodes": {
+        "count": 46
+      }
+    },
+    "authors": {
+      "href": "https://api.simplecast.com/episodes/c1ae8836-3688-436a-9f5f-549da32b58c9/authors",
+      "create": null,
+      "collection": [
+        {
+          "href": "https://api.simplecast.com/authors/41150ef5-f333-4df2-a3fd-420509303fa3?episode=c1ae8836-3688-436a-9f5f-549da32b58c9",
+          "remove": null,
+          "name": "Antti Mattila, Riku Rouvila",
+          "id": "41150ef5-f333-4df2-a3fd-420509303fa3"
+        }
+      ],
+      "associate": null
+    },
+    "is_hidden": false,
+    "sign_url": null,
+    "enclosure_url": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/c1ae8836-3688-436a-9f5f-549da32b58c9/2e084415_tc.mp3",
+    "upload_complete": null,
+    "recast_color": null,
+    "episode_url": "https://webbidevausfi.simplecast.com/episodes/41-2e084415",
+    "publish": null,
+    "created_at": "2019-06-02T13:10:08.987412",
+    "custom_url": null,
+    "audio_file_name": "2e084415.mp3",
+    "audio_file_path": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/c1ae8836-3688-436a-9f5f-549da32b58c9/2e084415.mp3",
+    "guid": "75829901-6730-4760-a23c-663fc096f19f",
+    "keywords": {
+      "href": "https://api.simplecast.com/episodes/c1ae8836-3688-436a-9f5f-549da32b58c9/keywords",
+      "create": null,
+      "collection": []
+    },
+    "is_explicit": false,
+    "audio_file_path_tc": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/c1ae8836-3688-436a-9f5f-549da32b58c9/2e084415_tc.mp3",
+    "long_description": "Te Kysytte, Me Vastaamme! Avasimme jälleen katsojien lähettämiä kysymyksiä sisältävän arkun, ja arvoimme sieltä kourallisen tiukkoja kysymyksiä vastattavaksi.\r\n\r\n## Kysymykset\r\n\r\n- Jos ette webbidevaisi työksenne, mitä tekisitte? **Sami**\r\n- Versionhallintaan löytyy monta keinoa. Git, svn, mercurial, main-01-02-2019-final-final.js vai jokin muu? Mitä itse suositte? **Sakari**\r\n- Paljonko saatte palkkaa? Muutama arkinen asia, jotka ilahduttavat teitä? **Rölli**\r\n- Miten elementti keskitetään pystysuunnassa CSS:llä? **Anonyymi**\r\n- Moni huippu-urheilija ja sirkustaiteilija yms. harjoittelee. Milloin koodari harjoittelee? Minusta tuntuu siltä, että kun harjoitellaan, niin harjoitellaan tuotannossa eli silloin kun tehdään asiakkaalle koodia. Mutta eikö olisi kannattavampaa harjoitella harjoituksissa ja sitten kun tehdään asiakkaalle, niin sitten suoritetaan? **Tomi-boiii**\r\n- Miksei [webbidevaus.fi](http://webbidevaus.fi/):n yksittäisten jaksojen playerissa ole vieläkään sitä \"progressbaria\" :S demonstraatio -> [http://www.giphy.com/gifs/VIucH2I0HIkPOMjMxr](http://www.giphy.com/gifs/VIucH2I0HIkPOMjMxr) **tsipilai**\r\n- Kuuntelen usein podcastejanne matkalla töihin ja takaisin kotiin. Työmatkani kestää noin 15 minuuttia, joten jaksot jäävät usein kesken, ja jatkan niitä myöhemmin. Toivoisin podcastien webbiplayeriin ihan rehtiä kelausominaisuutta. Pikkasen kyrsii kelata esim 45min podcastia rämpyttämällä 15sec eteenpäin tai nopeutuksella. Muuten kaikki hyvin ja kiitos huikeasta setistä ja mukavasta höpöstelystä! **Jupe**\r\n\r\n## Linkit\r\n\r\n- [React Finland](https://react-finland.fi)\r\n- [Git flow](https://nvie.com/posts/a-successful-git-branching-model/)\r\n\r\n## Jakson valinnat\r\n\r\n- Riku: [The Office (US)](https://en.wikipedia.org/wiki/The_Office_(U.S._TV_series))\r\n- Antti: [Mojito](http://www.shotti.fi/resepti/mojito/)\r\n    - [Sokerisiirappi](http://www.keittotaito.com/sokerisiirappi.html)\r\n    - [Vahva minttu](https://jarvikyla.fi/product/vahva-minttu/)\r\n\r\n## Ota yhteyttä!\r\n\r\n- [@webbidevaus](https://twitter.com/webbidevaus)\r\n- [webbidevaus.fi](https://webbidevaus.fi)",
+    "audio_file": {
+      "url": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/c1ae8836-3688-436a-9f5f-549da32b58c9/2e084415_tc.mp3",
+      "size": 26733802,
+      "path_tc": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/c1ae8836-3688-436a-9f5f-549da32b58c9/2e084415_tc.mp3",
+      "path": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/c1ae8836-3688-436a-9f5f-549da32b58c9/2e084415.mp3",
+      "name": "2e084415.mp3",
+      "delete": null
+    },
+    "season": {
+      "href": "https://api.simplecast.com/seasons/a7658b9d-0f0f-4594-8525-45f6e9f9cc22",
+      "number": 1
+    },
+    "image_url": "https://cdn.simplecast.com/images/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/c1ae8836-3688-436a-9f5f-549da32b58c9/1555855647artwork.jpg",
+    "token": "2e084415"
+  },
+  {
+    "id": "dabbd462-e2d0-422f-8aa6-50cf0098ffbf",
+    "legacy_id": 291808,
+    "href": "https://api.simplecast.com/episodes/dabbd462-e2d0-422f-8aa6-50cf0098ffbf",
+    "audio_file_size": 33339162,
+    "waveform_pack": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/dabbd462-e2d0-422f-8aa6-50cf0098ffbf/6c4dfa79_tc.pack",
+    "audio_file_url": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/dabbd462-e2d0-422f-8aa6-50cf0098ffbf/6c4dfa79_tc.mp3",
+    "schedule": null,
+    "duration": 4144,
+    "sponsors": {
+      "href": "https://api.simplecast.com/episodes/dabbd462-e2d0-422f-8aa6-50cf0098ffbf/sponsors"
+    },
+    "waveform_json": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/dabbd462-e2d0-422f-8aa6-50cf0098ffbf/6c4dfa79_tc.json",
+    "description": "Kaikkien aikojen ensimmäinen Level Up! -jakso! Aiheina mm. datalist, Houdini, CSS grid, Bundlephobia ja paljon muuta.",
+    "title": "40: Level Up! 1",
+    "updated_at": "2019-06-02T13:11:09.019424",
+    "unschedule": null,
+    "published_at": "2019-04-14T09:00:00.000000",
+    "status": "published",
+    "is_published": true,
+    "update": null,
+    "scheduled_for": null,
+    "recast_image": null,
+    "number": 40,
+    "analytics": null,
+    "type": "full",
+    "dashboard_link": "https://dashboard.simplecast.com/episodes/dabbd462-e2d0-422f-8aa6-50cf0098ffbf",
+    "image_path": "/images/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/dabbd462-e2d0-422f-8aa6-50cf0098ffbf/1555171285artwork.jpg",
+    "warnings": [],
+    "audio_content_type": "audio/mpeg",
+    "recast_image_url": null,
+    "slug": "40",
+    "delete": null,
+    "podcast": {
+      "href": "https://api.simplecast.com/podcasts/c323bddb-1521-4c01-9f09-f3b876b9877e?current_episode=dabbd462-e2d0-422f-8aa6-50cf0098ffbf",
+      "title": "Webbidevaus.fi",
+      "status": "published",
+      "is_migration": true,
+      "import": null,
+      "image_url": "https://cdn.simplecast.com/images/c323bddb-1521-4c01-9f09-f3b876b9877e/89bdabf8-b0fa-475b-a2c2-5e6a55975087/1518464110artwork.jpg",
+      "id": "c323bddb-1521-4c01-9f09-f3b876b9877e",
+      "episodes": {
+        "count": 46
+      }
+    },
+    "authors": {
+      "href": "https://api.simplecast.com/episodes/dabbd462-e2d0-422f-8aa6-50cf0098ffbf/authors",
+      "create": null,
+      "collection": [
+        {
+          "href": "https://api.simplecast.com/authors/41150ef5-f333-4df2-a3fd-420509303fa3?episode=dabbd462-e2d0-422f-8aa6-50cf0098ffbf",
+          "remove": null,
+          "name": "Antti Mattila, Riku Rouvila",
+          "id": "41150ef5-f333-4df2-a3fd-420509303fa3"
+        }
+      ],
+      "associate": null
+    },
+    "is_hidden": false,
+    "sign_url": null,
+    "enclosure_url": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/dabbd462-e2d0-422f-8aa6-50cf0098ffbf/6c4dfa79_tc.mp3",
+    "upload_complete": null,
+    "recast_color": null,
+    "episode_url": "https://webbidevausfi.simplecast.com/episodes/40-6c4dfa79",
+    "publish": null,
+    "created_at": "2019-06-02T13:10:09.012276",
+    "custom_url": null,
+    "audio_file_name": "6c4dfa79.mp3",
+    "audio_file_path": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/dabbd462-e2d0-422f-8aa6-50cf0098ffbf/6c4dfa79.mp3",
+    "guid": "7dc5d339-76aa-4c9e-9c80-65f28ae1a36d",
+    "keywords": {
+      "href": "https://api.simplecast.com/episodes/dabbd462-e2d0-422f-8aa6-50cf0098ffbf/keywords",
+      "create": null,
+      "collection": []
+    },
+    "is_explicit": false,
+    "audio_file_path_tc": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/dabbd462-e2d0-422f-8aa6-50cf0098ffbf/6c4dfa79_tc.mp3",
+    "long_description": "Kaikkien aikojen ensimmäinen Level Up! -jakso! Aiheina mm. datalist, Houdini, CSS grid, Bundlephobia ja paljon muuta.\r\n\r\n## Linkit\r\n\r\n- [React Finland](https://react-finland.fi)\r\n- [Datalist](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist) & [Details](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details)\r\n- [State of Houdini](https://www.youtube.com/watch?v=lK3OiJvwgSc&t=650s)\r\n- [CSS Paint API](https://developers.google.com/web/updates/2018/01/paintapi)\r\n- [css-houdini.rocks](https://css-houdini.rocks)\r\n    - [Irregular grid](https://css-houdini.rocks/irregular-grid)\r\n    - [Ripple animation](https://css-houdini.rocks/ripple)\r\n    - [Smooth corners](https://css-houdini.rocks/smooth-corners)\r\n- [GoogleChromeLabs/houdini-samples](https://github.com/GoogleChromeLabs/houdini-samples)\r\n- [CSS Layout API Explained](https://github.com/w3c/css-houdini-drafts/blob/master/css-layout-api/EXPLAINER.md)\r\n- [New WebKit Features](https://webkit.org/blog/8718/new-webkit-features-in-safari-12-1/)\r\n- [Image lazy-loading](https://addyosmani.com/blog/lazy-loading/)\r\n- [Bundlephobia](https://bundlephobia.com)\r\n- [Overmind.js](https://overmindjs.org/?view=react&typescript=true)\r\n\r\n## Jakson valinnat\r\n\r\n- Riku: [Nokian Panimon limpparit](http://nokianpanimo.fi/juomat/virvoitusjuomat/)\r\n- Antti: [The Division 2](https://tomclancy-thedivision.ubisoft.com/game/en-gb/home)\r\n\r\n## Ota yhteyttä!\r\n\r\n- [@webbidevaus](https://twitter.com/webbidevaus)\r\n- [webbidevaus.fi](https://webbidevaus.fi)",
+    "audio_file": {
+      "url": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/dabbd462-e2d0-422f-8aa6-50cf0098ffbf/6c4dfa79_tc.mp3",
+      "size": 33339162,
+      "path_tc": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/dabbd462-e2d0-422f-8aa6-50cf0098ffbf/6c4dfa79_tc.mp3",
+      "path": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/dabbd462-e2d0-422f-8aa6-50cf0098ffbf/6c4dfa79.mp3",
+      "name": "6c4dfa79.mp3",
+      "delete": null
+    },
+    "season": {
+      "href": "https://api.simplecast.com/seasons/a7658b9d-0f0f-4594-8525-45f6e9f9cc22",
+      "number": 1
+    },
+    "image_url": "https://cdn.simplecast.com/images/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/dabbd462-e2d0-422f-8aa6-50cf0098ffbf/1555171285artwork.jpg",
+    "token": "6c4dfa79"
+  },
+  {
+    "id": "8cbdc1e4-afaa-4a67-8335-50148c8cdcac",
+    "legacy_id": 290649,
+    "href": "https://api.simplecast.com/episodes/8cbdc1e4-afaa-4a67-8335-50148c8cdcac",
+    "audio_file_size": 25321323,
+    "waveform_pack": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/8cbdc1e4-afaa-4a67-8335-50148c8cdcac/6ffc1d78_tc.pack",
+    "audio_file_url": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/8cbdc1e4-afaa-4a67-8335-50148c8cdcac/6ffc1d78_tc.mp3",
+    "schedule": null,
+    "duration": 3142,
+    "sponsors": {
+      "href": "https://api.simplecast.com/episodes/8cbdc1e4-afaa-4a67-8335-50148c8cdcac/sponsors"
+    },
+    "waveform_json": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/8cbdc1e4-afaa-4a67-8335-50148c8cdcac/6ffc1d78_tc.json",
+    "description": "Vieraana kaksi alan kovinta konkaria Timo Erkkilä ja Miikka Ermes, vastaamassa sekä Rikun että teidän esittämiin kysymyksiin datatieteestä ja koneoppimisesta in the wild!",
+    "title": "39: Timo Erkkilä & Miikka Ermes - Data science, data engineering ja glorifioidut excel-taulukot",
+    "updated_at": "2019-06-02T13:11:10.732549",
+    "unschedule": null,
+    "published_at": "2019-04-07T15:24:00.000000",
+    "status": "published",
+    "is_published": true,
+    "update": null,
+    "scheduled_for": null,
+    "recast_image": null,
+    "number": 39,
+    "analytics": null,
+    "type": "full",
+    "dashboard_link": "https://dashboard.simplecast.com/episodes/8cbdc1e4-afaa-4a67-8335-50148c8cdcac",
+    "image_path": "/images/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/8cbdc1e4-afaa-4a67-8335-50148c8cdcac/1554650963artwork.jpg",
+    "warnings": [],
+    "audio_content_type": "audio/mpeg",
+    "recast_image_url": null,
+    "slug": "39",
+    "delete": null,
+    "podcast": {
+      "href": "https://api.simplecast.com/podcasts/c323bddb-1521-4c01-9f09-f3b876b9877e?current_episode=8cbdc1e4-afaa-4a67-8335-50148c8cdcac",
+      "title": "Webbidevaus.fi",
+      "status": "published",
+      "is_migration": true,
+      "import": null,
+      "image_url": "https://cdn.simplecast.com/images/c323bddb-1521-4c01-9f09-f3b876b9877e/89bdabf8-b0fa-475b-a2c2-5e6a55975087/1518464110artwork.jpg",
+      "id": "c323bddb-1521-4c01-9f09-f3b876b9877e",
+      "episodes": {
+        "count": 46
+      }
+    },
+    "authors": {
+      "href": "https://api.simplecast.com/episodes/8cbdc1e4-afaa-4a67-8335-50148c8cdcac/authors",
+      "create": null,
+      "collection": [
+        {
+          "href": "https://api.simplecast.com/authors/41150ef5-f333-4df2-a3fd-420509303fa3?episode=8cbdc1e4-afaa-4a67-8335-50148c8cdcac",
+          "remove": null,
+          "name": "Antti Mattila, Riku Rouvila",
+          "id": "41150ef5-f333-4df2-a3fd-420509303fa3"
+        }
+      ],
+      "associate": null
+    },
+    "is_hidden": false,
+    "sign_url": null,
+    "enclosure_url": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/8cbdc1e4-afaa-4a67-8335-50148c8cdcac/6ffc1d78_tc.mp3",
+    "upload_complete": null,
+    "recast_color": null,
+    "episode_url": "https://webbidevausfi.simplecast.com/episodes/39-6ffc1d78",
+    "publish": null,
+    "created_at": "2019-06-02T13:10:09.035647",
+    "custom_url": null,
+    "audio_file_name": "6ffc1d78.mp3",
+    "audio_file_path": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/8cbdc1e4-afaa-4a67-8335-50148c8cdcac/6ffc1d78.mp3",
+    "guid": "8f86b861-9fc5-4fc4-aff4-5d4984674790",
+    "keywords": {
+      "href": "https://api.simplecast.com/episodes/8cbdc1e4-afaa-4a67-8335-50148c8cdcac/keywords",
+      "create": null,
+      "collection": []
+    },
+    "is_explicit": false,
+    "audio_file_path_tc": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/8cbdc1e4-afaa-4a67-8335-50148c8cdcac/6ffc1d78_tc.mp3",
+    "long_description": "Vieraana kaksi alan kovinta konkaria [Timo Erkkilä](https://twitter.com/timo_erkkila) ja [Miikka Ermes](https://twitter.com/miikkaermes), vastaamassa sekä Rikun että teidän esittämiin kysymyksiin datatieteestä ja koneoppimisesta in the wild!\r\n\r\n## Yleisökysymykset\r\n\r\n- Itsekin koneoppimisen perusteiden kanssa leikkineenä kiinnostaa, kuinka paljon (ja mitä) pitäisi oikeasti osata ja ymmärtää, jos työelämässä näitä hommia haluaisi tehdä? **(Ville Johannes Pajala)**\r\n- Nämä backpropit ja lineaariset regressiot opetettiin mulle yliopistossa 1998 AD. Silloin #tekoälypöhinä oli Deep Blue. Pöhinä teki kestopaluun. Mikä on toisin? Onko kyse isommista opetusaineistoista ja laskentatehosta? Vai unohtuivatko aiemmat ongelmat, jotka nyt toistetaan? **(Tero Tilus)**\r\n\r\n## Jakson valinnat\r\n\r\n- Timo: [The Wavewatcher's Companion](https://www.goodreads.com/book/show/7306086-the-wave-watcher-s-companion)\r\n- Miikka: [You Won’t Believe What Obama Says In This Video! 😉](https://www.youtube.com/watch?v=cQ54GDm1eL0)\r\n- Riku: [Hälsans Kök fileesuikaleet](https://www.halsanskok.fi/ainekset/fileesuikaleet)\r\n\r\n## Ota yhteyttä!\r\n\r\n- [@webbidevaus](https://twitter.com/webbidevaus)\r\n- [webbidevaus.fi](https://webbidevaus.fi)",
+    "audio_file": {
+      "url": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/8cbdc1e4-afaa-4a67-8335-50148c8cdcac/6ffc1d78_tc.mp3",
+      "size": 25321323,
+      "path_tc": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/8cbdc1e4-afaa-4a67-8335-50148c8cdcac/6ffc1d78_tc.mp3",
+      "path": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/8cbdc1e4-afaa-4a67-8335-50148c8cdcac/6ffc1d78.mp3",
+      "name": "6ffc1d78.mp3",
+      "delete": null
+    },
+    "season": {
+      "href": "https://api.simplecast.com/seasons/a7658b9d-0f0f-4594-8525-45f6e9f9cc22",
+      "number": 1
+    },
+    "image_url": "https://cdn.simplecast.com/images/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/8cbdc1e4-afaa-4a67-8335-50148c8cdcac/1554650963artwork.jpg",
+    "token": "6ffc1d78"
+  },
+  {
+    "id": "5c05dd02-6574-4bbc-81cb-fc01bcc8fefe",
+    "legacy_id": 288347,
+    "href": "https://api.simplecast.com/episodes/5c05dd02-6574-4bbc-81cb-fc01bcc8fefe",
+    "audio_file_size": 31562866,
+    "waveform_pack": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/5c05dd02-6574-4bbc-81cb-fc01bcc8fefe/e906e6ab_tc.pack",
+    "audio_file_url": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/5c05dd02-6574-4bbc-81cb-fc01bcc8fefe/e906e6ab_tc.mp3",
+    "schedule": null,
+    "duration": 3922,
+    "sponsors": {
+      "href": "https://api.simplecast.com/episodes/5c05dd02-6574-4bbc-81cb-fc01bcc8fefe/sponsors"
+    },
+    "waveform_json": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/5c05dd02-6574-4bbc-81cb-fc01bcc8fefe/e906e6ab_tc.json",
+    "title": "38: TKMV",
+    "description": "Toimistollemme on saapunut jälleen kasa tiukkoja kysymyksiä, joihin vastaamme parhaamme mukaan! Aiheina mm. hipsterikielet, mutatointi ja E2E-testit.",
+    "updated_at": "2019-06-02T13:10:42.346250",
+    "unschedule": null,
+    "published_at": "2019-03-27T17:22:00.000000",
+    "status": "published",
+    "is_published": true,
+    "update": null,
+    "scheduled_for": null,
+    "recast_image": null,
+    "analytics": null,
+    "type": "full",
+    "dashboard_link": "https://dashboard.simplecast.com/episodes/5c05dd02-6574-4bbc-81cb-fc01bcc8fefe",
+    "image_path": "/images/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/5c05dd02-6574-4bbc-81cb-fc01bcc8fefe/1553708019artwork.jpg",
+    "warnings": [],
+    "audio_content_type": "audio/mpeg",
+    "recast_image_url": null,
+    "slug": "38",
+    "delete": null,
+    "number": 38,
+    "podcast": {
+      "href": "https://api.simplecast.com/podcasts/c323bddb-1521-4c01-9f09-f3b876b9877e?current_episode=5c05dd02-6574-4bbc-81cb-fc01bcc8fefe",
+      "title": "Webbidevaus.fi",
+      "status": "published",
+      "is_migration": true,
+      "import": null,
+      "image_url": "https://cdn.simplecast.com/images/c323bddb-1521-4c01-9f09-f3b876b9877e/89bdabf8-b0fa-475b-a2c2-5e6a55975087/1518464110artwork.jpg",
+      "id": "c323bddb-1521-4c01-9f09-f3b876b9877e",
+      "episodes": {
+        "count": 46
+      }
+    },
+    "authors": {
+      "href": "https://api.simplecast.com/episodes/5c05dd02-6574-4bbc-81cb-fc01bcc8fefe/authors",
+      "create": null,
+      "collection": [
+        {
+          "href": "https://api.simplecast.com/authors/41150ef5-f333-4df2-a3fd-420509303fa3?episode=5c05dd02-6574-4bbc-81cb-fc01bcc8fefe",
+          "remove": null,
+          "name": "Antti Mattila, Riku Rouvila",
+          "id": "41150ef5-f333-4df2-a3fd-420509303fa3"
+        }
+      ],
+      "associate": null
+    },
+    "is_hidden": false,
+    "sign_url": null,
+    "enclosure_url": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/5c05dd02-6574-4bbc-81cb-fc01bcc8fefe/e906e6ab_tc.mp3",
+    "upload_complete": null,
+    "recast_color": null,
+    "episode_url": "https://webbidevausfi.simplecast.com/episodes/38-e906e6ab",
+    "publish": null,
+    "created_at": "2019-06-02T13:10:09.059560",
+    "custom_url": null,
+    "audio_file_name": "e906e6ab.mp3",
+    "audio_file_path": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/5c05dd02-6574-4bbc-81cb-fc01bcc8fefe/e906e6ab.mp3",
+    "guid": "a6d2bcf7-f1da-4c1f-806c-736a3dad7728",
+    "keywords": {
+      "href": "https://api.simplecast.com/episodes/5c05dd02-6574-4bbc-81cb-fc01bcc8fefe/keywords",
+      "create": null,
+      "collection": []
+    },
+    "is_explicit": false,
+    "audio_file_path_tc": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/5c05dd02-6574-4bbc-81cb-fc01bcc8fefe/e906e6ab_tc.mp3",
+    "long_description": "Toimistollemme on saapunut jälleen kasa tiukkoja kysymyksiä, joihin vastaamme parhaamme mukaan! Aiheina mm. hipsterikielet, mutatointi ja E2E-testit.\r\n\r\n- [Futurice](https://futurice.com)\r\n- [React Finland](https://react-finland.fi)\r\n\r\n## Kysymykset\r\n\r\n- [Sentry.io](http://sentry.io/): onko tuttu? Onko vastaavia vaihtoehtoja ja mikä on paras? Saako nyky-EU:ssa webbiäppistä lähetellä stacktracet yms debug-tiedot kysymättä käyttäjältä siihen lupaa? **(Lars von Strömsson)**\r\n- Miten testaus kannattaisi hoitaa ei kriittisissä verkkosovelluksissa? Onko esim. mitään arvoa koodata metodeihin ja testeihin tyyppitarkistuksia, jos metodi kuitenkin ottaa vastaan vain yhden tyyppisiä muuttujia (Typescript). Onko järkevintä vaan koodailla E2E testejä vaikkapa Seleniumin kautta ja saavutta sitä kautta melko kattavat testit melko pienellä hyödyllä?  **(Konsta boii)**\r\n- Onko softa-alalla olemassa jotain tiettyjä paikkoja/reittejä, jolla voi maksimoida oman kehittymisen devaajana? Onko konsulttitalo ja vaihtuvat projektit hedelmällisempää osaamiselle kuin korporaatioissa vuosikymmeniä haudutettu syväosaaminen? **(Konsta boii)**\r\n- Kannattaako opetella uusia moderneja hipsterikieliä vai keskittyä vanhaan ja hyväksi todettuun tekkistäkkiin **(Jupe)**\r\n- Miksi mutatoimisesta koitetaan päästä eroon? **(Pyry Rouvila)**\r\n\r\n## Jakson valinnat\r\n\r\n- Riku: [Game of Thrones](https://fi.wikipedia.org/wiki/Game_of_Thrones)\r\n- Antti: [Feedbin](https://feedbin.com/)\r\n\r\n## Ota yhteyttä!\r\n\r\n- [@webbidevaus](https://twitter.com/webbidevaus)\r\n- [webbidevaus.fi](https://webbidevaus.fi)",
+    "audio_file": {
+      "url": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/5c05dd02-6574-4bbc-81cb-fc01bcc8fefe/e906e6ab_tc.mp3",
+      "size": 31562866,
+      "path_tc": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/5c05dd02-6574-4bbc-81cb-fc01bcc8fefe/e906e6ab_tc.mp3",
+      "path": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/5c05dd02-6574-4bbc-81cb-fc01bcc8fefe/e906e6ab.mp3",
+      "name": "e906e6ab.mp3",
+      "delete": null
+    },
+    "season": {
+      "href": "https://api.simplecast.com/seasons/a7658b9d-0f0f-4594-8525-45f6e9f9cc22",
+      "number": 1
+    },
+    "image_url": "https://cdn.simplecast.com/images/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/5c05dd02-6574-4bbc-81cb-fc01bcc8fefe/1553708019artwork.jpg",
+    "token": "e906e6ab"
+  },
+  {
+    "id": "4d9234eb-2f0f-4c67-9ebe-f9498fa327b0",
+    "legacy_id": 285340,
+    "href": "https://api.simplecast.com/episodes/4d9234eb-2f0f-4c67-9ebe-f9498fa327b0",
+    "audio_file_size": 34170128,
+    "waveform_pack": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/4d9234eb-2f0f-4c67-9ebe-f9498fa327b0/15587ba1_tc.pack",
+    "audio_file_url": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/4d9234eb-2f0f-4c67-9ebe-f9498fa327b0/15587ba1_tc.mp3",
+    "schedule": null,
+    "duration": 4248,
+    "sponsors": {
+      "href": "https://api.simplecast.com/episodes/4d9234eb-2f0f-4c67-9ebe-f9498fa327b0/sponsors"
+    },
+    "waveform_json": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/4d9234eb-2f0f-4c67-9ebe-f9498fa327b0/15587ba1_tc.json",
+    "description": "Jakson vieraana koodarikuiskaaja [Elisa Heikura](https://twitter.com/elisaliisa)! Tällä kertaa sukelletaan astetta hankalampien asioiden pariin, nimittäin kommunikaatiotaitoihin ja muiden ihmisten kanssa toimeen tulemiseen.",
+    "updated_at": "2019-06-02T13:11:26.934769",
+    "unschedule": null,
+    "published_at": "2019-03-17T10:00:00.000000",
+    "status": "published",
+    "is_published": true,
+    "update": null,
+    "scheduled_for": null,
+    "number": 37,
+    "recast_image": null,
+    "analytics": null,
+    "type": "full",
+    "title": "37: Elisa Heikura, Koodarikuiskaaja!",
+    "dashboard_link": "https://dashboard.simplecast.com/episodes/4d9234eb-2f0f-4c67-9ebe-f9498fa327b0",
+    "image_path": "/images/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/4d9234eb-2f0f-4c67-9ebe-f9498fa327b0/1552744765artwork.jpg",
+    "warnings": [],
+    "audio_content_type": "audio/mpeg",
+    "recast_image_url": null,
+    "slug": "37",
+    "delete": null,
+    "podcast": {
+      "href": "https://api.simplecast.com/podcasts/c323bddb-1521-4c01-9f09-f3b876b9877e?current_episode=4d9234eb-2f0f-4c67-9ebe-f9498fa327b0",
+      "title": "Webbidevaus.fi",
+      "status": "published",
+      "is_migration": true,
+      "import": null,
+      "image_url": "https://cdn.simplecast.com/images/c323bddb-1521-4c01-9f09-f3b876b9877e/89bdabf8-b0fa-475b-a2c2-5e6a55975087/1518464110artwork.jpg",
+      "id": "c323bddb-1521-4c01-9f09-f3b876b9877e",
+      "episodes": {
+        "count": 46
+      }
+    },
+    "authors": {
+      "href": "https://api.simplecast.com/episodes/4d9234eb-2f0f-4c67-9ebe-f9498fa327b0/authors",
+      "create": null,
+      "collection": [
+        {
+          "href": "https://api.simplecast.com/authors/41150ef5-f333-4df2-a3fd-420509303fa3?episode=4d9234eb-2f0f-4c67-9ebe-f9498fa327b0",
+          "remove": null,
+          "name": "Antti Mattila, Riku Rouvila",
+          "id": "41150ef5-f333-4df2-a3fd-420509303fa3"
+        }
+      ],
+      "associate": null
+    },
+    "is_hidden": false,
+    "sign_url": null,
+    "enclosure_url": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/4d9234eb-2f0f-4c67-9ebe-f9498fa327b0/15587ba1_tc.mp3",
+    "upload_complete": null,
+    "recast_color": null,
+    "episode_url": "https://webbidevausfi.simplecast.com/episodes/37-15587ba1",
+    "publish": null,
+    "created_at": "2019-06-02T13:10:09.078835",
+    "custom_url": null,
+    "audio_file_name": "15587ba1.mp3",
+    "audio_file_path": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/4d9234eb-2f0f-4c67-9ebe-f9498fa327b0/15587ba1.mp3",
+    "guid": "d6bee63b-290f-42ed-8cda-5b9f77872c68",
+    "keywords": {
+      "href": "https://api.simplecast.com/episodes/4d9234eb-2f0f-4c67-9ebe-f9498fa327b0/keywords",
+      "create": null,
+      "collection": []
+    },
+    "is_explicit": false,
+    "audio_file_path_tc": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/4d9234eb-2f0f-4c67-9ebe-f9498fa327b0/15587ba1_tc.mp3",
+    "long_description": "Jakson vieraana koodarikuiskaaja [Elisa Heikura](https://twitter.com/elisaliisa)! Tällä kertaa sukelletaan astetta hankalampien asioiden pariin, nimittäin kommunikaatiotaitoihin ja muiden ihmisten kanssa toimeen tulemiseen.\r\n\r\n## Linkit\r\n\r\n- [Koodarikuiskaaja](https://koodarikuiskaaja.fi)\r\n- [Elisa Twitterissä](https://twitter.com/elisaliisa)\r\n\r\n## Jakson valinnat\r\n\r\n- Elisa\r\n  - [The Witness](https://store.steampowered.com/app/210970/The_Witness/)\r\n  - [Brene Brownin TED-talk](https://www.ted.com/talks/brene_brown_on_vulnerability)\r\n  - [Brene Brownin luentosarja](https://www.amazon.com/Power-Vulnerability-Teachings-Authenticity-Connection/dp/1604078588)\r\n  - Siivoaminen päivittäin tunnin ajan\r\n  - Haaste: Käy lounaalla viikon ajan ilman puhelinta!\r\n- Antti\r\n  - Tylsyys\r\n  - [Calm](https://www.calm.com)\r\n- Riku\r\n  - Appelsiinien syöminen\r\n  - [kimmobrunfeldt/howto-everything/tips-to-eating-oranges.md](https://github.com/kimmobrunfeldt/howto-everything/blob/master/tips-to-eating-oranges.md)",
+    "audio_file": {
+      "url": "https://cdn.simplecast.com/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/4d9234eb-2f0f-4c67-9ebe-f9498fa327b0/15587ba1_tc.mp3",
+      "size": 34170128,
+      "path_tc": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/4d9234eb-2f0f-4c67-9ebe-f9498fa327b0/15587ba1_tc.mp3",
+      "path": "/prod/audio/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/4d9234eb-2f0f-4c67-9ebe-f9498fa327b0/15587ba1.mp3",
+      "name": "15587ba1.mp3",
+      "delete": null
+    },
+    "season": {
+      "href": "https://api.simplecast.com/seasons/a7658b9d-0f0f-4594-8525-45f6e9f9cc22",
+      "number": 1
+    },
+    "image_url": "https://cdn.simplecast.com/images/c323bd/c323bddb-1521-4c01-9f09-f3b876b9877e/4d9234eb-2f0f-4c67-9ebe-f9498fa327b0/1552744765artwork.jpg",
+    "token": "15587ba1"
   }
 ]

@@ -60,7 +60,7 @@ module.exports = {
               return (
                 allEpisode.edges
                   // Filter out not yet published episodes
-                  .filter(edge => edge.node.published)
+                  .filter(edge => edge.node.isPublished)
                   .map(edge => {
                     const { title, description } = edge.node
                     const url = `${site.siteMetadata.siteUrl}/${
@@ -94,7 +94,7 @@ module.exports = {
                       title
                       publishedAt
                       description
-                      published
+                      isPublished
                     }
                   }
                 }
