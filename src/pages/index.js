@@ -40,10 +40,12 @@ const IndexPage = () => (
                 title
                 description
                 longDescription
-                sharingUrl
-                published
+                isPublished
                 duration
                 publishedAt
+                audioFile {
+                  url
+                }
               }
             }
           }
@@ -68,14 +70,20 @@ const IndexPage = () => (
                     Uusin podcast-jakso
                   </h3>
                   <div className="newest-podcast">
-                    <a href={`/${latestEpisode.number}`} className="newest-podcast__block-link">
+                    <a
+                      href={`/${latestEpisode.number}`}
+                      className="newest-podcast__block-link"
+                    >
                       <h1 className="newest-podcast__number">
                         {latestEpisode.number}
                       </h1>
                     </a>
 
                     <div className="newest-podcast__content">
-                      <a href={`/${latestEpisode.number}`} className="newest-podcast__block-link">
+                      <a
+                        href={`/${latestEpisode.number}`}
+                        className="newest-podcast__block-link"
+                      >
                         <h1 className="newest-podcast__title">
                           <span className="newest-podcast__title-number">
                             {latestEpisode.number}.{' '}
@@ -101,11 +109,7 @@ const IndexPage = () => (
                         </a>
                       </p>
 
-                      <Player
-                        audioSrc={`https://audio.simplecast.com/${
-                          latestEpisode.embedId
-                        }.mp3`}
-                      />
+                      <Player audioSrc={latestEpisode.audioFile.url} />
                     </div>
                   </div>
                 </div>

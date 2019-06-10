@@ -32,15 +32,12 @@ exports.createPages = ({ graphql, actions }) => {
               title
               description
               longDescription
-              sharingUrl
-              published
+              audioFile {
+                url
+              }
+              isPublished
               publishedAt
               duration
-              images {
-                large
-                small
-                thumb
-              }
             }
           }
         }

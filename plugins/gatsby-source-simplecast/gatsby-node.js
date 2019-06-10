@@ -1,7 +1,7 @@
 const fetch = require('node-fetch')
 const humps = require('humps')
 
-exports.sourceNodes = (
+exports.sourceNodes = async (
   { actions, createNodeId, createContentDigest },
   configOptions
 ) => {
@@ -26,25 +26,36 @@ exports.sourceNodes = (
     return nodeData
   }
 
-  const apiUrl = `https://api.simplecast.com/podcasts/${
+  const episodeListingUrl = `https://api.simplecast.com/podcasts/${
     configOptions.podcastId
   }/episodes?count=999`
 
+  const episodeUrl = id => `https://api.simplecast.com/episodes/${id}`
+
+  const requestOpts = {
+    headers: {
+      Authorization: `Basic ${configOptions.apiKey}`,
+    },
+  }
   let request
   if (configOptions.apiKey) {
-    request = fetch(apiUrl, {
-      headers: {
-        Authorization: `Basic ${configOptions.apiKey}`,
-      },
-    }).then(response => response.json())
+    request = fetch(episodeListingUrl, requestOpts)
+      .then(response => response.json())
+      .then(response =>
+        Promise.all(
+          response.collection.map(({ id }) =>
+            fetch(episodeUrl(id), requestOpts).then(res => res.json())
+          )
+        )
+      )
   } else {
     request = Promise.resolve(require('./mock-data.json'))
   }
 
-  return request.then(async response => {
-    response.collection.forEach(episode => {
-      const nodeData = processEpisode(episode)
-      createNode(nodeData)
-    })
+  const response = await request
+
+  response.forEach(episode => {
+    const nodeData = processEpisode(episode)
+    createNode(nodeData)
   })
 }

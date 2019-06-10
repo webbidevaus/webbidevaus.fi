@@ -14,7 +14,6 @@ export function nodeToPodcastEpisode(node) {
   return {
     ...node,
     publishedAt: new Date(node.publishedAt),
-    embedId: node.sharingUrl.split('/s/')[1],
   }
 }
 
@@ -23,9 +22,8 @@ export function resultToPodcastEpisodes(result) {
     .map(({ node }) => ({
       ...node,
       publishedAt: new Date(node.publishedAt),
-      embedId: node.sharingUrl.split('/s/')[1],
     }))
-    .filter(({ published }) => published)
+    .filter(({ isPublished }) => isPublished)
 }
 
 export function episodeTitleWithoutNumber(title) {

@@ -31,10 +31,7 @@ const EpisodeTemplate = props => {
           <Meta publishedAt={episode.publishedAt} duration={episode.duration} />
 
           <div className="episode__player">
-            <Player
-              audioSrc={`https://audio.simplecast.com/${episode.embedId}.mp3`}
-              isDark
-            />
+            <Player audioSrc={episode.audioFile.url} isDark />
           </div>
 
           <div className="episode__shownotes">
