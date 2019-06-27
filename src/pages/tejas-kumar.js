@@ -16,7 +16,7 @@ const episode = {
   `,
   duration: 1061,
   audioFile: {
-    url: 'tejas.mp3',
+    url: '/tejas.mp3',
   },
 }
 
