@@ -28,7 +28,7 @@ exports.sourceNodes = async (
 
   const episodeListingUrl = `https://api.simplecast.com/podcasts/${
     configOptions.podcastId
-  }/episodes?count=999`
+  }/episodes?limit=999`
 
   const episodeUrl = id => `https://api.simplecast.com/episodes/${id}`
 
