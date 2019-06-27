@@ -117,13 +117,16 @@
 .newest-vlog-entry__container {
   position: relative;
   padding-top: 56.25%;
-
+  overflow: hidden;
   img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    opacity: 0.8;
+    filter: blur(2px);
+    transform: scale(1.1, 1.1);
   }
   svg {
     position: absolute;
