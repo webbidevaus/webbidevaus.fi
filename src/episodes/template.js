@@ -28,6 +28,10 @@ const EpisodeTemplate = props => {
             {episodeTitleWithoutNumber(episode.title)}
           </h1>
 
+          {episode.description && (
+            <p className="episode__description">{episode.description}</p>
+          )}
+
           <Meta publishedAt={episode.publishedAt} duration={episode.duration} />
 
           <div className="episode__player">
