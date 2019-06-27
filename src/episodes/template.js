@@ -28,8 +28,8 @@ const EpisodeTemplate = props => {
             {episodeTitleWithoutNumber(episode.title)}
           </h1>
 
-          {episode.description && (
-            <p className="episode__description">{episode.description}</p>
+          {episode.shortDescription && (
+            <p className="episode__description">{episode.shortDescription}</p>
           )}
 
           <Meta publishedAt={episode.publishedAt} duration={episode.duration} />

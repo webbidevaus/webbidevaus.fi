@@ -4,7 +4,7 @@ import Episode from '../episodes/template'
 const episode = {
   title: 'React Finland - Interview with Tejas Kumar',
   number: 47,
-  description: `
+  shortDescription: `
     230 type errors to an incredible type safe codebase? Hit play and hear how.
     Tejas, Antti and Riku chat about TypeScript, about whether it's too difficult to adopt and how it could still be improved as a language?
   `,
