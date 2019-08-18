@@ -107,7 +107,7 @@ const IndexPage = () => (
                       href="https://www.youtube.com/watch?v=aaWsv0h4lOg"
                     >
                       <img
-                        src="http://i3.ytimg.com/vi/aaWsv0h4lOg/maxres3.jpg"
+                        src="https://i3.ytimg.com/vi/aaWsv0h4lOg/maxres3.jpg"
                         alt="WDS.11 - CSS Nuggets 8pcs"
                       />
                       <svg viewBox="0 0 459 459">
