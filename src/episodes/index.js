@@ -23,6 +23,7 @@ export function resultToPodcastEpisodes(result) {
       ...node,
       publishedAt: new Date(node.publishedAt),
     }))
+    .sort((a, b) => b.publishedAt - a.publishedAt)
     .filter(({ isPublished }) => isPublished)
 }
 
