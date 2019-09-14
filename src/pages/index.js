@@ -1,6 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import classNames from 'classnames'
+import Markdown from 'react-markdown'
 
 import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
@@ -144,7 +145,16 @@ const IndexPage = () => (
                             <h3 className="old-episode__title">
                               {episodeTitleWithoutNumber(title)}
                             </h3>
-                            <p>{description}</p>
+                            <Markdown
+                              source={description}
+                              linkTarget="_blank"
+                              renderers={{
+                                /*
+                                 * Only render link texts, as the episode box is already an anchor
+                                 */
+                                link: props => props.children,
+                              }}
+                            />
                           </div>
                         </section>
                       </a>
