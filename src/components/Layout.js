@@ -13,22 +13,26 @@ export const Layout = ({ children, episode }) => (
         site {
           siteMetadata {
             title
+            siteUrl
           }
         }
       }
     `}
     render={data => {
+      const { siteUrl } = data.site.siteMetadata
       const title = episode
         ? `${episode.title} - ${data.site.siteMetadata.title}`
         : data.site.siteMetadata.title
 
       const description = episode
         ? episode.description
-        : 'Webbidevaus.fi - Puheradiota web-kehityksestä Suomeksi!'
+        : 'Puheradiota web-kehityksestä Suomeksi! Suomen kovin koodausaiheinen podcast - mikissä Riku Rouvila ja Antti Mattila'
 
-      const url = episode
-        ? `https://webbidevaus.fi/${episode.number}`
-        : `https://webbidevaus.fi/`
+      const url = episode ? `${siteUrl}/${episode.number}` : siteUrl
+
+      // Gatsby seems to give us the full url path in development mode
+      // whereas in production it's only the absolute path
+      const coverUrl = cover.includes('http') ? cover : `${siteUrl}${cover}`
 
       const metaTags = [
         { name: 'title', content: title },
@@ -40,12 +44,12 @@ export const Layout = ({ children, episode }) => (
         { property: 'og:title', content: title },
         { property: 'og:description', content: description },
         { property: 'og:url', content: url },
-        { property: 'og:image', content: cover },
+        { property: 'og:image', content: coverUrl },
         { property: 'og:type', content: 'website' },
         { property: 'twitter:title', content: title },
         { property: 'twitter:description', content: description },
         { property: 'twitter:url', content: url },
-        { property: 'twitter:image', content: cover },
+        { property: 'twitter:image', content: coverUrl },
         { property: 'twitter:card', content: 'summary_large_image' },
       ]
 
