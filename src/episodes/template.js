@@ -16,7 +16,7 @@ const EpisodeTemplate = props => {
   const episode = nodeToPodcastEpisode(props.pageContext)
 
   return (
-    <Layout>
+    <Layout episode={episode}>
       <div className="hero hero--single">
         <Header className={classNames('hero__header', 'wrap')} />
       </div>
