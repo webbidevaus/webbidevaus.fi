@@ -21,10 +21,15 @@
   }
 }
 
+.podcast-player__play-pause-button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
 .podcast-player__play-pause {
   width: 52px;
   height: 52px;
-  cursor: pointer;
 }
 
 .podcast-player__controls {
@@ -96,4 +101,14 @@
   --playerPrimaryColor: white;
   --playerBackgroundColor: #bb1155;
   --playerRangeBackgroundColor: hsla(0, 0%, 100%, 0.4);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; /* added line */
 }

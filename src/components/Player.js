@@ -64,14 +64,11 @@ export default function Player({ audioSrc, isDark = false }) {
   }
 
   // Persist current play position when currentTime changes
-  useEffect(
-    () => {
-      const config = getPlayerConfig()
-      config.episodePositions[audioSrc] = currentTime
-      storePlayerConfig(config)
-    },
-    [currentTime]
-  )
+  useEffect(() => {
+    const config = getPlayerConfig()
+    config.episodePositions[audioSrc] = currentTime
+    storePlayerConfig(config)
+  }, [currentTime])
 
   // Force player's play position if there's a stored position
   useEffect(() => {
@@ -132,92 +129,99 @@ export default function Player({ audioSrc, isDark = false }) {
           <source src={audioSrc} type="audio/mpeg" />
         </audio>
 
-        <svg
-          className="podcast-player__play-pause"
-          width="52"
-          height="52"
-          viewBox="0 0 104 104"
+        <button
+          className="podcast-player__play-pause-button"
           onClick={onPlayPauseClicked}
         >
-          <circle
-            cx="51"
-            cy="51"
-            r="48"
-            strokeDasharray="314"
-            strokeDashoffset="0"
-            style={{
-              strokeWidth: '6px',
-              stroke: 'var(--playerPrimaryColor)',
-              fill: 'transparent',
-            }}
-          />
-          <path
-            id="triangle"
-            d="M 40 30 L 40 30 L 71 50 L 40 70 L 40 30"
-            rx="10"
-            ry="10"
-            style={{
-              strokeWidth: '8px',
-              stroke: 'var(--playerPrimaryColor)',
-              strokeLinejoin: 'round',
-              strokeLinecap: 'round',
-              fill: 'var(--playerPrimaryColor)',
-            }}
+          <span class="visually-hidden">
+            {isPlaying ? 'Pysäytä' : 'Toista'}
+          </span>
+          <svg
+            className="podcast-player__play-pause"
+            width="52"
+            height="52"
+            viewBox="0 0 104 104"
           >
-            <animate
-              attributeName="d"
-              dur="50ms"
-              from="M 40 30 L 40 30 L 71 50 L 40 70 L 40 30"
-              to="M 38 30 L 38 30 L 38 50 L 38 70 L 38 30"
-              begin="indefinite"
-              fill="freeze"
-              id="triangle-from-pause-to-play"
-              ref={fromPauseToPlayAnimationTriangleRef}
+            <circle
+              cx="51"
+              cy="51"
+              r="48"
+              strokeDasharray="314"
+              strokeDashoffset="0"
+              style={{
+                strokeWidth: '6px',
+                stroke: 'var(--playerPrimaryColor)',
+                fill: 'transparent',
+              }}
             />
-            <animate
-              attributeName="d"
-              dur="50ms"
-              to="M 40 30 L 40 30 L 71 50 L 40 70 L 40 30"
-              from="M 38 30 L 38 30 L 38 50 L 38 70 L 38 30"
-              begin="indefinite"
-              fill="freeze"
-              ref={fromPlayToPauseAnimationTriangleRef}
-            />
-          </path>
+            <path
+              id="triangle"
+              d="M 40 30 L 40 30 L 71 50 L 40 70 L 40 30"
+              rx="10"
+              ry="10"
+              style={{
+                strokeWidth: '8px',
+                stroke: 'var(--playerPrimaryColor)',
+                strokeLinejoin: 'round',
+                strokeLinecap: 'round',
+                fill: 'var(--playerPrimaryColor)',
+              }}
+            >
+              <animate
+                attributeName="d"
+                dur="50ms"
+                from="M 40 30 L 40 30 L 71 50 L 40 70 L 40 30"
+                to="M 38 30 L 38 30 L 38 50 L 38 70 L 38 30"
+                begin="indefinite"
+                fill="freeze"
+                id="triangle-from-pause-to-play"
+                ref={fromPauseToPlayAnimationTriangleRef}
+              />
+              <animate
+                attributeName="d"
+                dur="50ms"
+                to="M 40 30 L 40 30 L 71 50 L 40 70 L 40 30"
+                from="M 38 30 L 38 30 L 38 50 L 38 70 L 38 30"
+                begin="indefinite"
+                fill="freeze"
+                ref={fromPlayToPauseAnimationTriangleRef}
+              />
+            </path>
 
-          <path
-            id="line"
-            d="M 68 50 L 68 50 L 68 50"
-            rx="10"
-            ry="10"
-            style={{
-              strokeWidth: '8px',
-              stroke: 'var(--playerPrimaryColor)',
-              strokeLinejoin: 'round',
-              strokeLinecap: 'round',
-              fill: 'var(--playerPrimaryColor)',
-            }}
-          >
-            <animate
-              attributeName="d"
-              dur="50ms"
-              from="M 68 50 L 68 50 L 68 50"
-              to="M 66 30 L 66 50 L 66 70"
-              begin="indefinite"
-              fill="freeze"
-              ref={fromPauseToPlayAnimationLineRef}
-            />
-            <animate
-              attributeName="d"
-              dur="50ms"
-              to="M 68 50 L 68 50 L 68 50"
-              from="M 66 30 L 66 50 L 66 70"
-              begin="indefinite"
-              fill="freeze"
-              ref={fromPlayToPauseAnimationLineRef}
-            />
-          </path>
-        </svg>
+            <path
+              id="line"
+              d="M 68 50 L 68 50 L 68 50"
+              rx="10"
+              ry="10"
+              style={{
+                strokeWidth: '8px',
+                stroke: 'var(--playerPrimaryColor)',
+                strokeLinejoin: 'round',
+                strokeLinecap: 'round',
+                fill: 'var(--playerPrimaryColor)',
+              }}
+            >
+              <animate
+                attributeName="d"
+                dur="50ms"
+                from="M 68 50 L 68 50 L 68 50"
+                to="M 66 30 L 66 50 L 66 70"
+                begin="indefinite"
+                fill="freeze"
+                ref={fromPauseToPlayAnimationLineRef}
+              />
+              <animate
+                attributeName="d"
+                dur="50ms"
+                to="M 68 50 L 68 50 L 68 50"
+                from="M 66 30 L 66 50 L 66 70"
+                begin="indefinite"
+                fill="freeze"
+                ref={fromPlayToPauseAnimationLineRef}
+              />
+            </path>
+          </svg>
+        </button>
 
         <div className="podcast-player__controls">
           <button
@@ -225,6 +229,7 @@ export default function Player({ audioSrc, isDark = false }) {
             onClick={on15Rev}
             disabled={!isPlaying}
           >
+            <span class="visually-hidden">Taaksepäin 15 sekuntia</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -247,6 +252,7 @@ export default function Player({ audioSrc, isDark = false }) {
             onClick={on15Fwd}
             disabled={!isPlaying}
           >
+            <span class="visually-hidden">Eteenpäin 15 sekuntia</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -264,7 +270,10 @@ export default function Player({ audioSrc, isDark = false }) {
             </svg>
           </button>
           <div className="podcast-player__control podcast-player__speed">
-            <select value={currentSpeed} onChange={onSpeedChanged}>
+            <label for="speed" class="visually-hidden">
+              Toistonopeus
+            </label>
+            <select id="speed" value={currentSpeed} onChange={onSpeedChanged}>
               {SPEEDS.map(speed => (
                 <option key={speed} value={speed}>
                   {speed}
