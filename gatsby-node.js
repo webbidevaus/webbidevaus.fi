@@ -49,6 +49,11 @@ exports.createPages = ({ graphql, actions }) => {
           component: path.resolve(`./src/episodes/template.js`),
           context: node,
         })
+        createPage({
+          path: node.number.toString() + '/embed',
+          component: path.resolve(`./src/episodes/embed.js`),
+          context: node,
+        })
       })
       resolve()
     })
