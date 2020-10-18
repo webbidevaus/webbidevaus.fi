@@ -3,6 +3,7 @@ import classNames from 'classnames'
 
 import './Player.scss'
 import SeekBar from './SeekBar'
+import { useHash } from './useHash'
 
 const SPEEDS = [0.5, 0.8, 1, 1.1, 1.25, 1.5, 2]
 const FAST_FORWARD = Symbol('ff')
@@ -32,16 +33,29 @@ function storePlayerConfig(config) {
   window.localStorage.setItem(STORAGE_KEY, JSON.stringify(config))
 }
 
-function getStoredPlayPosition(audioSrc) {
-  return getPlayerConfig().episodePositions[audioSrc]
+function getStoredPlayPosition(locationHash, audioSrc) {
+  return (
+    getCurrentTimeFromHash(locationHash) ||
+    getPlayerConfig().episodePositions[audioSrc]
+  )
+}
+
+function getCurrentTimeFromHash(hash) {
+  const matches = (hash || '').match(/t=(\d+)/)
+  if (!matches) {
+    return null
+  }
+  const currentTimeInHash = parseInt(matches[1], 10)
+  return currentTimeInHash
 }
 
 export default function Player({ audioSrc, isDark = false }) {
+  const [hash] = useHash()
   const [isPlaying, setIsPlaying] = useState(false)
   const [duration, setDuration] = useState(0)
   const [currentSpeed, setCurrentSpeed] = useState(1)
   const [currentTime, setCurrentTime] = useState(
-    getStoredPlayPosition(audioSrc) || 0
+    getStoredPlayPosition(hash, audioSrc) || 0
   )
   const audioRef = useRef(null)
   const fromPlayToPauseAnimationTriangleRef = useRef(null)
@@ -63,6 +77,13 @@ export default function Player({ audioSrc, isDark = false }) {
     }
   }
 
+  useEffect(() => {
+    const currentTimeInHash = getCurrentTimeFromHash(hash)
+    if (currentTimeInHash !== null) {
+      setCurrentTime(currentTimeInHash)
+    }
+  }, [hash])
+
   // Persist current play position when currentTime changes
   useEffect(() => {
     const config = getPlayerConfig()
@@ -72,7 +93,7 @@ export default function Player({ audioSrc, isDark = false }) {
 
   // Force player's play position if there's a stored position
   useEffect(() => {
-    const storedPosition = getStoredPlayPosition(audioSrc)
+    const storedPosition = getStoredPlayPosition(hash, audioSrc)
     if (storedPosition) {
       audioRef.current.currentTime = storedPosition
     }
