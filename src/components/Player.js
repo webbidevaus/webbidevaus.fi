@@ -80,6 +80,9 @@ export default function Player({ audioSrc, isDark = false }) {
   useEffect(() => {
     const currentTimeInHash = getCurrentTimeFromHash(hash)
     if (currentTimeInHash !== null) {
+      if (audioRef.current) {
+        audioRef.current.currentTime = currentTimeInHash
+      }
       setCurrentTime(currentTimeInHash)
     }
   }, [hash])
