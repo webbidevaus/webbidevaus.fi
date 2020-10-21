@@ -16,7 +16,7 @@
     "gatsby-plugin-sharp": "2.0.7",
     "gatsby-source-filesystem": "2.1.34",
     "gatsby-source-youtube": "1.0.1",
-    "gatsby-transformer-sharp": "2.1.4",
+    "gatsby-transformer-sharp": "2.5.19",
     "humps": "2.0.1",
     "node-sass": "4.13.0",
     "react": "16.11.0",
