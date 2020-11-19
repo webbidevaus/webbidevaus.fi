@@ -1,44 +1,30 @@
 {
-  "name": "webbidevaus.fi",
-  "description": "Webbidevaus.fi",
-  "version": "1.0.0",
-  "author": "Antti Mattila <me@rarelyneeded.com>, Riku Rouvila <riku.rouvila@gmail.com>",
-  "dependencies": {
-    "classnames": "2.2.6",
-    "dotenv-cli": "3.0.0",
-    "gatsby": "2.19.32",
-    "gatsby-image": "2.2.30",
-    "gatsby-plugin-feed": "2.3.19",
-    "gatsby-plugin-manifest": "2.0.5",
-    "gatsby-plugin-offline": "3.0.17",
-    "gatsby-plugin-react-helmet": "3.1.13",
-    "gatsby-plugin-sass": "2.1.20",
-    "gatsby-plugin-sharp": "2.0.7",
-    "gatsby-source-filesystem": "2.1.34",
-    "gatsby-source-youtube": "1.0.1",
-    "gatsby-transformer-sharp": "2.1.4",
-    "humps": "2.0.1",
-    "node-sass": "4.13.0",
-    "react": "16.11.0",
-    "react-dom": "16.11.0",
-    "react-helmet": "5.2.1",
-    "react-markdown": "4.2.2"
-  },
-  "keywords": [
-    "webbidevaus"
-  ],
-  "license": "MIT",
+  "name": "webbidevaus-next",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "build": "gatsby build",
-    "develop": "dotenv gatsby develop",
-    "start": "npm run develop",
-    "format": "prettier --write \"src/**/*.js\""
+    "dev": "next dev -p 4000",
+    "build": "next build",
+    "start": "next start",
+    "postbuild": "next-on-netlify"
+  },
+  "dependencies": {
+    "@types/qs": "6.9.5",
+    "classnames": "2.2.6",
+    "firebase": "8.0.2",
+    "next": "10.0.2",
+    "next-on-netlify": "2.6.3",
+    "purify-ts": "0.16.0",
+    "qs": "6.9.4",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-markdown": "5.0.3",
+    "sass": "1.29.0"
   },
   "devDependencies": {
-    "prettier": "^1.14.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/webbidevaus/webbidevaus.fi"
+    "@types/classnames": "2.2.11",
+    "@types/node": "14.14.8",
+    "@types/react": "16.9.56",
+    "typescript": "4.0.5"
   }
 }
