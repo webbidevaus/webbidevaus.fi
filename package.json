@@ -11,7 +11,7 @@
   "dependencies": {
     "@types/qs": "6.9.5",
     "classnames": "2.2.6",
-    "firebase": "8.0.2",
+    "firebase": "8.2.1",
     "next": "10.0.2",
     "next-on-netlify": "2.6.3",
     "purify-ts": "0.16.0",
