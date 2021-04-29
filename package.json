@@ -12,7 +12,7 @@
     "@types/qs": "6.9.5",
     "classnames": "2.2.6",
     "firebase": "8.2.1",
-    "next": "10.0.2",
+    "next": "10.2.0",
     "next-on-netlify": "2.7.0",
     "purify-ts": "0.16.1",
     "qs": "6.9.4",
