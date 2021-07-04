@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 4000",
-    "build": "next build",
+    "build": "ts-node generate-episodes-json.ts && next build",
     "start": "next start",
     "postbuild": "next-on-netlify"
   },
