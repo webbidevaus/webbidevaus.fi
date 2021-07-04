@@ -7,13 +7,9 @@ import { Footer } from "../components/Footer";
 import { Meta } from "../components/Meta";
 import { Player } from "../components/Player";
 import { GetStaticProps } from "next";
-import { getEpisodes } from "../util/episodes";
+import { episodeTitleWithoutNumber, getEpisodes } from "../util/episodes";
 import { ListingEpisode } from "../types/Episode";
 import { useHit } from "../util/analytics";
-
-function episodeTitleWithoutNumber(title: string) {
-  return title.replace(/^\d*. /, "");
-}
 
 interface IHome {
   allEpisodes: ListingEpisode[];
