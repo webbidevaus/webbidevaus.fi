@@ -17,7 +17,7 @@
     "next": "10.0.2",
     "next-on-netlify": "3.0.1",
     "purify-ts": "^0.16.3",
-    "qs": "6.9.4",
+    "qs": "6.10.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-markdown": "5.0.3",
