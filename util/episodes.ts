@@ -3,9 +3,10 @@ import { Left } from "purify-ts/Either";
 import { Maybe } from "purify-ts/Maybe";
 import { List } from "purify-ts/List";
 import path from "path";
-const fs = require("fs").promises;
+import { promises as fs } from "fs";
 import { ListingEpisodes, ListingEpisode, Episode } from "../types/Episode";
 import { authFetch, plainFetchAuth } from "../util/fetch";
+import { GetType } from "purify-ts";
 
 function getFile(filename: string) {
   return (): Promise<Buffer> => {
@@ -25,9 +26,10 @@ export async function loadEpisodes(filePath: string) {
 }
 
 const findEpisode = (episodeId: number) => (epis: ListingEpisodes) => {
-  return List.find((epi) => epi.number === episodeId, epis.collection).toEither(
-    Left("Episode not found")
-  );
+  return List.find<ListingEpisodes["collection"][number]>(
+    (epi) => epi.number === episodeId,
+    epis.collection
+  ).toEither(Left("Episode not found"));
 };
 
 const parseId = (id?: string) => {
@@ -35,6 +37,8 @@ const parseId = (id?: string) => {
     .map((val) => parseInt(val, 10))
     .orDefault(-1);
 };
+
+export type Episode = GetType<typeof Episode>;
 
 const createEpisodeUrl = (e: ListingEpisode) =>
   `https://api.simplecast.com/episodes/${e.id}`;
@@ -71,4 +75,8 @@ export async function getEpisodes(podcastId?: string) {
       .map((e) => e.json())
       .chain((val) => EitherAsync.liftEither(ListingEpisodes.decode(val)))
   ).orDefault({ collection: [] });
+}
+
+export function episodeTitleWithoutNumber(title: string) {
+  return title.replace(/^\d*. /, "");
 }
