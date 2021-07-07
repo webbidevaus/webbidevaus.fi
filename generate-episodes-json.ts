@@ -4,6 +4,10 @@ import { getEpisode, getEpisodes } from "./util/episodes";
 import TurndownService from "turndown";
 import { MaybeAsync } from "purify-ts/MaybeAsync";
 
+function isHTML(text: string) {
+  return text.startsWith("<p>");
+}
+
 async function main() {
   const episodes = await getEpisodes(process.env.SIMPLECAST_PODCAST_ID);
   writeFileSync("episodes.json.tmp", JSON.stringify(episodes));
@@ -18,7 +22,9 @@ async function main() {
 
   const episodesWithMarkdownDescription = fullEpisodeDetails.map((episode) => {
     // Episodes before 55 have description in markdown, others are in HTML
-
+    if (!isHTML(episode.long_description)) {
+      return episode;
+    }
     return {
       ...episode,
       long_description: new TurndownService({ headingStyle: "atx" }).turndown(
