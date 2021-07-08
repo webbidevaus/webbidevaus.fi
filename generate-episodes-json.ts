@@ -5,7 +5,7 @@ import TurndownService from "turndown";
 import { MaybeAsync } from "purify-ts/MaybeAsync";
 
 function isHTML(text: string) {
-  return text.startsWith("<p>");
+  return text.startsWith("<p>") || text.startsWith("<h");
 }
 
 async function main() {
