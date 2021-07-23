@@ -13,7 +13,7 @@
     "@types/turndown": "^5.0.1",
     "classnames": "2.2.6",
     "cross-fetch": "^3.0.5",
-    "firebase": "8.2.1",
+    "firebase": "8.8.0",
     "next": "10.0.2",
     "next-on-netlify": "3.0.1",
     "purify-ts": "^0.16.3",
