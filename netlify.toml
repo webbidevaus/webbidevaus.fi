@@ -1,7 +1,6 @@
 [build]
   command   = "npm run build"
-  functions = "out_functions"
-  publish   = "out_publish"
+  publish   = "out"
 
 [dev]
   functions = "out_functions"
@@ -15,3 +14,6 @@
   for = "/*.json"
     [headers.values]
     Access-Control-Allow-Origin = "*"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
