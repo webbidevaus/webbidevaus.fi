@@ -5,30 +5,30 @@
   "scripts": {
     "dev": "next dev -p 4000",
     "build": "ts-node generate-episodes-json.ts && next build",
-    "start": "next start",
-    "postbuild": "next-on-netlify"
+    "start": "next start"
   },
   "dependencies": {
+    "@netlify/plugin-nextjs": "^3.9.0",
     "@types/qs": "6.9.5",
     "@types/turndown": "^5.0.1",
     "classnames": "2.2.6",
     "cross-fetch": "^3.0.5",
     "firebase": "8.2.1",
-    "next": "10.0.2",
-    "next-on-netlify": "3.0.1",
+    "next": "11.1.2",
     "purify-ts": "^0.16.3",
     "qs": "6.9.4",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
     "react-markdown": "5.0.3",
     "sass": "1.32.0",
+    "sharp": "^0.29.1",
     "turndown": "^7.1.1"
   },
   "devDependencies": {
     "@types/classnames": "2.2.11",
     "@types/node": "14.14.20",
     "@types/react": "17.0.0",
-    "ts-node": "^10.0.0",
-    "typescript": "4.0.5"
+    "ts-node": "10.2.1",
+    "typescript": "4.4.3"
   }
 }
