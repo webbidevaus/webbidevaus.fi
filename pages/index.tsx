@@ -9,14 +9,12 @@ import { Player } from "../components/Player";
 import { GetStaticProps } from "next";
 import { episodeTitleWithoutNumber, getEpisodes } from "../util/episodes";
 import { ListingEpisode } from "../types/Episode";
-import { useHit } from "../util/analytics";
 
 interface IHome {
   allEpisodes: ListingEpisode[];
 }
 
 export default function Home({ allEpisodes }: IHome) {
-  useHit();
   const latestEpisode = allEpisodes[0];
 
   return (
