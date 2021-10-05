@@ -1,4 +1,4 @@
-@import 'colors';
+@import "colors";
 
 .footer.padded {
   position: relative;
@@ -16,7 +16,7 @@
   }
 
   &:after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     z-index: -1;
@@ -81,8 +81,10 @@
   }
 
   @media (min-width: 600px) {
-    &:first-of-type {
-      margin-right: 2rem;
+    margin-right: 2rem;
+
+    &:last-of-type {
+      margin-right: 0;
     }
   }
 }
@@ -93,6 +95,10 @@
   align-self: center;
   margin-bottom: 1rem;
   border-radius: 8px;
+}
+
+.tommi {
+  filter: grayscale(100%);
 }
 
 .host-details {

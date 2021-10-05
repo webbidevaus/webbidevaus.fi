@@ -33,6 +33,17 @@ export function Footer({ isSingle = false }) {
         </li>
         <li className="host">
           <img
+            className="tommi"
+            src="https://avatars.githubusercontent.com/u/1451152?v=4"
+            alt="Tommi Pääkkö"
+          />
+          <div className="host-details">
+            <h2>Tommi Pääkkö</h2>
+            <a href="https://twitter.com/tommipaakko">@tommipaakko</a>
+          </div>
+        </li>
+        <li className="host">
+          <img
             src="https://avatars3.githubusercontent.com/u/1206987?s=460&v=4"
             alt="Riku Rouvila"
           />
