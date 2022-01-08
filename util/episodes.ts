@@ -41,7 +41,7 @@ const parseId = (id?: string) => {
 export type Episode = GetType<typeof Episode>;
 
 const createEpisodeUrl = (e: ListingEpisode) =>
-  `https://api.simplecast.com/episodes/${e.id}`;
+  `https://kapselistudio.gigalixirapp.com/api/episode/${e.id}`;
 
 /**
  * Load the episodes JSON from the given file path and return the
@@ -68,7 +68,7 @@ export async function getEpisode(filePath: string, id?: string) {
  * Fetch the list of all episodes from Simplecast, returning a `ListingEpisodes`
  */
 export async function getEpisodes(podcastId?: string) {
-  const episodeListingUrl = `https://api.simplecast.com/podcasts/${podcastId}/episodes?limit=999`;
+  const episodeListingUrl = `https://kapselistudio.gigalixirapp.com/api/podcast/${podcastId}/episodes`;
 
   return (
     await EitherAsync(() => plainFetchAuth(episodeListingUrl))
