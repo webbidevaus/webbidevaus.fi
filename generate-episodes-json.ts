@@ -9,9 +9,8 @@ function isHTML(text: string) {
 }
 
 async function main() {
-  const episodes = await getEpisodes(process.env.SIMPLECAST_PODCAST_ID);
+  const episodes = await getEpisodes(process.env.PODCAST_ID);
   writeFileSync("episodes.json.tmp", JSON.stringify(episodes));
-  console.log(episodes.collection.length);
 
   const episodeRequests = episodes.collection.map(async (episode) =>
     getEpisode("episodes.json.tmp", episode.number.toString())
@@ -33,8 +32,6 @@ async function main() {
       ),
     };
   });
-
-  console.log("Writing episodes.json", episodesWithMarkdownDescription);
 
   writeFileSync(
     "public/episodes.json",

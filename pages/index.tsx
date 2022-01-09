@@ -150,7 +150,7 @@ export default function Home({ allEpisodes }: IHome) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const episodes = await getEpisodes(process.env.SIMPLECAST_PODCAST_ID);
+  const episodes = await getEpisodes(process.env.PODCAST_ID);
 
   return {
     props: {

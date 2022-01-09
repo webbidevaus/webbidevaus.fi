@@ -71,8 +71,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  // Fetch the master episode list from Simplecast, return numeric episode IDs
-  const episodes = await getEpisodes(process.env.SIMPLECAST_PODCAST_ID);
+  // Fetch the master episode list from Kapselistudio, return numeric episode IDs
+  const episodes = await getEpisodes(process.env.PODCAST_ID);
 
   const filePath = path.join("./", FILE_NAME);
   await fs.promises.writeFile(filePath, JSON.stringify(episodes, null, 2));

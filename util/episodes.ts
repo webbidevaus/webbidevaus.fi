@@ -5,7 +5,7 @@ import { List } from "purify-ts/List";
 import path from "path";
 import { promises as fs } from "fs";
 import { ListingEpisodes, ListingEpisode, Episode } from "../types/Episode";
-import { authFetch, plainFetchAuth } from "../util/fetch";
+import { fetchToJson } from "../util/fetch";
 import { GetType } from "purify-ts";
 
 function getFile(filename: string) {
@@ -41,7 +41,7 @@ const parseId = (id?: string) => {
 export type Episode = GetType<typeof Episode>;
 
 const createEpisodeUrl = (e: ListingEpisode) =>
-  `https://kapselistudio.gigalixirapp.com/api/episode/${e.id}`;
+  `${process.env.KAPSELISTUDIO_ROOT_URL}/api/episode/${e.id}`;
 
 /**
  * Load the episodes JSON from the given file path and return the
@@ -55,23 +55,23 @@ export async function getEpisode(filePath: string, id?: string) {
     findEpisode(episodeId)
   );
 
-  // Fetch the full episode information based on the Simplecast episode ID from `listingEpisode`
+  // Fetch the full episode information based on the Kapselistudio episode ID from `listingEpisode`
   const fullEpisode = await EitherAsync.liftEither(listingEpisode)
     .map(createEpisodeUrl)
-    .chain(authFetch)
+    .chain(fetchToJson)
     .chain((val) => EitherAsync.liftEither(Episode.decode(val)));
 
   return fullEpisode.toMaybe();
 }
 
 /**
- * Fetch the list of all episodes from Simplecast, returning a `ListingEpisodes`
+ * Fetch the list of all episodes from Kapselistudio, returning a `ListingEpisodes`
  */
 export async function getEpisodes(podcastId?: string) {
-  const episodeListingUrl = `https://kapselistudio.gigalixirapp.com/api/podcast/${podcastId}/episodes`;
+  const episodeListingUrl = `${process.env.KAPSELISTUDIO_ROOT_URL}/api/podcast/${podcastId}/episodes`;
 
   return (
-    await EitherAsync(() => plainFetchAuth(episodeListingUrl))
+    await EitherAsync(() => fetch(episodeListingUrl))
       .map((e) => e.json())
       .chain((val) => EitherAsync.liftEither(ListingEpisodes.decode(val)))
   ).orDefault({ collection: [] });
