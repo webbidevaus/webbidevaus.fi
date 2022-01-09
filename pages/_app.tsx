@@ -20,7 +20,7 @@ function WebbidevausApp({ Component, pageProps }: AppProps) {
           rel="alternate"
           type="application/rss+xml"
           title="Webbidevaus.fi RSS"
-          href="{process.env.PODCAST_RSS}"
+          href={process.env.PODCAST_RSS}
         />
       </Head>
       <Component {...pageProps} />
